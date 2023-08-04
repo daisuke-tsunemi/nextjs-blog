@@ -2,7 +2,7 @@ import Head from 'next/head';
 import Image from 'next/image';
 import Link from 'next/link';
 import Footer from '../layouts/footer';
-import View from '../components/view';
+import View from '../../components/view';
 import layoutStyles from '../../public/css/layout.module.css';
 import styles from '../../public/css/utils.module.css'
 

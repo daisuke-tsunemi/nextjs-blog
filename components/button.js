@@ -1,4 +1,4 @@
-import styles from '../../public/css/Button.module.css'
+import styles from '../public/css/Button.module.css'
  
 export default function Button() {
   return (
