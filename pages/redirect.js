@@ -1,4 +1,4 @@
-export async function getStaticProps(context) {
+export default function getStaticProps(context) {
   return {
     redirect: {
       destination: '/',
