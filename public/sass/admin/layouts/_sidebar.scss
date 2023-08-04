@@ -1,0 +1,387 @@
+@use "../foundation/responsive" as *;
+@use "../foundation/_var" as *;
+.c-nav__toggle{
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  cursor: pointer;
+  border: 1px solid var(--primary-dark);
+  background-color: var(--bg);
+  z-index: 10;
+  border-radius: 8px;
+  @include responsive (tabletWide){
+    display:none;
+  }
+  div{
+    position: relative;
+    height: 40px;
+    width: 40px;
+    span{
+      width: calc(70% - 8px);
+      height:3px;
+      border-radius:2px;
+      background-color: var(--primary-dark);
+      position:absolute;
+      top:38%;
+      right:4px;
+      transition: all 0.2s ease;
+      +span{
+        top:62%;
+        width: calc(100% - 8px);
+      }
+      &.current{
+        width: calc(100% - 8px);
+        transform: rotate(45deg);
+        top:48%;
+        +span{
+          transform: rotate(-45deg);
+        }
+      }
+    }
+  }
+}
+.l-sidebar{
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  background-color:rgba($color: #000000, $alpha: 0.8);
+  top: 0;
+  left: 0;
+  z-index: 9;
+  display:none;
+  transition: all 0.2s ease;
+  padding: 2rem;
+  @include responsive (tabletWide){
+    position:fixed;
+    display:block !important;
+    height: auto;
+    width: 210px;
+    top:1.5rem;
+    left:1.5rem;
+    background-color: transparent;
+    padding: 0;
+  }
+  .p-sidebar{
+    width: 100%;
+    height: calc(100vh - 3rem);
+    padding: 1.5rem 1rem 1.5rem;
+    box-shadow: 5px 5px 12px rgba(107, 112, 125, .6) inset;
+    @include responsive (tabletWide){
+      box-shadow: -5px -5px 5px rgba(255,255,255,.7) inset, 5px 5px 5px rgba(107, 112, 125, .1) inset;
+    }
+    &__head{
+      max-width: 400px;
+      margin: 1rem auto;
+      @include responsive (tabletWide){
+        max-width: 80px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin:0 1rem 0 0;
+        padding: 0 0 1rem;
+        margin:0 auto;
+        max-width: inherit;
+      }
+      .logo{
+        width: 100%;
+        background:url(../image/admin/logo/logo.svg) no-repeat center;
+        background-size:cover;
+        aspect-ratio: 8/1;
+      }
+      a{
+        &:hover{
+          opacity: .7;
+        }
+      }
+      h1{margin-top: 8px;}
+    }
+    .u-align--center{
+      display:none;
+      position:relative;
+      padding: 0 0 1rem;
+      @include responsive (tabletWide){
+        display:flex;
+      }
+    }
+    &__body{
+      max-width: 300px;
+      margin: 0 auto;
+      @include responsive (tabletWide){
+        width: 100%;
+        margin:0;
+      }
+      >div{
+        position:relative;
+        +div{
+          margin-top: 8px;
+        }
+        a,span{
+          display:flex;
+          flex-wrap:wrap;
+          align-items:center;
+          cursor: pointer;
+          padding: 1rem;
+          @include responsive (tabletWide){
+            padding: 1rem .5rem 1rem 1rem;
+          }
+          svg{
+            fill: var(--primary-dark);
+            margin-inline-end: 0.5rem
+          }
+          p{
+            font-weight: 500;
+            line-height:1;
+            font-size: 1rem;
+          }
+        }
+        &:not(.c-content):hover{
+          a,span{
+            background-color: white;
+            position:relative;
+            svg{
+              fill: var(--base);
+            }
+          }
+        }
+        &.is-active{
+          a,span{
+            background-color: var(--txt-link);
+            z-index: 1;
+            position:relative;
+            box-shadow: 0px 8px 20px rgba(0, 232, 255, .4);
+            svg{
+              fill: #fff;
+            }
+            p{
+              color: #fff;
+            }
+          }
+          &:hover{
+            p{
+              color: var(--primary-dark);
+            }
+          }
+        }
+        &.c-tab{
+          span{
+            position:relative;
+            &::after{
+              content: '';
+              display: block;
+              position:absolute;
+              top:50%;
+              right:8px;
+              transform:translate(0,-50%);
+              height:16px;
+              width:16px;
+              background: url(../image/common/shape/arrow.svg) no-repeat center;
+              background-size: cover !important;
+              transition: all 0.1s;
+            }
+          }
+          &.is-active{
+            span{
+              &::after{
+                transform:translate(0,-50%) rotate(90deg);
+                background: url(../image/common/shape/white/arrow.svg) no-repeat center;
+              }
+            }
+            +.c-content{
+              display: block;
+            }
+          }
+          &.is-open{
+            span{
+              background-color: white;
+              &::after{
+                transform:translate(0,-50%) rotate(90deg);
+              }
+              svg{
+                fill: var(--primary-dark);
+              }
+              p{
+                color: var(--primary-dark);
+              }
+            }
+            +.c-content{
+              display: block;
+              &:hover{
+                a{
+                  span{
+                    background-color: transparent;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+      .c-content{
+        display: none;
+        transition: all 0.2s;
+        a{
+          padding: 0.5rem 0.25rem 0.5rem 1.5rem;
+          background-color:transparent;
+          color: var(--txt-strong);
+          box-shadow:none;
+          &:hover{
+            background-color:#B6EEF7;
+          }
+          span{
+            padding: 0;
+            border-radius: 0;
+            margin-right: 4px;
+          }
+          &.office{
+            span{
+              background-image: url(/image/admin/shape/aside/home.svg);
+            }
+          }
+          &.partner{
+            span{
+              background-image: url(/image/admin/shape/aside/partner.svg);
+            }
+          }
+          &.cars{
+            span{
+              background-image: url(/image/admin/shape/aside/car.svg);
+            }
+          }
+          &.agency{
+            span{
+              background-image: url(/image/admin/shape/aside/agency.svg);
+            }
+          }
+          &.items{
+            span{
+              background-image: url(/image/admin/shape/aside/item.svg);
+            }
+          }
+          &.address{
+            span{
+              background-image: url(/image/admin/shape/aside/address.svg);
+            }
+          }
+        }
+      }
+    }
+    &__foot{
+      margin-inline-start: auto;
+      @include responsive (tabletWide){
+        margin:0;
+        padding: 1rem 1rem 0;
+      }
+    }
+  }
+}
+.c-button--l_change{
+  transform: rotate(180deg);
+  position:absolute;
+  top: -4px;
+  right: 0px;
+  background:url(../image/common/shape/arrow.svg) no-repeat center;
+  background-size:cover;
+  width:24px;
+  aspect-ratio: 1/1;
+  box-shadow: 4px 4px 10px rgba(174, 174, 192, .2), -4px -4px 8px #fff;
+  border-radius:4px;
+  &:hover{
+    background-color: #fff;
+  }
+}
+.aside__narrow{
+  .c-button--l_change{
+    transform: inherit;
+    right: 8px;
+  }
+  .l-sidebar{
+    @include responsive (tabletWide){
+      width: 72px;
+    }
+    .p-sidebar{
+      &__head{
+        max-width:100px;
+        .logo{
+          background:url(../image/admin/logo/logo_sp.svg) no-repeat center;
+          background-size:cover;
+          aspect-ratio: 1.15/1;
+        }
+      }
+      .u-align--center{
+        position:relative;
+        padding: 1rem;
+        p{
+          display:none;
+        }
+      }
+      &__body{
+        > div{
+          &.c-tab{
+            span{
+              &::after{
+                @include responsive (tabletWide){
+                  content: none;
+                }
+              }
+            }
+          }
+          a,span{
+            @include responsive (tabletWide){
+              padding: 0.5rem;
+              margin:0;
+              position:relative;
+              p{
+                font-size: 0;
+              }
+            }
+            &:hover{
+              p{
+                @include responsive (tabletWide){
+                  font-size: 1rem;
+                  font-weight: 400;
+                  border-radius: 4px;
+                  padding: 4px;
+                  color: #fff;
+                  background-color: var(--txt-strong);
+                  position: absolute;
+                  top: 50%;
+                  left: 3rem;
+                  min-width: 100px;
+                  text-align: center;
+                  transform: translate(0, -50%);
+                }
+              }
+            }
+          }
+          &.dashboard, &.user, &.master{
+            a,span{
+              &:hover{
+                p{
+                  min-width: 130px;
+                }
+              }
+            }
+          }
+          svg{
+            @include responsive (tabletWide){
+              margin:0;
+            }
+          }
+          &.is-active{
+            +.c-content{
+              display: block;
+              &:hover{
+                background-color: transparent;
+              }
+              a{
+                @include responsive (tabletWide){
+                  padding:4px 10px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

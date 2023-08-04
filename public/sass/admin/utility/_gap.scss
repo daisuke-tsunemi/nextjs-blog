@@ -1,0 +1,16 @@
+@use "../foundation/responsive" as *;
+/* ——————————————————————————————————————————————————————————————
+gap
+—————————————————————————————————————————————————————————————— */
+.u-gap4{
+  gap: 4px;
+}
+@for $i from 1 through 5 {
+  $num: $i * 8;
+  .u-gap#{$num} {
+    gap: 8px;
+    @include responsive(spWide) {
+      gap: #{$num}px;
+    }
+  }
+}

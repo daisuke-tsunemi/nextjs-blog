@@ -1,0 +1,128 @@
+@use "../../foundation/responsive" as *;
+.p-flash {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform:translate(-50%,0);
+    pointer-events: none;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+    &.is-active{
+      z-index: 100 !important;
+    }
+  }
+  /* ! ==================================================
+  　リスト
+  ================================================== */
+  .p-flash--list {
+    width: 100%;
+    height: 100%;
+    > li {
+      opacity: 0;
+      pointer-events: all;
+      height: 100%;
+      +li{
+        margin-top: 8px;
+      }
+      article {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: rgba(0, 41, 65, 0.9);
+        width: 100%;
+        height: 100%;
+        .data{
+          padding: 2rem 4rem;
+          background-color: var(--bg);
+          border-radius:1rem;
+          border: 4px solid var(--primary-dark);
+          display:flex;
+          align-items:center;
+          flex-direction: column;
+          max-width: 90%;
+          @include responsive (tablet){
+            padding: 3rem 5rem;
+          }
+          p{
+            margin-top: 1rem;
+            &.c-text__lv3 {
+              color: var(--primary-dark);
+            }
+          }
+        }
+      }
+        /* 個別 */
+      .flash_info article{ border-color: #9dabc3;}
+      .flash_success article{ border-color: #9dabc3;}
+      .flash_warning article{ border-color: #F29938;}
+      .flash_error article{ border-color: #c30011;}
+      /* ! キーフレーム ============================== */
+        animation: flash 2.5s ease forwards;
+        &:nth-of-type(2){ animation-delay: .1s;}
+        &:nth-of-type(3){ animation-delay: .2s;}
+        &:nth-of-type(4){ animation-delay: .3s;}
+        &:nth-of-type(5){ animation-delay: .4s;}
+        &:nth-of-type(6){ animation-delay: .5s;}
+        &:nth-of-type(7){ animation-delay: .6s;}
+    }
+    /* クリックして消す場合。 */
+    &.is-delete {
+      animation: flash_remove .5s ease forwards;
+      pointer-events: none;
+      cursor: default;
+    }
+  }
+  
+  
+  @keyframes flash {
+    0% {
+      opacity: 0;
+      transform: translateY(100px); 
+    }
+    20% {
+      opacity: 1;
+      transform: translate(0); 
+    }
+    89% {
+      opacity: 1;
+      transform: translate(0); 
+    }
+    90% {
+      height: 100%;
+    }
+    100% {
+      transform: translateY(-100px); 
+      opacity:0;
+      height: 0; 
+    }
+  }
+  
+  
+  @keyframes flash_fixed {
+    0% {
+      opacity: 0;
+      transform: translateY(100px); 
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(-100px); 
+    }
+  }
+  
+  @keyframes flash_remove {
+    0% {
+      transform: translateY(0100px); 
+      opacity: 1;
+    }
+    90% {
+      height: 100%;
+    }
+    100% {
+      transform: translateY(100px); 
+      opacity: 0;
+      height: 0;
+    }
+  }
+  
+  

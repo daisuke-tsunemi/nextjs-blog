@@ -1,0 +1,21 @@
+$breakpoints: (
+  'sm': (min-width: 575px),
+  'md': (min-width: 767px),
+  'lg': (min-width: 991px),
+  'xl': (min-width: 1025px),
+  'xl2': (min-width: 1120px),
+  'xl3': (min-width: 1280px),
+  'xl4': (min-width: 1440px),
+  'xl5': (min-width: 1920px),
+) !default;
+@mixin responsive($breakpoint) {
+  @if map-has-key($breakpoints, $breakpoint) {
+    @media screen and #{inspect(map-get($breakpoints, $breakpoint))} {
+      @content;
+    }
+  }
+  // エラー時
+  @else {
+    @error "指定されたブレークポイントは定義されていません。" + "指定できるブレークポイントは次のとおりです。 -> #{map-keys(breakpoints.$breakpoints)}";
+  }
+}

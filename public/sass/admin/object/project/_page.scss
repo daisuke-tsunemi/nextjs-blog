@@ -1,0 +1,199 @@
+@use "../../foundation/responsive" as *;
+// 下層ページ特有のCSS記述
+.p-section{
+  &__head{
+    margin-bottom: 0.5rem;
+    @include responsive (tablet){
+      margin-bottom: 1rem;
+    }
+  }
+  &__body{
+    .p-list{
+      &__wrap{
+        margin:-0.25rem;
+        >li{
+          padding: 0.25rem;
+        }
+      }
+    }
+  }
+  &__foot{
+    margin-top: 0.5rem;
+    @include responsive (tablet){
+      margin-top: 1rem;
+    }
+    .c-text{
+      margin-top: 0.5rem;
+    }
+  }
+  +.p-section{
+    padding-top: 1rem;
+    @include responsive (tablet){
+      padding-top: 1.5rem;
+    }
+  }
+}
+.p-detail--border{
+  >div{
+    grid-template-columns: unquote('minmax(120px,1fr)') 1fr;
+    +div{
+      border-top: 1px solid var(--border);
+      padding-top: 1rem;
+    }
+    P+P{
+      margin:0;
+    }
+  }
+}
+.p-master--multi{
+  .t-wrapper{
+    display:flex;
+    flex-direction: column;
+    .t-body{
+      flex: auto;
+      .t-table{
+        height: 40vh;
+      }
+    }
+  }
+}
+// 詳細ページ
+.l-detail{
+  .l-frame{
+    .p-list__border{
+      .l-grid--2{
+        grid-template-columns: 1fr 1fr;
+      }
+      .c-icon--map{
+        margin-inline-start:auto;
+        flex: 0 0 32px;
+        width: 32px;
+        background-size: unset;
+        border: 1px solid var(--primary-dark);
+      }
+    }
+    .c-info{
+      small{
+        margin-inline-end: 0.5rem;
+      }
+    }
+    .p-list--number{
+      counter-reset: number 0;
+      > li, > .f-item{
+        counter-increment: number 1;
+        span{
+          &:after{
+            content: counter(number) " ";
+            color: var(--txt);
+            font-size: 14px;
+            margin:0 0 0 4px;
+            background-color: transparent;
+            border: none;
+          }
+        }
+      }
+    }
+    .l-grid{
+      &--3{
+        &.c-detail--cars{
+          grid-template-columns:max(400px) 1fr;
+          @include responsive (tabletWide){
+            grid-template-columns:250px 250px minmax(300px, 1fr);
+          }
+          @include responsive (pc){
+            grid-template-columns:300px 300px minmax(300px, 1fr);
+          }
+        }
+      }
+      //営業所マスタの更新ボタン
+      .c-icon--update{
+        border: 1px solid var(--primary-dark);
+      }
+      &--reception{
+        grid-template-columns:1fr;
+        @include responsive (tabletWide){
+          grid-template-columns:1fr 1fr;
+        }
+        @include responsive (pc){
+          grid-template-columns:1fr 1fr 350px;
+        }
+      }
+    }
+    //アカウントマイページ
+    .l-account.l-grid--2{
+      grid-template-columns:250px 1fr;
+      @include responsive (tabletWide){
+        grid-template-columns: 400px 1fr;
+      }
+      .p-list{
+        &__row {
+          li {
+            gap: .5rem;
+            @include responsive (tabletWide){
+              gap: 1rem;
+              flex-wrap: nowrap;
+            }
+            .label{
+              min-width: inherit;
+              width: 100%;
+              @include responsive (tabletWide){
+                min-width: 100px;
+                width: auto;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .p-addition--partner{
+    .bg-fff{
+      border-radius: 0;
+    }
+  }
+}
+
+// 車両マスタのナンバープレートっぽい
+.c-number--plate{
+  border: 8px solid #207700;
+  padding: 0.5rem 1rem 0.5rem;
+  border-radius:0.5rem;
+  background-color: #fff;
+  min-width: 200px;
+  p,span{
+    color: #207700;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    +p{
+      margin-top: -1rem;
+    }
+    .c-text__lv1{
+      @include responsive (tablet){
+        font-size: 3rem;
+      }
+    }
+  }
+}
+form{
+  .c-number--plate{
+    max-width: 270px;
+    .u-align{
+      gap: 0.5rem;
+      input{
+        color: #207700;
+        text-align: center;
+      }
+    }
+    .middle{
+      font-weight: 700;
+      font-size: 1.5rem;
+      height: auto;
+    }
+    .thick{
+      font-weight: 900;
+      font-size: 2rem;
+      height: auto;
+    }
+  }
+}

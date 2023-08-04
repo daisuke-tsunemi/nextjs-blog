@@ -1,0 +1,41 @@
+@use "../../foundation/responsive" as *;
+.l-auth{
+    position:relative;
+    .l-main{
+        padding: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .p-auth{
+            width: 100%;
+            max-width:450px;
+            &__head{
+                margin-block-end: 1rem;
+            }
+            &__body{
+                form{
+                    &.l-form{
+                        &__head{
+                            margin-block-end: 2rem;
+                        }
+                    }
+                    input{
+                        height: 60px;
+                        font-size: 20px;
+                    }
+                    .c-button,.c-button__lg{
+                        max-width: inherit;
+                        background:linear-gradient(135deg, #00AFEF, #0019D8);
+                    }
+                }
+            }
+            &__foot{
+                margin-block-start: 3rem;
+                p{
+                    text-align: center;
+                    color: var(--txt-light);
+                }
+            }
+        }
+    }
+}

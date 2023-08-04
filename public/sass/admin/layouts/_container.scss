@@ -1,0 +1,44 @@
+@use "../foundation/responsive" as *;
+@use "../foundation/var" as *;
+/* ! --------------------------------------------------
+- コンテナ
+-------------------------------------------------- */
+%container{
+  max-width: 1280px;
+  width: 100%;
+  min-width:350px;
+}
+.l-container {
+  @extend %container;
+  $i: 5;
+  @while $i <= 14 {
+    &__#{$i}00 {
+      max-width: (100px * $i);
+    }
+    $i: $i + 1;
+  }
+  &__full {
+    @extend %container;
+    max-width: inherit;
+  }
+  &__1080 {
+    @extend %container;
+    max-width: 1080px;
+    min-width: inherit;
+  }
+  &__960 {
+    @extend %container;
+    max-width: 960px;
+    min-width: inherit;
+  }
+  &__768 {
+    @extend %container;
+    max-width: 768px;
+    min-width: inherit;
+  }
+  &__600 {
+    @extend %container;
+    max-width: 600px;
+    min-width: inherit;
+  }
+}

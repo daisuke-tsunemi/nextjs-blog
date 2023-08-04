@@ -1,0 +1,30 @@
+@use "../foundation/var" as *;
+/* ! ==================================================
+- ボディ
+================================================== */
+.l-body {
+  &.l-admin{
+    min-width:768px;
+  }
+  // animation: fadeIn 3s ease 0s 1 normal;
+  // -webkit-animation: fadeIn 3s ease 0s 1 normal;
+  *{
+    // スクロールバー
+    ::-webkit-scrollbar{
+      background-color: var(--bg-light);
+      border-radius: 5px;
+      height: 10px;
+      width: 10px;
+    }
+    ::-webkit-scrollbar-track{
+        border-radius: 5px;
+        height: 10px;
+    }
+    ::-webkit-scrollbar-thumb{
+      background-color: var(--bg-dark);
+      border-radius: 5px;
+      height: 10px;
+    }
+  }
+}
+
