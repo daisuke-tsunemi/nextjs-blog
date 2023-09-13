@@ -1,0 +1,177 @@
+@use "../../foundation/responsive" as *;
+@use "../../foundation/var" as *;
+/* ! ==================================================
+- リスト
+================================================== */
+.p-list {
+  >li{
+    +li{
+      margin-block-start: .5rem;
+      @include responsive (pcWide){
+        margin-block-start: 1rem;
+      }
+    }
+  }
+}
+%p-list,.p-list {
+  li{
+    .label{
+      min-width:100px;
+      color: var(--txt-weak);
+    }
+  }
+  &__row{
+    @extend %p-list;
+    >li{
+      gap: .5rem;
+      @include responsive (md){
+        gap: 1rem;
+        display:flex;
+        flex-wrap:wrap;
+        align-items:center;
+        P+P{
+          margin: 0;
+        }
+      }
+      &.f-start{
+        align-items: flex-start;
+      }
+    }
+  }
+  &__wrap{
+    @extend %p-list;
+    display: flex;
+    flex-wrap:wrap;
+    &--2{
+      @extend %p-list;
+      display: flex;
+      flex-wrap:wrap;
+      >li{
+        @include responsive (sm){
+          width: 50%;
+        }
+      }
+    }
+    &--3{
+      @extend %p-list;
+      display: flex;
+      flex-wrap:wrap;
+      >li{
+        @include responsive (sm){
+          width: 50%;
+        }
+        @include responsive (md){
+          width: 33.3333%;
+        }
+      }
+    }
+    &--4{
+      @extend %p-list;
+      display: flex;
+      flex-wrap:wrap;
+      >li{
+        @include responsive (sm){
+          width: 50%;
+        }
+        @include responsive (md){
+          width: 33.3333%;
+        }
+        @include responsive (tabletWide){
+          width: 25%;
+        }
+      }
+    }
+    &--5{
+      @extend %p-list;
+      display: flex;
+      flex-wrap:wrap;
+      >li{
+        @include responsive (sm){
+          width: 50%;
+        }
+        @include responsive (md){
+          width: 33.3333%;
+        }
+        @include responsive (tabletWide){
+          width: 25%;
+        }
+        @include responsive (note){
+          width: 20%;
+        }
+      }
+    }
+    &--6{
+      @extend %p-list;
+      display: flex;
+      flex-wrap:wrap;
+      >li{
+        @include responsive (sm){
+          width: 50%;
+        }
+        @include responsive (md){
+          width: 33.3333%;
+        }
+        @include responsive (tabletWide){
+          width: 25%;
+        }
+        @include responsive (note){
+          width: 20%;
+        }
+        @include responsive (pcWide){
+          width: 16.6666%;
+        }
+      }
+    }
+  }
+  &__border {
+    >li{
+      padding-top: 1rem;
+      padding-bottom: 1rem;
+      border-bottom:1px solid var(--border);
+      &:first-child{
+        padding-bottom: 1rem;
+      }
+      &:last-child{
+        padding-top: 1rem;
+        border: none;
+      }
+    }
+    &--narrow{
+      >li{
+        padding-top: .5rem;
+        padding-bottom: .5rem;
+        border-bottom:1px solid var(--border);
+        &:last-child{
+          border: none;
+        }
+      }
+    }
+  }
+}
+li,tr{
+  &[data-href]{
+    cursor: pointer;
+    &:hover{
+      background-color: var(--primary-pale);
+    }
+  }
+}
+ul li{
+  &[data-href]{
+    padding-right:2rem !important;
+    padding-left:0.5rem !important;
+    position:relative;
+    &:after{
+      content: '';
+      display:block;
+      position:absolute;
+      top:50%;
+      right:4px;
+      transform:translate(0,-50%);
+      width: 24px;
+      aspect-ratio: 1/1;
+      background:url(../image/common/shape/arrow.svg) no-repeat center;
+      background-size:cover;
+    }
+  }
+}

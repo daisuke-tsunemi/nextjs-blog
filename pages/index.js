@@ -1,7 +1,8 @@
 import Head from 'next/head'
 import Link from 'next/link';
+import Image from 'next/image';
 import Layout, { siteTitle } from './layouts/layout';
-import styles from '../public/css/utils.module.css'
+import styles from '../styles/css/utils.module.css'
 import { getSortedPostsData } from '../lib/posts';
 import Date from '../components/date';
 
@@ -33,13 +34,22 @@ export default function Home ({ allPostsData }) {
       <section className={`${styles.headingMd} ${styles.padding1px}`}>
         <h2 className={styles.headingXl}>Blog</h2>
         <ul className={styles.list}>
-          {allPostsData.map(({ id, date, title }) => (
+          {allPostsData.map(({ id, date, title, image }) => (
             <li className={styles.listItem} key={id}>
-              <Link href={`/posts/${id}`}>{title}</Link>
-              <br />
-              <small className={styles.lightText}>
-                <Date dateString={date} />
-              </small>
+              <Link href={`/posts/${id}`}>
+                <Image
+                  priority
+                  className={styles.img}
+                  src={image}
+                  height={100}
+                  width={200}
+                  alt=""
+                />
+                <h4 className={styles.headingMd}>{title}</h4>
+                <small className={styles.lightText}>
+                  <Date dateString={date} />
+                </small>
+              </Link>
             </li>
           ))}
         </ul>

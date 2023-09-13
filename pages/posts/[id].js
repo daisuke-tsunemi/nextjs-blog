@@ -1,8 +1,9 @@
 import Layout from '../layouts/layout'
 import Head from 'next/head';
+import Image from 'next/image';
 import { getAllPostIds, getPostData } from '../../lib/posts'
 import Date from '../../components/date';
-import styles from '../../public/css/utils.module.css'
+import styles from '../../styles/css/utils.module.css'
 
 export default function Post({ postData }) {
   return (
@@ -10,17 +11,27 @@ export default function Post({ postData }) {
       <Head>
         <title>{postData.title}</title>
       </Head>
-      <h1 className={styles.headingXl}>
-        {postData.title}
-      </h1>
-      <br />
-      <p>
-      {postData.id}
-      </p>
-      <br />
-      <Date dateString={postData.date} />
-      <br />
-      <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
+      <div className={styles.content}>
+        <h1 className={styles.headingXl}>
+          {postData.title}
+        </h1>
+        <Image
+          priority
+          className={styles.img}
+          src={postData.image}
+          height={100}
+          width={200}
+          alt=""
+        />
+        <br />
+        <p>
+        {postData.id}
+        </p>
+        <br />
+        <Date dateString={postData.date} />
+        <br />
+        <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
+      </div>
     </Layout>
   );
 };

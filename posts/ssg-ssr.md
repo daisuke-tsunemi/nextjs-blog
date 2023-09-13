@@ -1,4 +1,5 @@
 ---
+image: '/images/home/sample_4.jpg'
 title: 'When to Use Static Generation v.s. Server-side Rendering'
 date: '2022-01-02'
 ---

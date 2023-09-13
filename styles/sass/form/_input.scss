@@ -1,0 +1,648 @@
+@use "../foundation/responsive" as *;
+@use "../form/_var" as *;
+/* ! --------------------------------------------------
+- インプット
+-------------------------------------------------- */
+input:-webkit-autofill {
+    transition: background-color 5000s ease-in-out 0s !important;
+}
+textarea {
+  padding: 8px;
+  resize: none;
+  min-height: 100px;
+  width: 100%;
+  @include responsive(sm){
+    min-height:200px;
+  }
+}
+//共通要素
+%input {
+  font-size: 1rem; 
+  height: 35px;
+  padding: 0 8px;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  color: var(--base);
+  background-color: #fff;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  &:focus{
+    border-color: var(--primary)
+  }
+}
+// プレイスホルダー
+::-webkit-input-placeholder { color: var(--txt-light);}
+:-ms-input-placeholder { color: var(--txt-light);}
+::-moz-placeholder { color: var(--txt-light);}
+// -- インプット search number file checkbox radio submit 
+input {
+  @extend %input;
+  &[type="number"] {
+    -moz-appearance:textfield;
+  }
+  &[type="number"]::-webkit-outer-spin-button,&[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: .25rem;
+  }
+  &[type="color"] {
+    cursor: pointer;
+    padding: 0.25rem;
+    height: 60px;
+  }
+}
+select{
+  @extend %input;
+  color:var(--base);
+  padding-right:1.5rem;
+  background-image: url(../image/common/shape/arrow_down.svg);
+  background-size: 1rem;
+  background-position: right 4px center;
+  background-repeat: no-repeat;
+}
+textarea {
+  @extend %input;
+  padding: 5px 8px;
+  resize: none;
+  min-height: 100px;
+  @include responsive(sm){
+    padding: 8px;
+    min-height: 200px;
+  }
+}
+.c-input {
+  display:inline-flex;
+  position: relative;
+  $c-input: #{&};
+  &--full {
+    @extend #{$c-input};
+    width: 100%;
+    input,
+    textarea {
+      width: 100%;
+    }
+  }
+  &--wrap {@extend #{$c-input};
+    display:flex; flex-wrap:wrap;
+    align-items: center;
+    margin:-4px;
+    >*{
+      padding: 4px;
+    }
+  }
+  &--center {@extend #{$c-input};
+    display: -webkit-flex; display: flex;
+    align-items: center;
+    >*+*{
+      margin-left: 8px;
+    }
+  }
+  &--end {@extend #{$c-input};
+    display: -webkit-flex; display: flex;
+    align-items: flex-end;
+    >*+*{
+      margin-left: 8px;
+    }
+  }
+  &--column{@extend #{$c-input};flex-direction:column;width:100%;}
+  &__600{@extend #{$c-input};width: 100%;
+    @include responsive (md){width:600px;}
+  }
+  &__500{@extend #{$c-input};width: 100%;
+    @include responsive (md){width:500px;}
+  }
+  &__400{@extend #{$c-input};width: 100%;
+  @include responsive (sm){width:400px;}
+}
+  &__350{@extend #{$c-input};width: 100%;
+  @include responsive (sm){width:350px;}
+}
+  &__300{@extend #{$c-input};width: 100%;
+  @include responsive (sm){width:300px;}
+}
+  &__250{@extend #{$c-input};width: 250px;}
+  &__200{@extend #{$c-input};width: 200px;}
+  &__150{@extend #{$c-input};width: 150px;}
+  &__100{@extend #{$c-input};width: 100px;}
+  &__70{@extend #{$c-input};width: 70px;}
+  &__50{@extend #{$c-input};width: 50px;}
+  // -- チェックボックス・ラジオ共通項目
+  %inputInput {    
+    opacity: 0;
+    pointer-events: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  %inputBox {
+    content: "";
+    display: block;
+    width: 20px;
+    height: 20px;
+    background: url(/img/admin/p-input/radio.svg);
+    background-size: contain !important;
+    background-position: center center !important;
+    background-repeat: no-repeat !important;
+    position: absolute;
+    top: 50%;
+    left: -4px;
+    transform: translateY(-50%);
+  }
+  %inputLabel {
+    color: var(--border-color);
+    font-size: 14px;
+    line-height: 1em;
+    display: flex;
+    align-items: center;
+    height: 32px;
+    padding: 0 12px 0 20px;
+    position: relative; 
+  }
+  // -- 日付入力
+  &--date{
+    position:relative;
+    width: 150px;
+    &:before{
+      content: '';
+      display: block;
+      background: url(../image/icon/icon_calendar.svg) no-repeat center;
+      background-size: cover;
+      position:absolute;
+      right: 10px;
+      top: 50%;
+      margin: 0;
+      height:24px;width:24px;
+      transform: translateY(-50%);
+    }
+  }
+  &--pw{
+    position:relative;
+    .c-icon__eye{
+      background-size: cover !important;
+      background: url(../image/common/shape/eye_close.svg) no-repeat center;
+      width: 24px;
+      position:absolute;
+      top: 50%;
+      right: 8px;
+      transform: translateY(-50%);
+      cursor: pointer;
+      aspect-ratio: 1/1;
+      &.visible{
+        background: url(../image/common/shape/eye_open.svg) no-repeat center;
+      }
+    }
+  }
+  /* セレクトボックス */
+  &--select{
+    @extend #{$c-input};
+    display: inline-flex;
+    position: relative;
+  }
+}
+// -- チェックボックス&ラジオボタン
+.c-checkbox,.c-radio{
+  display:flex;
+  align-items:center;
+  position:relative;
+  cursor: pointer;
+  font-size: 1rem;
+  &:has(input:checked){
+    &:after{
+      content: '';
+      display:block;
+      position:absolute;
+      top: 5px;
+      left: 3px;
+      transform: rotate(-45deg);
+      height: 6px;
+      width: 11px;
+      border-left: 3px solid var(--ok);
+      border-bottom: 3px solid var(--ok);
+    }
+  }
+  input{
+    height: 20px;
+    width: 20px;
+    margin-inline-end: 4px;
+  }
+}
+.c-radio {
+  cursor: pointer;
+  input{
+    height:24px;
+    width:24px;
+    border-radius: 50%;
+  }
+  &:has(input:checked){
+    input{
+      border: 1px solid var(--primary);
+    }
+    &:after{
+      top: 50%;
+      left: 6px;
+      transform: translateY(-50%);
+      height: 12px;
+      width: 12px;
+      background-color: var(--primary);
+      border-radius: 50%;
+      border:none;
+    }
+  }
+  &--column {
+    flex-direction: column;
+  }
+  &__button{
+    background:linear-gradient(135deg, #EFD800, #EF6500);
+    padding: 2px;
+    border-radius:8px;
+    input[type="checkbox"],input[type="radio"] {
+      +label{
+        border-radius:6px;
+        color: var(--primary);
+        background: #fff;
+        padding:4px 16px;
+        font-size: 14px;
+        font-weight:700;
+        @include responsive (sm){
+          padding:4px 8px;
+          font-size: 13px;
+        }
+        &:before,&:after{
+          content: none;
+        }
+        .c-icon__w16{
+          margin-right:8px;
+        }
+      }
+      &:checked + label {
+        background:transparent;
+        color:#fff;
+        .c-icon--heart{
+          background-image:url(../image/icon/icon_heart_white.svg);
+        }
+      }
+    }
+  }
+  &__icon{
+    input[type="checkbox"],input[type="radio"] {
+      +label{
+        font-size: 13px;
+        color: #888;
+        &:before,&:after{
+          content: none;
+        }
+        .c-icon--favorite{
+          border-radius:50%;
+          margin-right: 4px;
+        }
+      }
+      &:checked +label {
+        color: var(--primary);
+        .c-icon--favorite {
+          background-image:url(../image/icon/icon_star_white.svg);
+          background-color: var(--primary);
+        }
+      }
+    }
+  }
+  &.c-switch{
+    input[type="checkbox"]{
+      +label{
+        width:50px;
+        height: 24px;
+        background-color: var(--bg-light);
+        border-radius: 12px;
+        position:relative;
+        transition: all 0.2s ease;
+        &:before{
+          height:20px; width:20px;
+          display: block;
+          content: '';
+          z-index: 1;
+          background-color: #fff;
+          position:absolute;
+          top: 50%;
+          left: 2px;
+          border-radius: 50%;
+          transition: all 0.2s ease;
+        }
+        &:after{
+          position:absolute;top:5px;right:-55px;
+          content: '未対応';
+          font-size: 13px;
+          font-weight: 500;
+          color: var(--invalid);
+          display: block;
+          height:inherit; width:inherit;
+        }
+      }
+      &:checked{
+        +label{
+          background-color:var(--valid);
+          &:before{
+            left: 28px;
+          }
+          &:after{
+            content: '対応済';
+            color: var(--valid);
+          }
+        }
+      }
+    }
+    &__publish{
+      input[type="checkbox"]{
+        +label{
+          &:after{
+            content: '未公開';
+          }
+        }
+        &:checked{
+          +label{
+            &:after{
+              content: '公開中';
+            }
+          }
+        }
+      }
+    }
+  }
+}
+// -- ラジオ
+.c-radio {
+  input[type="radio"] {
+    +label{
+      line-height: 1em;
+      padding:8px;
+      width:auto;
+      &:before,&:after{
+        border-radius:50%;
+      }
+      &:before{
+        margin-right: 8px;
+      }
+      &:after{
+        height:10px; width:10px;
+        border: none;
+        background-color: var(--primary);
+        top: 50%;
+        left: 13px;
+        transform: translateY(-50%);
+      }
+    }
+  }
+  label {
+    @extend %inputLabel;
+    &:before {
+      content: '';
+      display: block;
+      height:16px; width:16px;
+      border-radius: 50%;
+      background-color: #ddd;
+    }
+    @extend %inputBox;
+    &:after {
+      content: none;
+    }
+  }
+}
+input[readonly],textarea[readonly]{
+  border: none;
+  background: none;
+  padding: 0;
+}
+/* デフォルトリセットなど */
+button { outline: none;}
+select::-ms-expand { display: none;}
+input:-webkit-autofill {-webkit-box-shadow: 0 0 0px 1000px #fafafa inset;}
+input[type="file"]{display:none;width:100%;border-radius:0 !important;padding: 0;}
+
+/* イメージ、ファイル系 */
+.c-input--image,.c-input--file{
+  width: 100%;
+  max-width: 300px;
+  position:relative;
+  .c-icon--cross{
+    position:absolute;
+    top:8px;
+    right:8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, .15);
+    border: none;
+    background-color: white;
+    z-index: 1;
+    cursor: pointer;
+  }
+  input[type="file"]{
+    +label{
+      background:var(--fc-image-bg) url(../image/common/shape/noImage.svg) no-repeat center;
+      background-size: cover;
+      display: block;
+      width: 100%;
+      border-radius: 3px;
+      cursor: pointer;
+      border: 1px solid var(--border-color);
+      aspect-ratio: 4/3;
+      &.c-user{
+        background-image: url(../image/common/shape/user.svg);
+        aspect-ratio: 1/1;
+      }
+      &:hover{
+        opacity: 0.7;
+      }
+    }
+  }
+  &.wide{
+    input[type="file"]+label{
+      aspect-ratio: 16/9;
+    }
+  }
+  &.square{
+    input[type="file"]+label{
+      aspect-ratio: 1/1;
+      background-size:contain;
+    }
+  }
+}
+/* 住所などインプット要素を縦に並べる場合 */
+.c-input--column > .c-input + .c-input {
+  margin: 4px 0 0;
+}
+/* プレイスホルダー */
+input::-webkit-input-placeholder { color:rgba(0,0,0,.25);line-height: normal;}
+input:-ms-input-placeholder { color:rgba(0,0,0,.25);line-height: normal;}
+input::-moz-placeholder { color:rgba(0,0,0,.25);line-height: normal;}
+textarea::-webkit-input-placeholder { color:rgba(0,0,0,.25);line-height: normal;}
+label{
+  &:has(input:disabled){
+    color: var(--txt-light);
+    cursor: inherit;
+    input{
+      border-color: var(--border-light);
+    }
+  }
+  &:has(input:checked){
+    color: var(--base);
+    cursor: inherit;
+    input{
+      border-color: var(--ok);
+      background-color: #fff;
+    }
+  }
+}
+// スイッチ式ラジオボタン
+.c-switch{
+  margin:0 auto;
+  display: flex;
+  width: 200px;
+  height: 35px;
+  &.c-radio{
+    input[type="radio"] + label{
+      margin: 0;
+      font-size:14px;
+      font-weight:500;
+      align-items: center;
+      justify-content: center;
+      line-height: 1.5em;
+      padding: 0;
+      width: 50%;
+      box-shadow: 0px 2px 4px rgba(0,0,0,.1);
+      border-radius: 3px 0 0 3px;
+      background-color: #ccc;
+      color: #fff;
+      &:before, &:after{
+        display: none;
+      }
+      + input + label{
+        border-radius: 0 3px 3px 0;
+      }
+    }
+    input[type=radio]:checked + label{
+      background-color:#1dbe00;
+      &:before{
+        content: none;
+      }
+      &:after{
+        display: none;
+      }
+    }
+  }
+}
+// エラーメッセージ
+.c-text__error,.error{
+  padding:3px 8px 2px;
+  color: #fff !important;
+  background-color: #D92B89;
+  font-size: 12px;
+  font-weight: 500;
+  margin-top: 5px;
+  display: inline-flex;
+  &:before{
+    content: '!';
+    font-weight:900;font-size:15px;
+    margin-right: 4px;
+  }
+}
+//select2
+.select2{
+  &-container--default, &-container--open, &-container--below, &-selection--multiple{
+    .select2-selection--single{
+      border: 1px solid var(--primary-dark);
+      border-radius: 0;
+      cursor: text;
+      height: auto;
+      padding: 4px 0;
+      font-size: 1rem;
+      .select2-selection__arrow{
+        top:50%;
+        transform:translate(0,-50%);
+      }
+    }
+  }
+}
+//DatePicker
+body {
+  .c-datepicker{
+    width: 160px;
+    position:relative;
+    &:after{
+      content: '';
+      background: url(../image/common/shape/calendar.svg) no-repeat center;
+      background-size:cover;
+      position:absolute;
+      top:50%;
+      right:8px;
+      transform:translate(0,-50%);
+      display:block;
+      width: 16px;
+      aspect-ratio: 1/1;
+    }
+    input{
+      width: 100%;
+    }
+  }
+  .ui-datepicker{
+    &.ui-widget.ui-widget-content{
+      border: none;
+      width: 300px;
+      .ui-state-active{
+        background-color: var(--primary);
+        border-color: var(--primary-light);
+      }
+    }
+    box-shadow: 0px 4px 8px rgba(48, 65, 76, 0.15);
+    .ui-datepicker{
+      &-title{
+        position:relative;
+        select{
+          border:1px solid var(--primary);
+          width: 70px;
+          border-radius:4px;
+          cursor: pointer;
+          &:hover{
+            background-color: var(--border-color);
+          }
+          &.ui-datepicker-year{
+            margin-right: 4px;
+          }
+          &.ui-datepicker-month{
+            margin-left: 4px;
+          }
+        }
+      }
+    }
+    .ui-state-default{
+      border: none;
+      &:hover{
+        background-color: var(--border-color);
+      }
+    }
+    .ui-button{
+      &.ui-state-disabled{
+        &:hover{
+          border: none;
+        }
+        &:active{
+          border: none;
+        }
+      }
+    }
+    .ui-corner{
+      &-all{
+        border: none;
+        border-radius:0;
+      }
+      &-top{border: none;}
+      &-left{border: none;}
+      &-tl{border: none;}
+    }
+    .ui-state-highlight{
+      color: #fff;
+      background-color: var(--primary);
+      border-color: var(--primary-light);
+    }
+  }
+}
+.p-postal-code{
+  position:relative;
+  padding-left: 32px;
+  background: #fff url(../image/common/shape/post.svg) no-repeat 8px;
+}

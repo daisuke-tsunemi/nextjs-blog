@@ -4,7 +4,7 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/effect-fade';
-import styles from '../public/css/utils.module.css'
+import styles from '../styles/css/utils.module.css'
 export default () => {
   return (
     <Swiper
@@ -30,10 +30,13 @@ export default () => {
         <img src="/images/home/sample_4.jpg" alt="{name}イメージ" className={styles.swiperImg} />
       </SwiperSlide>
       <SwiperSlide>
-        <img src="/images/home/sample_3.jpg" alt="{name}イメージ" className={styles.swiperImg} />
+        <img src="/images/home/sample_2.jpg" alt="{name}イメージ" className={styles.swiperImg} />
       </SwiperSlide>
       <SwiperSlide>
-        <img src="/images/home/sample_2.jpg" alt="{name}イメージ" className={styles.swiperImg} />
+        <img src="/images/home/sample_5.jpg" alt="{name}イメージ" className={styles.swiperImg} />
+      </SwiperSlide>
+      <SwiperSlide>
+        <img src="/images/home/sample_4.jpg" alt="{name}イメージ" className={styles.swiperImg} />
       </SwiperSlide>
     </Swiper>
   );

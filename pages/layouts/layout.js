@@ -3,8 +3,8 @@ import Image from 'next/image';
 import Link from 'next/link';
 import Footer from '../layouts/footer';
 import View from '../../components/view';
-import layoutStyles from '../../public/css/layout.module.css';
-import styles from '../../public/css/utils.module.css'
+import layoutStyles from '../../styles/css/layout.module.css';
+import styles from '../../styles/css/utils.module.css'
 
 const name = 'Your Name';
 export const siteTitle = 'Next.js Sample Website';
@@ -17,7 +17,7 @@ export default function Layout({ children, home }) {
       <Head>
         <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0" />
         <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
-        <link rel="icon" href="images/logo/favicon/favicon.ico" />
+        <link rel="icon" href="img/favicon/favicon.ico" />
         <meta property="og:site_name" content={siteTitle} />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content="@ユーザー名" />
@@ -33,26 +33,30 @@ export default function Layout({ children, home }) {
       <header className={layoutStyles.header}>
         {home ? (
           <>
-            <h1 className={styles.heading2Xl}>{name}</h1>
+            <div className={styles.container}>
+              <h1 className={styles.heading2Xl}>{name}</h1>
+            </div>
             <View />
           </>
         ) : (
           <>
-            <Link href="/">
-              <Image
-                priority
-                src="/images/img_9.png"
-                className={styles.borderCircle}
-                height={60}
-                width={60}
-                alt=""
-              />
-            </Link>
-            <h2 className={styles.headingLg}>
-              <Link href="/" className={styles.colorInherit}>
-                {name}
+            <div className={styles.container}>
+              <Link href="/">
+                <Image
+                  priority
+                  src="/images/img_9.png"
+                  className={styles.borderCircle}
+                  height={60}
+                  width={60}
+                  alt=""
+                />
               </Link>
-            </h2>
+              <h2 className={styles.headingLg}>
+                <Link href="/" className={styles.colorInherit}>
+                  {name}
+                </Link>
+              </h2>
+            </div>
           </>
         )}
       </header>

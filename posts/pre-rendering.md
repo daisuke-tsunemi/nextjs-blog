@@ -1,4 +1,5 @@
 ---
+image: '/images/home/sample_5.jpg'
 title: 'Two Forms of Pre-rendering'
 date: '2022-01-01'
 ---
