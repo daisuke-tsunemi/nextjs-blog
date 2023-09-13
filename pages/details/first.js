@@ -1,7 +1,7 @@
 import Head from 'next/head';
 import Link from 'next/link';
 import Script from 'next/script';
-import layoutStyles from '../../public/css/layout.module.css';
+import layoutStyles from '../../styles/css/layout.module.css';
 import Layout from '../layouts/layout';
 
 export default function First() {
