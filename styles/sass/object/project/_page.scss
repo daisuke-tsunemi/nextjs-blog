@@ -1,9 +1,9 @@
-@use "../../foundation/responsive" as *;
+@use "../../foundation/breakpoints" as *;
 // 下層ページ特有のCSS記述
 .p-section{
   &__head{
     margin-bottom: 0.5rem;
-    @include responsive (md){
+    @include breakpoints (md){
       margin-bottom: 1rem;
     }
   }
@@ -19,7 +19,7 @@
   }
   &__foot{
     margin-top: 0.5rem;
-    @include responsive (md){
+    @include breakpoints (md){
       margin-top: 1rem;
     }
     .c-text{
@@ -28,7 +28,7 @@
   }
   +.p-section{
     padding-top: 1rem;
-    @include responsive (md){
+    @include breakpoints (md){
       padding-top: 1.5rem;
     }
   }
@@ -97,10 +97,10 @@
       &--3{
         &.c-detail--cars{
           grid-template-columns:max(400px) 1fr;
-          @include responsive (tabletWide){
+          @include breakpoints (lg){
             grid-template-columns:250px 250px minmax(300px, 1fr);
           }
-          @include responsive (pc){
+          @include breakpoints (xl2){
             grid-template-columns:300px 300px minmax(300px, 1fr);
           }
         }
@@ -111,10 +111,10 @@
       }
       &--reception{
         grid-template-columns:1fr;
-        @include responsive (tabletWide){
+        @include breakpoints (lg){
           grid-template-columns:1fr 1fr;
         }
-        @include responsive (pc){
+        @include breakpoints (xl2){
           grid-template-columns:1fr 1fr 350px;
         }
       }
@@ -122,21 +122,21 @@
     //アカウントマイページ
     .l-account.l-grid--2{
       grid-template-columns:250px 1fr;
-      @include responsive (tabletWide){
+      @include breakpoints (lg){
         grid-template-columns: 400px 1fr;
       }
       .p-list{
         &__row {
           li {
             gap: .5rem;
-            @include responsive (tabletWide){
+            @include breakpoints (lg){
               gap: 1rem;
               flex-wrap: nowrap;
             }
             .label{
               min-width: inherit;
               width: 100%;
-              @include responsive (tabletWide){
+              @include breakpoints (lg){
                 min-width: 100px;
                 width: auto;
               }
@@ -169,7 +169,7 @@
       margin-top: -1rem;
     }
     .c-text__lv1{
-      @include responsive (md){
+      @include breakpoints (md){
         font-size: 3rem;
       }
     }

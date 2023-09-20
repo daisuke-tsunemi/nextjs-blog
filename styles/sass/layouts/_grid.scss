@@ -1,65 +1,26 @@
-@use "../foundation/responsive" as *;
-.l-grid {
-  // レスポンシブの数だけループさせるための配列
-  // 通常クラスの出力用に""を指定
-  // クラス打ち消しを考慮してlg→smの順に（min-widthの場合は逆）
-  $sizes: '', lg, md, sm;
-  // 上記配列をループ
-  @each $size in $sizes{
-    // 分割のパターンを設けるために1~8までループさせる   
-    @for $i from 1 through 8 {
-      // l-grid-◯◯　←ここに1~8の数値を入れる
-      &-#{$i} {
-        //クラス名の.（ドット）を削除（2文字目以降を出力）
-        $class: str-slice(#{&}, 2); 
-        @if $size == '' {
-          //配列の中身が""の時は、ノーマルの出力
-          display: grid;
-          gap: 1rem;
-          width:100%;
-          grid-template-columns: repeat($i, 1fr);
-        } else {
-          //配列の中身が"sm"や"lg"の時は、sm:~、lg:~の形式で出力
-          //:（コロン）を正しく出力するために、バックスラッシュを挿入
-          //@at-rootがないと、頭に.l-grid-xxx と出力されてしまう
-          @at-root .#{$size}\:#{$class}{
-            @include mq($size){
-              grid-template-columns: repeat($i, 1fr);
-            }
-          }
-        }
-      }
-    }
-  }
-}
+@use "../foundation/breakpoints" as *;
 .l-grid{
+  display: grid;
   grid-template-columns: 1fr;
   &--2{
+    display: grid;
     grid-template-columns: repeat(2, 1fr);
   }
   &--3{
+    display: grid;
     grid-template-columns: repeat(3, 1fr);
   }
   &--4{
+    display: grid;
     grid-template-columns: repeat(4, 1fr);
   }
   &--5{
+    display: grid;
     grid-template-columns: repeat(5, 1fr);
   }
   &--6{
+    display: grid;
     grid-template-columns: repeat(6, 1fr);
-  }
-  &--gap8{
-    gap: .5rem;
-  }
-  &--gap24{
-    gap: 1.5rem;
-  }
-  &--gap32{
-    gap: 2rem;
-  }
-  &--gap40{
-    gap: 2.5rem;
   }
   &--item{
     display:flex;
@@ -78,4 +39,19 @@
       justify-content: flex-end;
     }
   }
+}
+.gap8{
+  gap: .5rem;
+}
+.gap16{
+  gap: 1rem;
+}
+.gap24{
+  gap: 1.5rem;
+}
+.gap32{
+  gap: 2rem;
+}
+.gap40{
+  gap: 2.5rem;
 }

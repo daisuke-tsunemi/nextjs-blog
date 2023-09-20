@@ -1,4 +1,4 @@
-@use "../foundation/responsive" as *;
+@use "../foundation/breakpoints" as *;
 /* ——————————————————————————————————————————————————————————————
 gap
 —————————————————————————————————————————————————————————————— */
@@ -9,7 +9,7 @@ gap
   $num: $i * 8;
   .u-gap#{$num} {
     gap: 8px;
-    @include responsive(sm) {
+    @include breakpoints(sm) {
       gap: #{$num}px;
     }
   }

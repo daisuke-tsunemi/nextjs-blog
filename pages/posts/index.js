@@ -23,8 +23,8 @@ export default function Posts ({ allPostsData }) {
 
       {/* Add this <section> tag below the existing <section> tag */}
       <section className={`${styles.headingMd} ${styles.padding1px}`}>
-        <h2 className={styles.headingXl}>Blog Index</h2>
-        <ul className={styles.list}>
+        <h1 className={styles.headingXl}>Blog Index</h1>
+        <ul className='l-grid--3 gap16'>
           {allPostsData.map(({ id, date, title, image }) => (
             <li className={styles.listItem} key={id}>
               <Link href={`/posts/${id}`}>
@@ -33,8 +33,8 @@ export default function Posts ({ allPostsData }) {
                     priority
                     className={styles.img}
                     src={image}
-                    height={100}
-                    width={200}
+                    height={300}
+                    width={400}
                     alt=""
                   />
                 <small className={styles.lightText}>

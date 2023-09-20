@@ -8,7 +8,7 @@ $breakpoints: (
   'xl4': (min-width: 1440px),
   'xl5': (min-width: 1920px),
 ) !default;
-@mixin responsive($breakpoint) {
+@mixin breakpoints($breakpoint) {
   @if map-has-key($breakpoints, $breakpoint) {
     @media screen and #{inspect(map-get($breakpoints, $breakpoint))} {
       @content;

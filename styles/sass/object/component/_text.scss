@@ -1,113 +1,74 @@
-@use "../../foundation/responsive" as *;
+@use "../../foundation/breakpoints" as *;
 @use "../../foundation/_var" as *;
 /* ! ==================================================
 - テキスト
 ================================================== */
-// 擬似要素
-[data-before]{
-  &:before{
-    content: attr(data-before)'';
-    font-size: 0.6em;
-    font-weight: 500;
-  }
+.title{
+  color: var(--txt);
+  font-weight: 600;
+  line-height: 1.414em;
+  letter-spacing: 0.1em;
 }
-[data-after]{
-  &:after{
-    content: attr(data-after)'';
-    font-size: 0.6em;
-    font-weight: 500;
-  }
+h1.title{
+  font-size: 3.5rem;
+}
+h2.title{
+  font-size: 3rem;
+}
+h3.title{
+  font-size: 2.5rem;
+}
+h4.title{
+  font-size: 2rem;
+}
+h5.title{
+  font-size: 1.5rem;
 }
 %c-text {
-  color: var(--base);
+  color: var(--txt);
   font-weight: 500;
   font-size: 1rem;
   line-height: 1.618em;
   letter-spacing: 0.05em;
 }
 .c-text{
-  &__title {
-    @extend %c-text;
-    font-size: 2.5rem;
-    letter-spacing: 0;
-    @include responsive (sm){
-      font-size: 3rem;
-    }
-  }
-  &__lv1 {
+  &__xl2 {
     @extend %c-text;
     font-size: 2rem;
     letter-spacing: .08em;
-    @include responsive (sm){
+    @include breakpoints (sm){
       font-size: 2.5rem;
     }
   }
-  &__lv2 {
+  &__xl {
     @extend %c-text;
     font-size: 1.5rem;
-    @include responsive (sm){
+    @include breakpoints (sm){
       font-size: 2rem;
     }
   }
-  &__lv3 {
+  &__lg {
     @extend %c-text;
-    @include responsive (sm){
+    @include breakpoints (sm){
       font-size: 1.5rem;
     }
   }
-  &__lv4 {
+  &__md {
     @extend %c-text;
-    font-size: 14px;
-    @include responsive (sm){
+    font-size: 0.9rem;
+    @include breakpoints (sm){
       font-size: 1rem;
     }
   }
-  &__lv5 {
+  &__sm {
     @extend %c-text;
-    font-size: 0.85rem;
-    &--base {
-      color: var(--base);
-    }
-  }
-  &__lv6 {
-    @extend %c-text;
-    font-weight: 400;
-    font-size: 0.8rem;
-  }
-  &__lv7 {
-    @extend %c-text;
-    font-weight: 400;
-    font-size: 0.75rem;
-  }
-  &__sub {
-    @extend %c-text;
-    color: var(--base);
-    font-weight: 500;
-    font-size: 0.75rem;
-  }
-  &__label {
-    @extend %c-text;
-    font-weight: 400;
     font-size: 0.8333rem;
-    line-height: 1.2em;
-    letter-spacing: 0;
-    display: inline-block;
+    font-weight: 400;
   }
-  &__note {
+  &__xs {
     @extend %c-text;
     font-weight: 400;
-    font-size: 0.8rem;
-    letter-spacing: 0;
-    display: inline-block;
-  }
-  &__unit {
-    font-weight: 400;
     font-size: 0.75rem;
-    line-height: 1em;
-    margin: 0 2px;
-    letter-spacing: 0;
-    display: inline-block;
-    color: #888;
   }
   &__min {
     font-weight: 400;
@@ -115,53 +76,63 @@
     line-height: 1.2em;
     color: #444;
   }
-  &__main {color: var(--primary);}
-  &__dark {color: var(--primary-dark);}
-  &__deep {color: var(--primary-accent);}
-  &__accent {color: var(--primary-light);}
-  &__second {color: var(--second);}
-  &__second--dark {color: var(--second-dark);}
-  &__second--light {color: var(--second-light);}
-  &__alert {color: var(--invalid);}
-  &__ok {color: var(--valid);}
+  &__unit {
+    font-weight: 400;
+    font-size: 0.75rem;
+    line-height: 1em;
+    letter-spacing: 0;
+    display: inline-block;
+    color: #888;
+  }
   &__weak {color:var(--txt-weak);}
   &__light {color:var(--txt-light);}
   &__white {color:#fff;}
-  &__height--1 {line-height: 1;}
-  &__weight--100 {font-weight: 100;}
-  &__weight--200 {font-weight: 200;}
-  &__weight--300 {font-weight: 300;}
-  &__weight--400 {font-weight: 400;}
-  &__weight--700 {font-weight: 700;}
-  &__weight--900 {font-weight: 900;}
-  &__letter--none {letter-spacing: 0;}
+  &__main {color: var(--primary);}
+  &__second {color: var(--second);}
+  &__dark {
+    color: var(--primary-dark);
+    &--second {color: var(--second-dark);}
+  }
+  &__light {
+    color: var(--primary-light);
+    &--second {color: var(--second-light);}
+  }
+  &__alert {
+    color: var(--invalid);
+    padding: .25rem .5rem;
+    background-color: var(--invalid-light);
+    border: var(--invalid-dark) 1px solid;
+    line-height:1;
+  }
+  &__ok {color: var(--valid);}
+  &__weight{
+    &--100 {font-weight: 100;}
+    &--200 {font-weight: 200;}
+    &--300 {font-weight: 300;}
+    &--400 {font-weight: 400;}
+    &--600 {font-weight: 600;}
+    &--700 {font-weight: 700;}
+    &--900 {font-weight: 900;}
+  }
   &--center {text-align: center;}
   &--right {text-align: right;line-height:1;}
+  &__height--1 {line-height: 1;}
+  &__letter--0 {letter-spacing: 0;}
   &__space--wrap {white-space: pre-wrap;}
-  &--fix__before{
-    text-decoration: line-through;
-    opacity: .6;
-  }
 }
 .c-italic__en{
   font-family:'times',serif;
   font-style: italic;
+}
+strong{
+  color: var(--txt-strong);
+  font-size: 1.2em;
 }
 
 // 単位の空き
 .c-unit{
   &__before{margin:0 4px 0 0;}
   &__after{margin:0 0 0 4px;}
-}
-// アラート分
-.c-alert{
-  padding: 5px 10px;
-  border: var(--invalid) 1px solid;
-  p{
-    color:var(--invalid);
-    font-size: 15px;
-    text-align: center;
-  }
 }
 %c-status{
   padding: 2px .25rem;
@@ -175,17 +146,8 @@
     @extend %c-status;
     background-color: var(--ok);
   }
-  &__blue{
-    @extend %c-status;
-    background-color: var(--primary);
-  }
   &__red{
     @extend %c-status;
     background-color: var(--alert);
-  }
-  &__gray{
-    @extend %c-status;
-    color: var(--txt-weak);
-    font-weight: 700;
   }
 }

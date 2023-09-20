@@ -1,4 +1,4 @@
-@use "../foundation/responsive" as *;
+@use "../foundation/breakpoints" as *;
 @use "../form/_var" as *;
 /* ! --------------------------------------------------
 - インプット
@@ -11,7 +11,7 @@ textarea {
   resize: none;
   min-height: 100px;
   width: 100%;
-  @include responsive(sm){
+  @include breakpoints(sm){
     min-height:200px;
   }
 }
@@ -65,7 +65,7 @@ textarea {
   padding: 5px 8px;
   resize: none;
   min-height: 100px;
-  @include responsive(sm){
+  @include breakpoints(sm){
     padding: 8px;
     min-height: 200px;
   }
@@ -105,27 +105,6 @@ textarea {
     }
   }
   &--column{@extend #{$c-input};flex-direction:column;width:100%;}
-  &__600{@extend #{$c-input};width: 100%;
-    @include responsive (md){width:600px;}
-  }
-  &__500{@extend #{$c-input};width: 100%;
-    @include responsive (md){width:500px;}
-  }
-  &__400{@extend #{$c-input};width: 100%;
-  @include responsive (sm){width:400px;}
-}
-  &__350{@extend #{$c-input};width: 100%;
-  @include responsive (sm){width:350px;}
-}
-  &__300{@extend #{$c-input};width: 100%;
-  @include responsive (sm){width:300px;}
-}
-  &__250{@extend #{$c-input};width: 250px;}
-  &__200{@extend #{$c-input};width: 200px;}
-  &__150{@extend #{$c-input};width: 150px;}
-  &__100{@extend #{$c-input};width: 100px;}
-  &__70{@extend #{$c-input};width: 70px;}
-  &__50{@extend #{$c-input};width: 50px;}
   // -- チェックボックス・ラジオ共通項目
   %inputInput {    
     opacity: 0;
@@ -263,7 +242,7 @@ textarea {
         padding:4px 16px;
         font-size: 14px;
         font-weight:700;
-        @include responsive (sm){
+        @include breakpoints (sm){
           padding:4px 8px;
           font-size: 13px;
         }
@@ -417,7 +396,7 @@ input:-webkit-autofill {-webkit-box-shadow: 0 0 0px 1000px #fafafa inset;}
 input[type="file"]{display:none;width:100%;border-radius:0 !important;padding: 0;}
 
 /* イメージ、ファイル系 */
-.c-input--image,.c-input--file{
+.c-input--image{
   width: 100%;
   max-width: 300px;
   position:relative;

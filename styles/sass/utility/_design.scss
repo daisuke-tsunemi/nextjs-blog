@@ -27,7 +27,7 @@
 .p-noContent{
   padding:30px;
   min-height: 150px;
-  background-color: color(bgGray);
+  background-color: var(--bg);
   width: 100%;
   display: flex;flex-wrap:wrap;
   align-items: center;

@@ -1,4 +1,4 @@
-@use "../../foundation/responsive" as *;
+@use "../../foundation/breakpoints" as *;
 /* ! --------------------------------------------------
 - ボックス
 -------------------------------------------------- */
@@ -7,7 +7,7 @@
     &.bg-fff{
         padding:1rem;
         background-color: rgba($color: #fff, $alpha: 0.85);
-        @include responsive (md){
+        @include breakpoints (md){
             padding: 2rem;
         }
     }
@@ -38,7 +38,7 @@
     justify-content:center;
     p{
         color:#888;
-        @include responsive (sm){
+        @include breakpoints (sm){
             font-size:16px;
         }
     }

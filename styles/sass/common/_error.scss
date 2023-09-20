@@ -1,5 +1,5 @@
 @use "../foundation/_var" as *;
-@use "../foundation/responsive" as *;
+@use "../foundation/breakpoints" as *;
 /* ! --------------------------------------------------
 - errorPage
 -------------------------------------------------- */
@@ -7,15 +7,15 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  .l-body{
-    justify-content: center;
-    background:url(../image/common/error/bg-sp.webp) no-repeat center;
-    background-size: cover;
-    @include responsive (md){
-      background:url(../image/common/error/bg.webp) no-repeat center;
-      background-size: cover;
-    }
-  }
+  // .l-body{
+  //   justify-content: center;
+  //   background:url(../image/common/error/bg-sp.webp) no-repeat center;
+  //   background-size: cover;
+  //   @include breakpoints (md){
+  //     background:url(../image/common/error/bg.webp) no-repeat center;
+  //     background-size: cover;
+  //   }
+  // }
   .p-frame{
     padding: 1rem;
     border-radius:1rem;
@@ -23,20 +23,20 @@
     -webkit-backdrop-filter:blur(5px);
     background-color: rgba(255,255,255, .6);
     box-shadow: rgba(0, 0, 0, 0.3) 2px 8px 8px;
-    @include responsive (md){
+    @include breakpoints (md){
       padding: 2rem;
       border-radius:2rem;
     }
     .c-text__lv1{
       font-size:120px;
       line-height:1;
-      @include responsive (md){
+      @include breakpoints (md){
         font-size:200px;
       }
     }
     &__head{
       margin: 0 0 1rem;
-      @include responsive (md){
+      @include breakpoints (md){
         margin: 0 0 1rem;
       }
     }
@@ -52,7 +52,7 @@
     }
     &__foot {
       margin: 1.5rem 0 0;
-      @include responsive (md){
+      @include breakpoints (md){
         margin: 2.5rem 0 0;
       }
     }

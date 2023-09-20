@@ -1,4 +1,4 @@
-@use "../../foundation/responsive" as *;
+@use "../../foundation/breakpoints" as *;
 .p-calendar{
   max-height: 76vh;
   &--btn{

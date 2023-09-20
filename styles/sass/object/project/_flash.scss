@@ -1,4 +1,4 @@
-@use "../../foundation/responsive" as *;
+@use "../../foundation/breakpoints" as *;
 .p-flash {
     position: fixed;
     top: 0;
@@ -41,7 +41,7 @@
           align-items:center;
           flex-direction: column;
           max-width: 90%;
-          @include responsive (md){
+          @include breakpoints (md){
             padding: 3rem 5rem;
           }
           p{

@@ -1,7 +1,7 @@
 /* ——————————————————————————————————————————————————————————————
 flex
 —————————————————————————————————————————————————————————————— */
-@use "../foundation/responsive" as *;
+@use "../foundation/breakpoints" as *;
 .u-flex{
   display:flex;
 }
@@ -13,7 +13,7 @@ flex
   flex-wrap:wrap;
   align-items: center;
   gap: 0.5rem;
-  @include responsive (tabletWide){
+  @include breakpoints (lg){
     gap: 1rem
   }
   // 縦並び

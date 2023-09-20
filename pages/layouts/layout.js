@@ -2,11 +2,11 @@ import Head from 'next/head';
 import Image from 'next/image';
 import Link from 'next/link';
 import Footer from '../layouts/footer';
-import View from '../../components/view';
+import Aside from '../layouts/aside';
 import layoutStyles from '../../styles/css/layout.module.css';
-import styles from '../../styles/css/utils.module.css'
+import ForwardToInboxTwoToneIcon from '@mui/icons-material/ForwardToInboxTwoTone';
 
-const name = 'Your Name';
+const description = 'Your NameYour NameYour NameYour NameYour Name';
 export const siteTitle = 'Next.js Sample Website';
 export const pageTitle = 'トップページ';
 export const siteDescription = 'Learn how to build a personal website using Next.js';
@@ -17,7 +17,7 @@ export default function Layout({ children, home }) {
       <Head>
         <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0" />
         <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
-        <link rel="icon" href="img/favicon/favicon.ico" />
+        <link rel="icon" href="images/favicon/favicon.ico" />
         <meta property="og:site_name" content={siteTitle} />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content="@ユーザー名" />
@@ -29,41 +29,48 @@ export default function Layout({ children, home }) {
         <meta name="og:title" content={pageTitle} />
         <title>{pageTitle} | {siteTitle}</title>
       </Head>
-      
+      {/* ヘッダー */}
       <header className={layoutStyles.header}>
         {home ? (
           <>
-            <div className={styles.container}>
-              <h1 className={styles.heading2Xl}>{name}</h1>
-            </div>
-            <View />
           </>
         ) : (
           <>
-            <div className={styles.container}>
-              <Link href="/">
-                <Image
-                  priority
-                  src="/images/img_9.png"
-                  className={styles.borderCircle}
-                  height={60}
-                  width={60}
-                  alt=""
-                />
-              </Link>
-              <h2 className={styles.headingLg}>
-                <Link href="/" className={styles.colorInherit}>
-                  {name}
-                </Link>
+            <div className='container'>
+              <h2 className='c-text__min'>
+                {description}
               </h2>
+              <div className='logo'>
+                <Link href="/">
+                  <Image
+                    priority
+                    src="/images/img_9.png"
+                    height={48}
+                    width={48}
+                    alt=""
+                  />
+                </Link>
+              </div>
+              <div>
+                <Link href="/">
+                  <ForwardToInboxTwoToneIcon color="secondary" />
+                </Link>
+              </div>
             </div>
           </>
         )}
       </header>
 
-      <main className={layoutStyles.main}>{children}</main>
-      <Footer />
+      {/* サイドナビ */}
+      <Aside />
 
+      {/* メインコンテンツ */}
+      <main className={layoutStyles.main}>
+        {children}
+      </main>
+
+      {/* フッター */}
+      <Footer />
     </div>
   );
 }

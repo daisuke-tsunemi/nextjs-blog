@@ -1,4 +1,4 @@
-@use "../foundation/responsive" as *;
+@use "../foundation/breakpoints" as *;
 @use "../foundation/_var" as *;
 /* ! ==================================================
 - ベースレイアウト[サイドバー、メインを並べるために使用]
@@ -8,18 +8,17 @@
   width: 100%;
   display: flex;
   overflow: hidden;
-  background: var(--bg) url(../image/admin/bg/bg_base.png) repeat center;
-  @include responsive (tabletWide){
+  @include breakpoints (lg){
     display: flex;
   }
 }
 .l{
   gap: 1rem;
-  @include responsive (md){
+  @include breakpoints (md){
     display:flex;
   }
   >div{
-    @include responsive (md){
+    @include breakpoints (md){
       display: flex;
       flex: auto;
     }
@@ -30,7 +29,7 @@
   .l-half{
     flex: auto;
     width: 100%;
-    @include responsive (sm){
+    @include breakpoints (sm){
       flex: 1 1 50%;
       width: 50%;
     }
@@ -41,7 +40,7 @@
       &__#{$i}0 {
         flex: auto;
         width: 100%;
-        @include responsive (sm){
+        @include breakpoints (sm){
           width: (10px * $i);
           flex:0 0 (10px * $i);
         }

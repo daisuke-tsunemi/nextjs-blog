@@ -1,4 +1,4 @@
-@use "../foundation/responsive" as *;
+@use "../foundation/breakpoints" as *;
 /* ——————————————————————————————————————————————————————————————
 padding
 —————————————————————————————————————————————————————————————— */
@@ -6,32 +6,9 @@ padding
   padding: 0;
 }
 // padding-top
-@for $i from 0 through 50 {
-  $num: $i * 4;
+@for $i from 2 through 10 {
+  $num: $i * 8;
   .u-pdt#{$num} {
-    padding-top: #{calc($num / 2)}px;
-  }
-}
-@include responsive(tabletWide) {
-  @for $i from 0 through 50 {
-    $num: $i * 4;
-    .u-pdt#{$num} {
-      padding-top: #{$num}px;
-    }
-  }
-}
-// padding-bottom
-@for $i from 0 through 50 {
-  $num: $i * 4;
-  .u-pdb#{$num} {
-    padding-bottom: #{calc($num / 2)}px;
-  }
-}
-@include responsive(tabletWide) {
-  @for $i from 0 through 50 {
-    $num: $i * 4;
-    .u-pdb#{$num} {
-      padding-bottom: #{$num}px;
-    }
+    padding: #{calc($num / 2)}px;
   }
 }

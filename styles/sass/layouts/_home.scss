@@ -1,22 +1,22 @@
-@use "../foundation/responsive" as *;
+@use "../foundation/breakpoints" as *;
 @use "../foundation/var" as *;
-.p-section{
+.section--home{
     margin-top: 3rem;
-    @include responsive (sm){
+    @include breakpoints (sm){
         margin-top: 5rem;
     }
-    @include responsive (tabletWide){
+    @include breakpoints (lg){
         margin-top: 100px;
     }
     &__head{
         margin-bottom: 1.5rem;
-        @include responsive (sm){
+        @include breakpoints (sm){
             margin-bottom: 2.5rem;
         }
     }
     &__foot{
         margin-top: 1.5rem;
-        @include responsive (sm){
+        @include breakpoints (sm){
             margin-top: 2.5rem;
         }
     }
@@ -24,7 +24,7 @@
 .c-buttonArea__bottom--fixed{
     display:flex;
     flex-direction: column-reverse;
-    @include responsive (sm){
+    @include breakpoints (sm){
         flex-direction: row;
     }
 }

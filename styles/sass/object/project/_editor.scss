@@ -1,11 +1,11 @@
-@use "../../foundation/responsive" as *;
+@use "../../foundation/breakpoints" as *;
 @use "../../foundation/var" as *;
 .p-editor{
-    border: 1px solid color(main);
+    border: 1px solid var(--border);
     border-radius:8px;
     padding: 1rem;
     background-color:#f7f7f7;
-    @include responsive (pc){
+    @include breakpoints (xl){
         padding: 1rem 1rem 1rem 3.5rem;
     }
     .ce-block{

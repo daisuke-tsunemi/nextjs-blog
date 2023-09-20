@@ -1,5 +1,5 @@
 @use "../foundation/var" as *;
-@use "../foundation/responsive" as *;
+@use "../foundation/breakpoints" as *;
 %l-frame,.l-frame{
   flex: auto;
   &__narrow{
@@ -13,7 +13,7 @@
     align-items:center;
     flex: auto;
     padding: 1rem 4rem 1rem 1rem;
-    @include responsive (tabletWide){
+    @include breakpoints (lg){
       padding: 2rem 1.5rem;
     }
     .c-title{
@@ -34,46 +34,11 @@
       svg{
         fill: var(--primary-dark);
       }
-      .c-button__sm{
-        &.c-button--white{
-          color: var(--txt-weak);
-          &:before{
-            content: '';
-            display: inline-block;
-            height:20px;
-            width:20px;
-            background:url(../image/common/shape/dl.svg) no-repeat center;
-            background-size:cover;
-            margin-inline-end: 8px;
-          }
-        }
-      }
-    }
-    &--action{
-      display:flex;
-      align-items:center;
-      margin-inline-start: auto;
-      gap: 0.5rem;
-      a{
-        display:flex;
-        align-items:center;
-        gap: 0.5rem;
-        &:hover{
-          color: var(--primary);
-          .thumbnail{
-            border-color: var(--primary);
-          }
-        }
-        +a{
-          border-left: 1px solid #aaa;
-          padding-left: 0.5rem;
-        }
-      }
     }
   }
   &__body{
     padding:0 1rem;
-    @include responsive (tabletWide){
+    @include breakpoints (lg){
       padding:0 1.5rem;
     }
     .c-box{
@@ -93,7 +58,7 @@
   }
   &__foot{
     padding:1.5rem 1rem 0;
-    @include responsive (tabletWide){
+    @include breakpoints (lg){
       padding:2rem 1.5rem 0;
     }
   }

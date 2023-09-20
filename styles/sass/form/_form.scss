@@ -1,11 +1,11 @@
-@use "../foundation/responsive" as *;
+@use "../foundation/breakpoints" as *;
 @use "../foundation/_var" as *;
 .l-form{
   &__head{
     margin-block-end: 1rem;
   }
   .l-grid--2{
-    @include responsive (tabletWide){
+    @include breakpoints (lg){
       grid-template-columns:2fr 1fr;
     }
   }

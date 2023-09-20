@@ -1,4 +1,4 @@
-@use "../../foundation/responsive" as *;
+@use "../../foundation/breakpoints" as *;
 /* ! --------------------------------------------------
 - scroll
 -------------------------------------------------- */
@@ -6,7 +6,7 @@
     overflow: auto;
     width: 100%;
     // p-scrollのwidth指定 変数
-    $i: 1;
+    $i: 2;
     @while $i <= 8 {
       &__height--#{$i}00 {
           @extend .p-scroll;
@@ -29,11 +29,11 @@
           }
           $i: $i + 1;
         }
-        @include responsive (md){
+        @include breakpoints (md){
             min-width: inherit !important;
         }
         .c-icon_next{
-          background-image: url(../image/icon/icon_arrow.svg);
+          // background-image: url(../image/icon/icon_arrow.svg);
           width:20px;
           display: block;
         }

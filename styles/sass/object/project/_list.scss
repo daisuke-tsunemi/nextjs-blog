@@ -1,4 +1,4 @@
-@use "../../foundation/responsive" as *;
+@use "../../foundation/breakpoints" as *;
 @use "../../foundation/var" as *;
 /* ! ==================================================
 - リスト
@@ -7,7 +7,7 @@
   >li{
     +li{
       margin-block-start: .5rem;
-      @include responsive (pcWide){
+      @include breakpoints (xl3){
         margin-block-start: 1rem;
       }
     }
@@ -24,7 +24,7 @@
     @extend %p-list;
     >li{
       gap: .5rem;
-      @include responsive (md){
+      @include breakpoints (md){
         gap: 1rem;
         display:flex;
         flex-wrap:wrap;
@@ -47,7 +47,7 @@
       display: flex;
       flex-wrap:wrap;
       >li{
-        @include responsive (sm){
+        @include breakpoints (sm){
           width: 50%;
         }
       }
@@ -57,10 +57,10 @@
       display: flex;
       flex-wrap:wrap;
       >li{
-        @include responsive (sm){
+        @include breakpoints (sm){
           width: 50%;
         }
-        @include responsive (md){
+        @include breakpoints (md){
           width: 33.3333%;
         }
       }
@@ -70,13 +70,13 @@
       display: flex;
       flex-wrap:wrap;
       >li{
-        @include responsive (sm){
+        @include breakpoints (sm){
           width: 50%;
         }
-        @include responsive (md){
+        @include breakpoints (md){
           width: 33.3333%;
         }
-        @include responsive (tabletWide){
+        @include breakpoints (lg){
           width: 25%;
         }
       }
@@ -86,16 +86,16 @@
       display: flex;
       flex-wrap:wrap;
       >li{
-        @include responsive (sm){
+        @include breakpoints (sm){
           width: 50%;
         }
-        @include responsive (md){
+        @include breakpoints (md){
           width: 33.3333%;
         }
-        @include responsive (tabletWide){
+        @include breakpoints (lg){
           width: 25%;
         }
-        @include responsive (note){
+        @include breakpoints (xl){
           width: 20%;
         }
       }
@@ -105,19 +105,19 @@
       display: flex;
       flex-wrap:wrap;
       >li{
-        @include responsive (sm){
+        @include breakpoints (sm){
           width: 50%;
         }
-        @include responsive (md){
+        @include breakpoints (md){
           width: 33.3333%;
         }
-        @include responsive (tabletWide){
+        @include breakpoints (lg){
           width: 25%;
         }
-        @include responsive (note){
+        @include breakpoints (xl2){
           width: 20%;
         }
-        @include responsive (pcWide){
+        @include breakpoints (xl3){
           width: 16.6666%;
         }
       }

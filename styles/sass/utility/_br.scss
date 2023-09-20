@@ -1,23 +1,84 @@
-@use "../foundation/responsive" as *;
+@use "../foundation/breakpoints" as *;
 /* ——————————————————————————————————————————————————————————————
 br
 —————————————————————————————————————————————————————————————— */
 /* 指定のワイド以上でON */
 .on{
-  &_pcWide{display:none; @include responsive (pcWide){display:block;}}
-  &_pc{display:none; @include responsive (pc){display:block;}}
-  &_note{display:none; @include responsive (note){display:block;}}
-  &_tabletWide{display:none; @include responsive (tabletWide){display:block;}}
-  &_tablet{display:none; @include responsive (md){display:block;}}
-  &_spWide{display:none; @include responsive (sm){display:block;}}
+  display:inherit;
+  &_pcWide{
+    display:none;
+    @include breakpoints (xl3){
+      display:inherit;
+    }
+  }
+  &_pc{
+    display:none;
+    @include breakpoints (xl2){
+      display:inherit;
+    }
+  }
+  &_note{
+    display:none;
+    @include breakpoints (xl){
+      display:inherit;
+    }
+  }
+  &_tabletWide{
+    display:none;
+    @include breakpoints (lg){
+      display:inherit;
+    }
+  }
+  &_tablet{
+    display:none;
+    @include breakpoints (md){
+      display:inherit;
+    }
+  }
+  &_spWide{
+    display:none;
+    @include breakpoints (sm){
+      display:inherit;
+    }
+  }
 }
  /* 指定のワイド以上でOFF */
  .off{
   display:none;
-  &_pcWide{ @include responsive (pcWide){display:none;}}
-  &_pc{ @include responsive (pc){display:none;}}
-  &_note{ @include responsive (note){display:none;}}
-  &_tabletWide{ @include responsive (tabletWide){display:none;}}
-  &_tablet{ @include responsive (md){display:none;}}
-  &_spWide{ @include responsive (sm){display:none;}}
+  &_pcWide{
+    
+    @include breakpoints (xl3){
+      display:none;
+    }
+  }
+  &_pc{
+    
+    @include breakpoints (xl2){
+      display:none;
+    }
+  }
+  &_note{
+    
+    @include breakpoints (xl){
+      display:none;
+    }
+  }
+  &_tabletWide{
+    
+    @include breakpoints (lg){
+      display:none;
+    }
+  }
+  &_tablet{
+    
+    @include breakpoints (md){
+      display:none;
+    }
+  }
+  &_spWide{
+    
+    @include breakpoints (sm){
+      display:none;
+    }
+  }
 }

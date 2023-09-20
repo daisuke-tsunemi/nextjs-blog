@@ -1,4 +1,4 @@
-@use "../foundation/responsive" as *;
+@use "../foundation/breakpoints" as *;
 /* ——————————————————————————————————————————————————————————————
 width
 —————————————————————————————————————————————————————————————— */
@@ -10,23 +10,23 @@ width
     width: 100%;
   }
 }
-@for $i from 1 through 50 {
+@for $i from 5 through 30 {
   $num: $i * 10;
   .u-w#{$num} {
     width: #{$num}px;
   }
 }
 input{
-  @for $i from 16 through 50 {
+  @for $i from 16 through 30 {
     $num: $i * 10;
     &.u-w#{$num} {
       width: 100%;
     }
   }
 }
-@include responsive(sm) {
+@include breakpoints(sm) {
   input{
-    @for $i from 16 through 50 {
+    @for $i from 16 through 30 {
       $num: $i * 10;
       &.u-w#{$num} {
         width: #{$num}px;

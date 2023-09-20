@@ -1,4 +1,4 @@
-@use "../foundation/responsive" as *;
+@use "../foundation/breakpoints" as *;
 /* ——————————————————————————————————————————————————————————————
 margin
 —————————————————————————————————————————————————————————————— */
@@ -7,30 +7,30 @@ margin
 }
 
 // margin-top
-@for $i from 0 through 50 {
-  $num: $i * 4;
+@for $i from 2 through 10 {
+  $num: $i * 8;
   .u-mgt#{$num} {
     margin-top: #{calc($num / 2)}px;
   }
 }
-@include responsive(tabletWide) {
-  @for $i from 0 through 50 {
-    $num: $i * 4;
+@include breakpoints(lg) {
+  @for $i from 2 through 10 {
+    $num: $i * 8;
     .u-mgt#{$num} {
       margin-top: #{$num}px;
     }
   }
 }
 // margin-bottom
-@for $i from 0 through 50 {
-  $num: $i * 4;
+@for $i from 2 through 10 {
+  $num: $i * 8;
   .u-mgb#{$num} {
     margin-bottom: #{calc($num / 2)}px;
   }
 }
-@include responsive(tabletWide) {
-  @for $i from 0 through 50 {
-    $num: $i * 4;
+@include breakpoints(lg) {
+  @for $i from 2 through 10 {
+    $num: $i * 8;
     .u-mgb#{$num} {
       margin-bottom: #{$num}px;
     }

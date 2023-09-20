@@ -1,7 +1,44 @@
-@use "../foundation/responsive" as *;
+@use "../foundation/breakpoints" as *;
 /* ! ==================================================
 - ヘッダー
 ================================================== */
+header{
+  .container{
+		padding: .5rem 1.5rem;
+    display:flex;
+    align-items:center;
+    justify-content: space-between;
+    width: 100%;
+		.c-text__min{
+			max-width: 200px;
+		}
+		.logo{
+			&:before{
+				content: '';
+				position: absolute;
+				border-radius: 50%;
+				bottom: -2.5rem;
+				left: 50%;
+				transform: translate(-50%, 0);
+				background-color: #fff;
+				height:280px;
+				width:280px;
+			}
+			a{
+				z-index: 1;
+				position:absolute;
+				bottom: -50%;
+				left: 50%;
+				transform: translate(-50%, 0);
+				img{
+					object-fit: cover;
+					aspect-ratio: 1;
+					border-radius: 50%;
+				}
+			}
+		}
+  }
+}
 .l-header {
 	width: 100%;
 	padding:8px 24px;
@@ -9,7 +46,7 @@
 	display:flex;
 	align-items:center;
 	justify-content:center;
-	@include responsive (md){
+	@include breakpoints (md){
 		height: 40px;
 		padding:8px 16px;
 	}
@@ -21,7 +58,7 @@
 		.c-logo{
 			height:1rem;
 			display:block;
-			@include responsive (sm){
+			@include breakpoints (sm){
 				height:1.5rem;
 			}
 		}
@@ -59,7 +96,7 @@
 			}
 		}
 	}
-	@include responsive (sm){
+	@include breakpoints (sm){
 		display: block;
 			z-index: 99;
 		&:hover{

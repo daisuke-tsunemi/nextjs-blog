@@ -10,10 +10,8 @@ a{
 	}
 }
 .c-image{
-	background-image: url(../image/icon/icon_noimage_white.svg);
+	// background: url(../image/shape/avatar.webp) no-repeat center;
 	background-size: cover;
-	background-repeat: no-repeat;
-	background-position: center center;
 	width: 100%;
 	border-radius:8px;
 	aspect-ratio: 4/3;

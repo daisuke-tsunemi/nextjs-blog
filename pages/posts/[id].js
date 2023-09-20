@@ -11,7 +11,7 @@ export default function Post({ postData }) {
       <Head>
         <title>{postData.title}</title>
       </Head>
-      <div className={styles.content}>
+      <section className={styles.content}>
         <h1 className={styles.headingXl}>
           {postData.title}
         </h1>
@@ -19,8 +19,8 @@ export default function Post({ postData }) {
           priority
           className={styles.img}
           src={postData.image}
-          height={100}
-          width={200}
+          height={300}
+          width={400}
           alt=""
         />
         <br />
@@ -31,7 +31,7 @@ export default function Post({ postData }) {
         <Date dateString={postData.date} />
         <br />
         <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
-      </div>
+      </section>
     </Layout>
   );
 };
