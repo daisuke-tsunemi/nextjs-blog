@@ -3,7 +3,7 @@ import Head from 'next/head';
 import Image from 'next/image';
 import { getAllPostIds, getPostData } from '../../lib/posts'
 import Date from '../../components/date';
-import styles from '../../styles/css/utils.module.css'
+import styles from '../../styles/css/stylesPage.module.css'
 
 export default function Post({ postData }) {
   return (
@@ -12,7 +12,7 @@ export default function Post({ postData }) {
         <title>{postData.title}</title>
       </Head>
       <section className={styles.content}>
-        <h1 className={styles.headingXl}>
+        <h1 className='title'>
           {postData.title}
         </h1>
         <Image

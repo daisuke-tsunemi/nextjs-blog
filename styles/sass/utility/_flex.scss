@@ -37,6 +37,9 @@ flex
     align-items: flex-end;
     justify-content: flex-end;
   }
+  &.between{
+    justify-content: space-between;
+  }
   .f-item{
     margin:0;
   }

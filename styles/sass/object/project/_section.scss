@@ -1,0 +1,13 @@
+.p_section{
+  +.p_section{
+    margin-top: 8rem;
+  }
+  &__head{
+    margin-bottom: 3rem;
+    width: 90%;
+  }
+  &__foot{
+    margin-top: 3rem;
+    width: 90%;
+  }
+}

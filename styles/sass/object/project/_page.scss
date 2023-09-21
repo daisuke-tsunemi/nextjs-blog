@@ -1,199 +1,35 @@
 @use "../../foundation/breakpoints" as *;
 // 下層ページ特有のCSS記述
-.p-section{
-  &__head{
-    margin-bottom: 0.5rem;
-    @include breakpoints (md){
-      margin-bottom: 1rem;
-    }
-  }
-  &__body{
-    .p-list{
-      &__wrap{
-        margin:-0.25rem;
-        >li{
-          padding: 0.25rem;
-        }
-      }
-    }
-  }
-  &__foot{
-    margin-top: 0.5rem;
-    @include breakpoints (md){
-      margin-top: 1rem;
-    }
-    .c-text{
-      margin-top: 0.5rem;
-    }
-  }
-  +.p-section{
-    padding-top: 1rem;
-    @include breakpoints (md){
-      padding-top: 1.5rem;
-    }
-  }
+.heading2Xl{
+  font-size:2.5rem;line-height:1.2;font-weight:800;letter-spacing:-0.05rem;margin:1rem 0
 }
-.p-detail--border{
-  >div{
-    grid-template-columns: unquote('minmax(120px,1fr)') 1fr;
-    +div{
-      border-top: 1px solid var(--border);
-      padding-top: 1rem;
-    }
-    P+P{
-      margin:0;
-    }
-  }
+.headingXl{
+  font-size:2rem;line-height:1.3;font-weight:800;letter-spacing:-0.05rem;margin:1rem 0
 }
-.p-master--multi{
-  .t-wrapper{
-    display:flex;
-    flex-direction: column;
-    .t-body{
-      flex: auto;
-      .t-table{
-        height: 40vh;
-      }
-    }
-  }
+.headingLg{
+  font-size:1.5rem;line-height:1.4;margin:1rem 0
 }
-// 詳細ページ
-.l-detail{
-  .l-frame{
-    .p-list__border{
-      .l-grid--2{
-        grid-template-columns: 1fr 1fr;
-      }
-      .c-icon--map{
-        margin-inline-start:auto;
-        flex: 0 0 32px;
-        width: 32px;
-        background-size: unset;
-        border: 1px solid var(--primary-dark);
-      }
-    }
-    .c-info{
-      small{
-        margin-inline-end: 0.5rem;
-      }
-    }
-    .p-list--number{
-      counter-reset: number 0;
-      > li, > .f-item{
-        counter-increment: number 1;
-        span{
-          &:after{
-            content: counter(number) " ";
-            color: var(--txt);
-            font-size: 14px;
-            margin:0 0 0 4px;
-            background-color: transparent;
-            border: none;
-          }
-        }
-      }
-    }
-    .l-grid{
-      &--3{
-        &.c-detail--cars{
-          grid-template-columns:max(400px) 1fr;
-          @include breakpoints (lg){
-            grid-template-columns:250px 250px minmax(300px, 1fr);
-          }
-          @include breakpoints (xl2){
-            grid-template-columns:300px 300px minmax(300px, 1fr);
-          }
-        }
-      }
-      //営業所マスタの更新ボタン
-      .c-icon--update{
-        border: 1px solid var(--primary-dark);
-      }
-      &--reception{
-        grid-template-columns:1fr;
-        @include breakpoints (lg){
-          grid-template-columns:1fr 1fr;
-        }
-        @include breakpoints (xl2){
-          grid-template-columns:1fr 1fr 350px;
-        }
-      }
-    }
-    //アカウントマイページ
-    .l-account.l-grid--2{
-      grid-template-columns:250px 1fr;
-      @include breakpoints (lg){
-        grid-template-columns: 400px 1fr;
-      }
-      .p-list{
-        &__row {
-          li {
-            gap: .5rem;
-            @include breakpoints (lg){
-              gap: 1rem;
-              flex-wrap: nowrap;
-            }
-            .label{
-              min-width: inherit;
-              width: 100%;
-              @include breakpoints (lg){
-                min-width: 100px;
-                width: auto;
-              }
-            }
-          }
-        }
-      }
-    }
-  }
-  .p-addition--partner{
-    .bg-fff{
-      border-radius: 0;
-    }
-  }
+.headingMd{
+  font-size:1.2rem;line-height:1.5
 }
-
-// 車両マスタのナンバープレートっぽい
-.c-number--plate{
-  border: 8px solid #207700;
-  padding: 0.5rem 1rem 0.5rem;
-  border-radius:0.5rem;
-  background-color: #fff;
-  min-width: 200px;
-  p,span{
-    color: #207700;
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    +p{
-      margin-top: -1rem;
-    }
-    .c-text__lv1{
-      @include breakpoints (md){
-        font-size: 3rem;
-      }
-    }
-  }
+.borderCircle{
+  border-radius:9999px;aspect-ratio:1
 }
-form{
-  .c-number--plate{
-    max-width: 270px;
-    .u-align{
-      gap: 0.5rem;
-      input{
-        color: #207700;
-        text-align: center;
-      }
-    }
-    .middle{
-      font-weight: 700;
-      font-size: 1.5rem;
-      height: auto;
-    }
-    .thick{
-      font-weight: 900;
-      font-size: 2rem;
-      height: auto;
-    }
-  }
+.colorInherit{
+  color:inherit
+}
+.padding1px{
+  padding-top:1px
+}
+.list{
+  list-style:none;padding:0;margin:0
+}
+.listItem{
+  margin:0 0 1.25rem
+}
+.lightText{
+  color:#666
+}
+.darkText{
+  color:#666
 }

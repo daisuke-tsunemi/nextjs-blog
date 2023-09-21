@@ -5,21 +5,21 @@ import layoutStyles from '../../styles/css/layout.module.css';
 export default function Footer() {
   return (
     <footer className={layoutStyles.footer}>
-      <div className="l-grid--2 gap16">
-        <div className="footer__logo">
+      <div className="p-footer">
+        <div className="p-footer__logo">
           <Image
             priority
-            src="https://og-image.vercel.app/nextjs-black-logo.svg"
-            width={200}
-            height={80}
-            alt="Nextのロゴ"
+            src="/images/logo/logo.png"
+            width={150}
+            height={50}
+            alt="ロゴ"
           />
         </div>
-        <div className="footer__menu">
-          <nav className="footer__menu--nav">
-            <Link href="/">Home</Link>
-            <Link href="/posts">Blog Index</Link>
-            <Link href="/details/first">Details First</Link>
+        <div className="p-footer__menu">
+          <nav className="p-footer__menu--nav">
+            <Link className='c-text__sm' href="/">Home</Link>
+            <Link className='c-text__sm' href="/posts">Blog Index</Link>
+            <Link className='c-text__sm' href="/details/first">Details First</Link>
           </nav>
         </div>
       </div>

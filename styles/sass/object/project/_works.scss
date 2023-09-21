@@ -1,0 +1,12 @@
+@use "../../foundation/breakpoints" as *;
+.gridCard{
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(2, 1fr);
+  @include breakpoints (md){
+    grid-template-columns: repeat(3, 1fr);
+  }
+  @include breakpoints (lg){
+    grid-template-columns: repeat(4, 1fr);
+  }
+}

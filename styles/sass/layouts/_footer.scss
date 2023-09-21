@@ -1,5 +1,9 @@
 @use "../foundation/breakpoints" as *;
-.footer{
+.p-footer{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content: space-between;
+  gap: 1rem;
   &__logo{
     img{
       object-fit: contain;
@@ -7,9 +11,9 @@
   }
   &__menu{
     &--nav{
-      display: grid;
-      grid-template-columns:1fr;
-      gap: .5rem;
+      display:flex;
+      flex-wrap:wrap;
+      gap: .25rem;
       a{
         text-align: right;
         padding: .5rem;
@@ -24,5 +28,7 @@
 }
 .copyright{
   font-size: 11px;
-  color: #888;
+  color: #ccc;
+  text-align: right;
+  margin: 2rem 0 0;
 }

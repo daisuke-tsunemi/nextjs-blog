@@ -2,7 +2,7 @@ import Head from 'next/head';
 import Image from 'next/image';
 import Link from 'next/link';
 import layoutStyles from '../../styles/css/layout.module.css';
-import styles from '../../styles/css/utils.module.css'
+import styles from '../../styles/css/stylesPage.module.css'
 
 const name = 'Your Name';
 export const siteTitle = 'エラーが起こっています';
