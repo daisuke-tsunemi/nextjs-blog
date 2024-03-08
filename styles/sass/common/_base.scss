@@ -10,16 +10,25 @@
 *{
   box-sizing:border-box;
   letter-spacing:.06em;
-
 }
 html {
   font-family: var(--font);
   scroll-behavior: smooth;
-  scroll-padding-top: 16px;
+  scroll-padding-top: 1rem;
   height: -weblit-fill-available;
   display: block;
   font-family: 'Alata', 'Kiwi Maru', sans-serif;
   font-feature-settings: "palt";
+  /* Windows (全バージョン)のみ */
+  &.win {
+    font-feature-settings: normal;
+  }
+}
+/* edgeのみ */
+@supports (-ms-ime-align: auto){
+  html {
+    font-feature-settings: normal;
+  }
 }
 body {
   min-height: 100vh;
@@ -34,18 +43,6 @@ body {
   position:relative;
   color: var(--text);
   line-height: 1.4;
-}
-html {
-  /* Windows (全バージョン)のみ */
-  &.win {
-    font-feature-settings: normal;
-  }
-}
-@supports (-ms-ime-align: auto){
-  /* edgeのみ */
-  html {
-    font-feature-settings: normal;
-  }
 }
 /* ! --------------------------------------------------
 - text
@@ -78,7 +75,7 @@ a {
     &::after{
       content: '';
       display: inline-block;
-      // background:url(../../../public/image/shape/blanc.svg) no-repeat center;
+      background:url(../images/shape/blanc.svg) no-repeat center;
       background-size:cover;
       height:10px;
       width:10px;

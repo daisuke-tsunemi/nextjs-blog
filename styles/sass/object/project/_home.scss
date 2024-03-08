@@ -1,9 +1,9 @@
 @use "../../foundation/breakpoints" as *;
 .view{
   overflow: hidden;
-  border-radius:0 0 4rem 4rem;
   .swiperImg{
     object-fit: cover;
     height: 90vh;
+    border-radius:0 0 4rem 4rem;
   }
 }

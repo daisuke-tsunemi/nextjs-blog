@@ -1,12 +1,11 @@
 import Link from 'next/link';
-import layoutStyles from '../../styles/css/layout.module.css';
 
-export default function Aside() {
+export default function Sidebar() {
   return (
-    <aside className={layoutStyles.sidebar}>
-      <div className="p-menu">
-        <div className="p-menu__wrapper">
-          <nav className="p-menu__nav">
+    <aside className='sidebar'>
+      <div className='navigation'>
+        <div className='navigation__wrapper'>
+          <nav className='navigation__nav'>
             <Link href="/">Home</Link>
             <Link href="/posts">Blog Index</Link>
             <Link href="/details/first">Details First</Link>

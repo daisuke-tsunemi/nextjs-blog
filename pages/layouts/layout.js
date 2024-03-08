@@ -2,7 +2,7 @@ import Head from 'next/head';
 import Image from 'next/image';
 import Link from 'next/link';
 import Footer from '../layouts/footer';
-import Aside from '../layouts/aside';
+import Sidebar from '../layouts/aside';
 import layoutStyles from '../../styles/css/layout.module.css';
 import ForwardToInboxTwoToneIcon from '@mui/icons-material/ForwardToInboxTwoTone';
 
@@ -60,18 +60,20 @@ export default function Layout({ children, home }) {
       </header>
 
       {/* サイドナビ */}
-      <Aside />
+      <Sidebar />
 
       {/* メインコンテンツ */}
-        {home ? (
-          <main className={layoutStyles.main}>
-            {children}
-          </main>
-        ) : (
-          <main className={layoutStyles.main}>
-            {children}
-          </main>
-        )}
+        {
+          home ? (
+            <main className={layoutStyles.mainHome}>
+              {children}
+            </main>
+          ) : (
+            <main className={layoutStyles.mainPage}>
+              {children}
+            </main>
+          )
+        }
 
       {/* フッター */}
       <Footer />

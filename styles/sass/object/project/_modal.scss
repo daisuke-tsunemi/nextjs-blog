@@ -1,5 +1,4 @@
 @use "../../foundation/breakpoints" as *;
-@use "../../foundation/var" as *;
 body{
   &:has(.remodal-is-opened){
     overflow: hidden;

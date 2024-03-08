@@ -87,39 +87,3 @@
     p{color:#fff;}
   }
 }
-.l-form{
-  .c-accordion{
-    cursor: pointer;
-    max-height: 24px;
-    overflow: hidden;
-    position:relative;
-    padding-bottom: 0.5rem;
-    border-bottom: 1px dotted #888;
-    &:hover{
-      border-bottom: 1px dotted var(--primary);
-    }
-    &:after{
-      content: '';
-      display: inline-block;
-      height:6px;
-      width:6px;
-      transform: rotate(-45deg);
-      border-right: 2px solid var(--primary);
-      border-bottom: 2px solid var(--primary);
-      margin-inline-start: .5rem;
-      transition: all 0.2s ease;
-      position:absolute;
-      right: 2px;
-      top: 6px;
-    }
-    &.open{
-      max-height: inherit;
-      &:after{
-        transform: rotate(45deg);
-      }
-    }
-    .u-align{
-      align-items: flex-start;
-    }
-  }
-}

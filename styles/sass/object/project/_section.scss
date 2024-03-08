@@ -1,13 +1,15 @@
+@use "../../foundation/breakpoints" as *;
 .p_section{
   +.p_section{
-    margin-top: 8rem;
+    margin-top: 5rem;
   }
   &__head{
-    margin-bottom: 3rem;
-    width: 90%;
+    margin-bottom: 2rem;
+  }
+  &__body{
+    width: 100%;
   }
   &__foot{
-    margin-top: 3rem;
-    width: 90%;
+    margin-top: 2rem;
   }
 }

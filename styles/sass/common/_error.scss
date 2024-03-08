@@ -3,19 +3,10 @@
 /* ! --------------------------------------------------
 - errorPage
 -------------------------------------------------- */
-.l-error {
+.pageError {
   display: flex;
   flex-direction: column;
   align-items: center;
-  // .l-body{
-  //   justify-content: center;
-  //   background:url(../image/common/error/bg-sp.webp) no-repeat center;
-  //   background-size: cover;
-  //   @include breakpoints (md){
-  //     background:url(../image/common/error/bg.webp) no-repeat center;
-  //     background-size: cover;
-  //   }
-  // }
   .p-frame{
     padding: 1rem;
     border-radius:1rem;
