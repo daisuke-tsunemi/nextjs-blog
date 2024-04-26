@@ -5,7 +5,7 @@ export default function Head() {
     <Head>
     <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0" />
     <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
-    <link rel="icon" href="images/logo/favicon/favicon.ico" />
+    <link rel="icon" href="/public/images/favicon/favicon.ico" />
     <meta property="og:site_name" content={siteTitle} />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="@ユーザー名" />
