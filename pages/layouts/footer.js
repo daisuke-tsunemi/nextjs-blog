@@ -17,9 +17,9 @@ export default function Footer() {
         </div>
         <div className="p-footer__menu">
           <nav className="p-footer__menu--nav">
-            <Link className='c-text__sm' href="/">Home</Link>
-            <Link className='c-text__sm' href="/posts">Blog Index</Link>
-            <Link className='c-text__sm' href="/details/first">Details First</Link>
+            <Link className='c-txt__sm' href="/">Home</Link>
+            <Link className='c-txt__sm' href="/posts">Blog Index</Link>
+            <Link className='c-txt__sm' href="/details/first">Details First</Link>
           </nav>
         </div>
       </div>

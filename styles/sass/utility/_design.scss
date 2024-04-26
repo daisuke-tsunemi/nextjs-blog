@@ -32,7 +32,7 @@
   display: flex;flex-wrap:wrap;
   align-items: center;
   justify-content: center;
-  .c-text{
+  .c-txt{
     color: #aaa;
     font-size: 20px;
     font-weight: 700;
@@ -41,18 +41,6 @@
 /* ——————————————————————————————————————————————————————————————
 限定的なレイアウト
 —————————————————————————————————————————————————————————————— */
-.c-full{
-  width: 100% !important;
-  flex: 1 1 auto !important;
-}
-.c-none{
-  display:none;
-}
-.c-right{
-  margin-inline-start: auto;
-  justify-content: flex-end;
-  display: flex;
-}
 .c-center{
   margin:0 auto;
   text-align:center;

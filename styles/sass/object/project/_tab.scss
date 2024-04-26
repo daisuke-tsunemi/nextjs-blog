@@ -109,7 +109,7 @@
     display: block;
     background: var(--primary);
   }
-  >.c-text__lv4 {	/* タブ */
+  >.c-txt__lv4 {	/* タブ */
     margin-right: 3px;
     padding: 0.5rem 1rem;
     flex: 1;
@@ -123,7 +123,7 @@
   }
   input {		/* ラジオボタン非表示 */
     display: none;
-    &:checked + .c-text__lv4 {
+    &:checked + .c-txt__lv4 {
       color: #fff;
       background: var(--primary);
       + .content {

@@ -1,15 +1,24 @@
 @use "../../foundation/breakpoints" as *;
 .p_section{
   +.p_section{
-    margin-top: 5rem;
+    padding: 2rem 0;
+    @include breakpoints (md){
+      padding: 4rem 0;
+    }
   }
   &__head{
-    margin-bottom: 2rem;
+    margin-block-end: 1rem;
+    @include breakpoints (md){
+      margin-block-end: 2rem;
+    }
   }
   &__body{
     width: 100%;
   }
   &__foot{
-    margin-top: 2rem;
+    margin-block-start: 1rem;
+    @include breakpoints (md){
+      margin-block-start: 2rem;
+    }
   }
 }

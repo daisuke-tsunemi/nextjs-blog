@@ -2,37 +2,35 @@
 /* ——————————————————————————————————————————————————————————————
 margin
 —————————————————————————————————————————————————————————————— */
-.u-m0 {
-  margin: 0;
-}
-
-// margin-top
+.u-m0{margin: 0;}
+.u-mlAuto{margin-inline-start: auto;}
+// margin-block-start
 @for $i from 2 through 10 {
   $num: $i * 8;
-  .u-mgt#{$num} {
-    margin-top: #{calc($num / 2)}px;
+  .u-mt#{$num} {
+    margin-block-start: #{calc($num / 2)}px;
   }
 }
 @include breakpoints(lg) {
   @for $i from 2 through 10 {
     $num: $i * 8;
-    .u-mgt#{$num} {
-      margin-top: #{$num}px;
+    .u-mt#{$num} {
+      margin-block-start: #{$num}px;
     }
   }
 }
-// margin-bottom
+// margin-block-end
 @for $i from 2 through 10 {
   $num: $i * 8;
-  .u-mgb#{$num} {
-    margin-bottom: #{calc($num / 2)}px;
+  .u-mb#{$num} {
+    margin-block-end: #{calc($num / 2)}px;
   }
 }
 @include breakpoints(lg) {
   @for $i from 2 through 10 {
     $num: $i * 8;
-    .u-mgb#{$num} {
-      margin-bottom: #{$num}px;
+    .u-mb#{$num} {
+      margin-block-end: #{$num}px;
     }
   }
 }

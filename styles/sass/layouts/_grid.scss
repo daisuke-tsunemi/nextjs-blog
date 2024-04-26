@@ -3,28 +3,65 @@
   display: grid;
   grid-template-columns: 1fr;
   &--2{
+    grid-template-columns: 1fr;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    @include breakpoints (sm){
+      grid-template-columns: repeat(2, 1fr);
+    }
   }
   &--3{
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: 1fr;
+    @include breakpoints (sm){
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @include breakpoints (md){
+      grid-template-columns: repeat(3, 1fr);
+    }
   }
   &--4{
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: 1fr;
+    @include breakpoints (sm){
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @include breakpoints (md){
+      grid-template-columns: repeat(4, 1fr);
+    }
   }
   &--5{
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+    @include breakpoints (md){
+      grid-template-columns: repeat(3, 1fr);
+    }
+    @include breakpoints (lg){
+      grid-template-columns: repeat(4, 1fr);
+    }
+    @include breakpoints (xl){
+      grid-template-columns: repeat(5, 1fr);
+    }
   }
   &--6{
     display: grid;
-    grid-template-columns: repeat(6, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+    @include breakpoints (md){
+      grid-template-columns: repeat(3, 1fr);
+    }
+    @include breakpoints (lg){
+      grid-template-columns: repeat(4, 1fr);
+    }
+    @include breakpoints (xl){
+      grid-template-columns: repeat(5, 1fr);
+    }
+    @include breakpoints (xl2){
+      grid-template-columns: repeat(6, 1fr);
+    }
   }
   &--item{
     display:flex;
     flex-direction: column;
+    min-width: 1px;
     &__head{
       display:flex;
       flex-wrap:wrap;
@@ -39,19 +76,4 @@
       justify-content: flex-end;
     }
   }
-}
-.gap8{
-  gap: .5rem;
-}
-.gap16{
-  gap: 1rem;
-}
-.gap24{
-  gap: 1.5rem;
-}
-.gap32{
-  gap: 2rem;
-}
-.gap40{
-  gap: 2.5rem;
 }

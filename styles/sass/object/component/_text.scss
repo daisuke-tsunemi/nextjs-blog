@@ -3,16 +3,16 @@
 /* ! ==================================================
 - テキスト
 ================================================== */
-.title{
+.c-ttl{
   color: var(--txt);
   font-weight: 600;
   line-height: 1.414em;
   font-family: 'Galada', 'Kiwi Maru', sans-serif;
 }
-h1.title{
+h1.c-ttl{
   font-size: 3.5rem;
 }
-h2.title{
+h2.c-ttl{
   font-size: 3rem;
   .star{
     display: inline-flex;
@@ -25,25 +25,23 @@ h2.title{
     }
   }
 }
-h3.title{
+h3.c-ttl{
   font-size: 2.5rem;
 }
-h4.title{
+h4.c-ttl{
   font-size: 2rem;
 }
-h5.title{
+h5.c-ttl{
   font-size: 1.5rem;
 }
-%c-text {
+.c-txt{
   color: var(--txt);
   font-weight: 500;
   font-size: 1rem;
   line-height: 1.618em;
   letter-spacing: 0.05em;
-}
-.c-text{
   &__xl2 {
-    @extend %c-text;
+    @extend .c-txt;
     font-size: 2rem;
     letter-spacing: .08em;
     @include breakpoints (sm){
@@ -51,32 +49,32 @@ h5.title{
     }
   }
   &__xl {
-    @extend %c-text;
+    @extend .c-txt;
     font-size: 1.5rem;
     @include breakpoints (sm){
       font-size: 2rem;
     }
   }
   &__lg {
-    @extend %c-text;
+    @extend .c-txt;
     @include breakpoints (sm){
       font-size: 1.5rem;
     }
   }
   &__md {
-    @extend %c-text;
+    @extend .c-txt;
     font-size: 0.9rem;
     @include breakpoints (sm){
       font-size: 1rem;
     }
   }
   &__sm {
-    @extend %c-text;
+    @extend .c-txt;
     font-size: 0.8333rem;
     font-weight: 400;
   }
   &__xs {
-    @extend %c-text;
+    @extend .c-txt;
     font-weight: 400;
     font-size: 0.75rem;
   }
@@ -85,14 +83,6 @@ h5.title{
     font-size: 11px;
     line-height: 1.2em;
     color: #444;
-  }
-  &__unit {
-    font-weight: 400;
-    font-size: 0.75rem;
-    line-height: 1em;
-    letter-spacing: 0;
-    display: inline-block;
-    color: #888;
   }
   &__weak {color:var(--txt-weak);}
   &__light {color:var(--txt-light);}
@@ -130,10 +120,6 @@ h5.title{
   &__letter--0 {letter-spacing: 0;}
   &__space--wrap {white-space: pre-wrap;}
 }
-.c-italic__en{
-  font-family:'times',serif;
-  font-style: italic;
-}
 strong{
   color: var(--txt-strong);
   font-size: 1.2em;
@@ -143,21 +129,4 @@ strong{
 .c-unit{
   &__before{margin:0 4px 0 0;}
   &__after{margin:0 0 0 4px;}
-}
-%c-status{
-  padding: 2px .25rem;
-  font-size: 13px;
-  text-align: center;
-  color: white;
-  display: inline-block
-}
-.c-status{
-  &__green{
-    @extend %c-status;
-    background-color: var(--ok);
-  }
-  &__red{
-    @extend %c-status;
-    background-color: var(--alert);
-  }
 }

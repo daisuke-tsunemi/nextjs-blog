@@ -1,5 +1,4 @@
 @use "../foundation/breakpoints" as *;
-@use "../foundation/var" as *;
 /* ! --------------------------------------------------
 - コンテナ
 -------------------------------------------------- */
@@ -9,6 +8,10 @@
 }
 .l-container {
   max-width: 1440px;
+  padding: 1rem;
+  @include breakpoints (sm){
+    padding: 2rem;
+  }
   // 500px~1400px
   @extend %container;
   $i: 5;

@@ -23,29 +23,36 @@ export default function Posts ({ allPostsData }) {
 
       {/* Add this <section> tag below the existing <section> tag */}
       <section className={`${styles.headingMd} ${styles.padding1px}`}>
-        <h1 className='title'>Blog Index 
-          <span className='star'></span><span className='star'></span><span className='star'></span>
-        </h1>
-        <ul className='l-grid--3 gap16'>
-          {allPostsData.map(({ id, date, title, image }) => (
-            <li className={styles.listItem} key={id}>
-              <Link href={`/posts/${id}`}>
-                  <h3 className={styles.headingMd}>{title}</h3>
-                  <Image
-                    priority
-                    className={styles.img}
-                    src={image}
-                    height={300}
-                    width={400}
-                    alt=""
-                  />
-                <small className={styles.lightText}>
-                  <Date dateString={date} />
-                </small>
-              </Link>
-            </li>
-          ))}
-        </ul>
+        <div className="l-container">
+          <h1 className='c-ttl'>Blog Index 
+            <span className='star'></span><span className='star'></span><span className='star'></span>
+          </h1>
+          <div className={styles.gridCard}>
+            {allPostsData.map(({ id, date, title, image }) => (
+              <article className={styles.listItem} key={id}>
+                <Link href={`/posts/${id}`}>
+                  <figure className='u-m0'>
+                    <Image
+                      priority
+                      className={styles.img}
+                      src={image}
+                      height={300}
+                      width={400}
+                      alt=""
+                    />
+                    <figcaption>
+                      <h3 className={styles.headingMd}>{title}
+                        <small className={styles.lightText}>
+                          <Date dateString={date} />
+                        </small>
+                      </h3>
+                    </figcaption>
+                  </figure>
+                </Link>
+              </article>
+            ))}
+          </div>
+        </div>
       </section>
     </Layout>
   );

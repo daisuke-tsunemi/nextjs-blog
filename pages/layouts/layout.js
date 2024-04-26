@@ -1,19 +1,15 @@
 import Head from 'next/head';
-import Image from 'next/image';
-import Link from 'next/link';
+import Header from '../layouts/header';
 import Footer from '../layouts/footer';
-import Sidebar from '../layouts/aside';
-import layoutStyles from '../../styles/css/layout.module.css';
-import ForwardToInboxTwoToneIcon from '@mui/icons-material/ForwardToInboxTwoTone';
+import styles from '../../styles/css/layout.module.css';
 
-const description = 'Your NameYour NameYour NameYour NameYour Name';
 export const siteTitle = 'Next.js Sample Website';
 export const pageTitle = 'トップページ';
 export const siteDescription = 'Learn how to build a personal website using Next.js';
 
 export default function Layout({ children, home }) {
   return (
-    <div className={layoutStyles.page}>
+    <div className={styles.page}>
       <Head>
         <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0" />
         <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
@@ -32,44 +28,16 @@ export default function Layout({ children, home }) {
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link href="https://fonts.googleapis.com/css2?family=Alata&family=Galada&family=Kiwi+Maru:wght@300;400;500&display=swap" rel="stylesheet" />
       </Head>
-      {/* ヘッダー */}
-      <header className={layoutStyles.header}>
-        <>
-          <div className='container'>
-            <h2 className='c-text__min'>
-              {description}
-            </h2>
-            <div className='logo'>
-              <Link href="/">
-                <Image
-                  priority
-                  src="/images/logo/logo.png"
-                  height={48}
-                  width={48}
-                  alt=""
-                />
-              </Link>
-            </div>
-            <div>
-              <Link href="/">
-                <ForwardToInboxTwoToneIcon color="secondary" />
-              </Link>
-            </div>
-          </div>
-        </>
-      </header>
-
-      {/* サイドナビ */}
-      <Sidebar />
+      <Header />
 
       {/* メインコンテンツ */}
         {
           home ? (
-            <main className={layoutStyles.mainHome}>
+            <main className={styles.mainHome}>
               {children}
             </main>
           ) : (
-            <main className={layoutStyles.mainPage}>
+            <main className={styles.mainPage}>
               {children}
             </main>
           )

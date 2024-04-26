@@ -1,8 +1,7 @@
 :root {
  // カラー
  --hue: 204;
-//  --primary: hsl(var(--hue), 100%, 50%);
- --primary: hsl(204, 100%, 50%);
+ --primary: hsl(var(--hue), 100%, 50%);
  --primary-dark: hsl(204, 30%, 55%);
  --primary-accent: hsl(216, 100%, 35%);
  --primary-light: #00f5ff;
@@ -38,6 +37,3 @@
    "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Arial", "Yu Gothic", "Meiryo",
    sans-serif;
 }
-$colors: primary, primary-dark, primary-light, primary-bg, primary-bg-light,
- border, border-light, bg, bg-light, bg-dark, txt, txt-weak, txt-light,
- txt-strong, valid, invalid;

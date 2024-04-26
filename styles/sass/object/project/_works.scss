@@ -1,12 +1,29 @@
 @use "../../foundation/breakpoints" as *;
 .gridCard{
   display: grid;
-  gap: 1rem;
   grid-template-columns: repeat(2, 1fr);
   @include breakpoints (md){
     grid-template-columns: repeat(3, 1fr);
   }
-  @include breakpoints (lg){
+  @include breakpoints (xl2){
     grid-template-columns: repeat(4, 1fr);
+  }
+  figcaption{
+    display:none;
+    position:absolute;
+    bottom:1rem;
+    left:0;
+    color: #fff;
+    backdrop-filter: blur(4px);
+    background-color: rgba($color: #000000, $alpha: .3);
+  }
+  a{
+    opacity: 1;
+    position:relative;
+    &:hover{
+      figcaption{
+        display:block;
+      }
+    }
   }
 }

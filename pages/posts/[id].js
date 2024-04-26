@@ -13,9 +13,9 @@ export default function Post({ postData }) {
       </Head>
       <section className={stylesPage.p_section}>
         <div className={stylesPage.p_section__head}>
-          <h1 className='title'>
-            {postData.title}
-          </h1>
+          <div className='l-container'>
+            <h1 className='c-ttl'>{postData.title}</h1>
+          </div>
         </div>
         <div className={stylesPage.p_section__body}>
           <Image
@@ -29,16 +29,18 @@ export default function Post({ postData }) {
         </div>
       </section>
       <section className={stylesPage.p_section}>
-        <div className={stylesPage.p_section__head}>
-          <p>
-          {postData.id}
-          </p>
-        </div>
-        <div className={stylesPage.p_section__body}>
-          <Date dateString={postData.date} />
-        </div>
-        <div className={stylesPage.p_section__Foot}>
-          <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
+        <div className='l-container'>
+          <div className={stylesPage.p_section__head}>
+            <p>
+            {postData.id}
+            </p>
+          </div>
+          <div className={stylesPage.p_section__body}>
+            <Date dateString={postData.date} />
+          </div>
+          <div className={stylesPage.p_section__Foot}>
+            <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
+          </div>
         </div>
       </section>
     </Layout>

@@ -4,79 +4,73 @@ br
 —————————————————————————————————————————————————————————————— */
 /* 指定のワイド以上でON */
 .on{
-  display:inherit;
-  &_pcWide{
+  display:block;
+  &_xl3{
     display:none;
     @include breakpoints (xl3){
-      display:inherit;
+      display:block;
     }
   }
-  &_pc{
+  &_xl2{
     display:none;
     @include breakpoints (xl2){
-      display:inherit;
+      display:block;
     }
   }
-  &_note{
+  &_xl{
     display:none;
     @include breakpoints (xl){
-      display:inherit;
+      display:block;
     }
   }
-  &_tabletWide{
+  &_lg{
     display:none;
     @include breakpoints (lg){
-      display:inherit;
+      display:block;
     }
   }
-  &_tablet{
+  &_md{
     display:none;
     @include breakpoints (md){
-      display:inherit;
+      display:block;
     }
   }
-  &_spWide{
+  &_sm{
     display:none;
     @include breakpoints (sm){
-      display:inherit;
+      display:block;
     }
   }
 }
- /* 指定のワイド以上でOFF */
- .off{
+/* 指定のワイド以上でOFF */
+.off{
   display:none;
-  &_pcWide{
-    
+  &_xl3{
     @include breakpoints (xl3){
       display:none;
     }
   }
-  &_pc{
-    
+  &_xl2{
     @include breakpoints (xl2){
       display:none;
     }
   }
-  &_note{
-    
+  &_xl{
     @include breakpoints (xl){
       display:none;
     }
   }
-  &_tabletWide{
-    
+  &_lg{
     @include breakpoints (lg){
       display:none;
     }
   }
-  &_tablet{
-    
+  &_md{
     @include breakpoints (md){
       display:none;
     }
   }
-  &_spWide{
-    
+  &_sm{
     @include breakpoints (sm){
       display:none;
     }
