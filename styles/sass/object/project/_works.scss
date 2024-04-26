@@ -5,9 +5,6 @@
   @include breakpoints (md){
     grid-template-columns: repeat(3, 1fr);
   }
-  @include breakpoints (xl2){
-    grid-template-columns: repeat(4, 1fr);
-  }
   figcaption{
     display:none;
     position:absolute;
