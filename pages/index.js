@@ -25,7 +25,6 @@ export default function Home ({ allPostsData }) {
       <section className={home.p_section}>
         <View />
       </section>
-
       {/* Add this <section> tag below the existing <section> tag */}
       <section className={`${home.p_section} ${home.padding1px}`}>
         <div className={home.p_section__head}>
