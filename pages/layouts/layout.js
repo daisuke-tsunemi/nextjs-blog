@@ -2,8 +2,6 @@ import Head from 'next/head';
 import Image from 'next/image';
 import Link from 'next/link';
 import Footer from '../layouts/footer';
-import Sidebar from '../layouts/aside';
-import layoutStyles from '../../styles/css/layout.module.css';
 import ForwardToInboxTwoToneIcon from '@mui/icons-material/ForwardToInboxTwoTone';
 
 const description = 'Your NameYour NameYour NameYour NameYour Name';
@@ -13,7 +11,7 @@ export const siteDescription = 'Learn how to build a personal website using Next
 
 export default function Layout({ children, home }) {
   return (
-    <div className={layoutStyles.page}>
+    <div className='page'>
       <Head>
         <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0" />
         <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
@@ -33,10 +31,10 @@ export default function Layout({ children, home }) {
         <link href="https://fonts.googleapis.com/css2?family=Alata&family=Galada&family=Kiwi+Maru:wght@300;400;500&display=swap" rel="stylesheet" />
       </Head>
       {/* ヘッダー */}
-      <header className={layoutStyles.header}>
+      <header className='header'>
         <>
           <div className='container'>
-            <h2 className='c-text__min'>
+            <h2 className='c-txt__min'>
               {description}
             </h2>
             <div className='logo'>
@@ -59,17 +57,14 @@ export default function Layout({ children, home }) {
         </>
       </header>
 
-      {/* サイドナビ */}
-      <Sidebar />
-
       {/* メインコンテンツ */}
         {
           home ? (
-            <main className={layoutStyles.mainHome}>
+            <main className='mainHome'>
               {children}
             </main>
           ) : (
-            <main className={layoutStyles.mainPage}>
+            <main className='mainPage'>
               {children}
             </main>
           )

@@ -2,7 +2,6 @@ import Head from 'next/head'
 import Link from 'next/link';
 import Image from 'next/image';
 import Layout, { siteTitle } from '../layouts/layout';
-import styles from '../../styles/css/stylesPage.module.css'
 import { getSortedPostsData } from '../../lib/posts';
 import Date from '../../components/date';
 
@@ -22,24 +21,24 @@ export default function Posts ({ allPostsData }) {
       </Head>
 
       {/* Add this <section> tag below the existing <section> tag */}
-      <section className={`${styles.headingMd} ${styles.padding1px}`}>
+      <section className='headingMd'>
         <h1 className='title'>Blog Index 
           <span className='star'></span><span className='star'></span><span className='star'></span>
         </h1>
         <ul className='l-grid--3 gap16'>
           {allPostsData.map(({ id, date, title, image }) => (
-            <li className={styles.listItem} key={id}>
+            <li className='listItem' key={id}>
               <Link href={`/posts/${id}`}>
-                  <h3 className={styles.headingMd}>{title}</h3>
+                  <h3 className='headingMd'>{title}</h3>
                   <Image
                     priority
-                    className={styles.img}
+                    className='img'
                     src={image}
                     height={300}
                     width={400}
                     alt=""
                   />
-                <small className={styles.lightText}>
+                <small className='lightText'>
                   <Date dateString={date} />
                 </small>
               </Link>

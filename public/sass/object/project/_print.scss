@@ -1,0 +1,41 @@
+@use "../../foundation/breakpoints" as *;
+
+@media print {
+  body{
+    background:transparent;
+    .l-base{
+      background:transparent;
+      overflow:visible;
+      min-width: 1600px;
+    }
+  }
+  .c-title .c-btn__sm, .fc .fc-btn-group, .p-calendar--btn, .p-frame__head--action, .p-question, .c-nav__toggle {
+    display: none;
+  }
+  .p-scroll--tab {
+    ul {
+      >li{
+        display:none;
+        &.active{
+          display:block;
+        }
+      }
+    }
+  }
+  .p-calendar{
+    max-height: inherit;
+    width: 1600px;
+    .fc {
+      .fc-scroller-liquid-absolute{
+        overflow: visible;
+      }
+      .fc-scroller-harness{
+        overflow: visible;
+        width: 100vw;
+      }
+    }
+  }
+}
+.l-print--wide{
+  min-width: 3600px;
+}

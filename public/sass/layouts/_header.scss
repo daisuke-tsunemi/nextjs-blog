@@ -1,0 +1,109 @@
+@use "../foundation/breakpoints" as *;
+/* ! ==================================================
+- ヘッダー
+================================================== */
+header{
+  .container{
+		padding: .5rem 1.5rem;
+    display:flex;
+    align-items:center;
+    justify-content: space-between;
+    width: 100%;
+		.c-txt__min{
+			max-width: 200px;
+		}
+		.logo{
+			&:before{
+				content: '';
+				position: absolute;
+				border-radius: 50%;
+				bottom: -2.5rem;
+				left: 50%;
+				transform: translate(-50%, 0);
+				background-color: #fff;
+				width: 20%;
+				aspect-ratio: 1;
+			}
+			a{
+				z-index: 1;
+				position:absolute;
+				bottom: -50%;
+				left: 50%;
+				transform: translate(-50%, 0);
+				img{
+					object-fit: cover;
+					aspect-ratio: 1;
+					border-radius: 50%;
+				}
+			}
+		}
+  }
+}
+.l-header {
+	width: 100%;
+	padding:8px 24px;
+	height: 50px;
+	display:flex;
+	align-items:center;
+	justify-content:center;
+	@include breakpoints (md){
+		height: 40px;
+		padding:8px 16px;
+	}
+	.c-logoArea{
+		display:block;
+		&:hover{
+			opacity: .7;
+		}
+		.c-logo{
+			height:1rem;
+			display:block;
+			@include breakpoints (sm){
+				height:1.5rem;
+			}
+		}
+	}
+}
+// 通常のハンバーガーメニュー
+.nav_toggle{
+	height:40px; 
+	width:40px;
+	border-radius: 4px;
+	display: none;
+	border: #000 1px solid;
+	background-color:rgba(255,255,255,.2);
+	position:relative;
+	transition: all 0.2s ease;
+	z-index: 100;
+	cursor: pointer;
+	span{
+		height:1px; width:30px;
+		background-color: #000;
+		display: block;
+		position:absolute;
+		top:15px;
+		left:50%;
+		transition: all 0.2s ease;
+		transform:translate(-50%,0);
+		+span{
+			top:22px;
+		}
+		&.close{
+			top:50%;
+			transform:translate(-50%,-50%) rotate(45deg);
+			+span{
+				transform:translate(-50%,-50%) rotate(-45deg);
+			}
+		}
+	}
+	@include breakpoints (sm){
+		display: block;
+			z-index: 99;
+		&:hover{
+			background-color: #eee;
+			span{
+				width: 20px;
+			}
+		}
+	}
+}
