@@ -1,7 +1,6 @@
 import Head from 'next/head';
 import Header from '../layouts/header';
 import Footer from '../layouts/footer';
-import styles from '../../styles/css/layout.module.css';
 
 export const siteTitle = 'Next.js Sample Website';
 export const pageTitle = 'トップページ';

@@ -1,10 +1,9 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import layoutStyles from '../../styles/css/layout.module.css';
 
 export default function Footer() {
   return (
-    <footer className={layoutStyles.footer}>
+    <footer className='l-footer'>
       <div className="p-footer">
         <div className="p-footer__logo">
           <Image

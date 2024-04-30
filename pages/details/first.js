@@ -1,7 +1,6 @@
 import Head from 'next/head';
 import Link from 'next/link';
 import Script from 'next/script';
-import layoutStyles from '../../styles/css/layout.module.css';
 import Layout from '../layouts/layout';
 
 export default function First() {
@@ -14,7 +13,7 @@ export default function First() {
       
       <h1 className={'text-3xl font-black'}>最初の Post</h1>
       <h2>
-        <Link href="/" className={layoutStyles.backToHome}>Back to home</Link>
+        <Link href="/" className='c-btn'>Back to home</Link>
       </h2>
       
       <Script
