@@ -21,23 +21,33 @@ export default function Home ({ allPostsData }) {
         <title>{`Top page | ${siteTitle}`}</title>
         <meta name="description" content="top page desu"/>
       </Head>
-      <section className='p_section'>
-        <View />
+      <section className='p_fv'>
+        <div className='l-container'>
+          <View />
+          <div className='logo'>
+            <Image
+              priority
+              src="/images/logo/logo_set.png"
+              height={80}
+              width={120}
+              alt=""
+            />
+          </div>
+        </div>
       </section>
       {/* Add this <section> tag below the existing <section> tag */}
       <section className='p_section'>
-        <div className='p_section__head'>
-          <h2 className='title'>
-            Works
-            <span className='star'></span><span className='star'></span><span className='star'></span>
-          </h2>
-          <Link href="/posts" className='c-btn'>All Posts</Link>
-        </div>
-        <div className='p_section__body'>
-          <ul className='gridCard'>
-            {allPostsData.map(({ id, date, title, image }) => (
-              <li className='listItem' key={id}>
-                <Link href={`/posts/${id}`}>
+        <div className='l-container'>
+          <div className='p_section__head'>
+            <h2 className='c-txt__lg'>
+              Works
+              <span className='star'></span><span className='star'></span><span className='star'></span>
+            </h2>
+          </div>
+          <div className='p_section__body'>
+            <div className='l-grid--3 gridCard'>
+              {allPostsData.map(({ id, date, title, image }) => (
+                <Link className='listItem' key={id} href={`/posts/${id}`}>
                   <Image
                     priority
                     className='img'
@@ -53,9 +63,12 @@ export default function Home ({ allPostsData }) {
                   </small>
                   </figcaption>
                 </Link>
-              </li>
-            ))}
-          </ul>
+              ))}
+            </div>
+          </div>
+          <div className='p_section__foot'>
+            <Link href="/posts" className='c-btn'>All Posts</Link>
+          </div>
         </div>
       </section>
     </Layout>

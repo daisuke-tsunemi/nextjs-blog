@@ -9,35 +9,36 @@ export default function Post({ postData }) {
     <Layout>
       <Head>
         <title>{postData.title}</title>
+        <link rel="canonical" href="" />
       </Head>
-      <section className='p_section'>
-        <div className='p_section__head'>
-          <h1 className='title'>
-            {postData.title}
-          </h1>
-        </div>
-        <div className='p_section__body'>
+      <section className='p_works'>
+        <div className='p_works__head'>
           <Image
             priority
             className='img'
             src={postData.image}
-            height={300}
+            height={500}
             width={400}
             alt="メインのイメージ"
           />
         </div>
-      </section>
-      <section className='p_section'>
-        <div className='p_section__head'>
-          <p>
-          {postData.id}
-          </p>
-        </div>
-        <div className='p_section__body'>
-          <Date dateString={postData.date} />
-        </div>
-        <div className='p_section__Foot'>
-          <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
+        <div className='l-container'>
+          <div className='p_works__body'>
+            <h1 className='c-txt__xl c-txt__weight--700'>
+              {postData.title}
+            </h1>
+            <Date dateString={postData.date} />
+            <div className='u-align p_works__tag u-mt16'>
+              <p className='c-txt__min c-txt__height--1 c-txt__letter--0'>{postData.tag_1}</p>
+              <p className='c-txt__min c-txt__height--1 c-txt__letter--0'>{postData.tag_2}</p>
+            </div>
+          </div>
+          <div className='p_works__foot'>
+            <p>
+            {postData.id}
+            </p>
+            <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
+          </div>
         </div>
       </section>
     </Layout>

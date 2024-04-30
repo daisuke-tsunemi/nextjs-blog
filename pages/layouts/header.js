@@ -9,19 +9,8 @@ export default function Header() {
     <>
       <div className='container'>
         <h2 className='c-txt__min'>
-        Your NameYour NameYour NameYour NameYour Name
+        ユーザーを、ビジネスを、ミツメルデザイン
         </h2>
-        <div className='logo'>
-          <Link href="/">
-            <Image
-              priority
-              src="/images/logo/logo.png"
-              height={48}
-              width={48}
-              alt=""
-            />
-          </Link>
-        </div>
         {/* <div>
           <Link href="/">
             <ForwardToInboxTwoToneIcon color="secondary" />

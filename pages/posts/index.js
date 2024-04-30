@@ -22,13 +22,13 @@ export default function Posts ({ allPostsData }) {
 
       {/* Add this <section> tag below the existing <section> tag */}
       <section className='headingMd'>
-        <h1 className='title'>Blog Index 
-          <span className='star'></span><span className='star'></span><span className='star'></span>
-        </h1>
-        <ul className='l-grid--3 gap16'>
-          {allPostsData.map(({ id, date, title, image }) => (
-            <li className='listItem' key={id}>
-              <Link href={`/posts/${id}`}>
+        <div className='l-container'>
+          <h1 className='title'>Blog Index 
+            <span className='star'></span><span className='star'></span><span className='star'></span>
+          </h1>
+          <div className='l-grid--3 gap16'>
+            {allPostsData.map(({ id, date, title, image }) => (
+              <Link className='listItem' key={id} href={`/posts/${id}`}>
                   <h3 className='headingMd'>{title}</h3>
                   <Image
                     priority
@@ -42,9 +42,9 @@ export default function Posts ({ allPostsData }) {
                   <Date dateString={date} />
                 </small>
               </Link>
-            </li>
-          ))}
-        </ul>
+            ))}
+          </div>
+        </div>
       </section>
     </Layout>
   );

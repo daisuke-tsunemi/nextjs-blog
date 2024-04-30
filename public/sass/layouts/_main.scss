@@ -10,10 +10,3 @@
     min-height: 100vh;
   }
 }
-.l-body.aside__narrow{
-  .l-main{
-    @include breakpoints (lg){
-      padding: 0 0 0 84px;
-    }
-  }
-}

@@ -28,6 +28,9 @@ body{
     &-pagination-bullet{
       background: rgba($color: #000000, $alpha: 0.5);
       border: 1px #fff solid;
+      width: 10%;
+      height: .25rem;
+      border-radius: 2px;
       &-active{
         background: rgba($color: #fff, $alpha: 0.8);
       }

@@ -2,6 +2,8 @@
 image: '/images/home/sample_5.jpg'
 title: 'Two Forms of Pre-rendering'
 date: '2022-01-01'
+tag_1: 'ロゴデザイン'
+tag_2: 'ブランディングデザイン'
 ---
 
 Next.js has two forms of pre-rendering: 
