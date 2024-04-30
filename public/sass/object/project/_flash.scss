@@ -1,4 +1,5 @@
 @use "../../foundation/breakpoints" as *;
+@use "../../foundation/var" as *;
 .p-flash {
     position: fixed;
     top: 0;
