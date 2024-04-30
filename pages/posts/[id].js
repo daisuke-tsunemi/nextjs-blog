@@ -3,7 +3,6 @@ import Head from 'next/head';
 import Image from 'next/image';
 import { getAllPostIds, getPostData } from '../../lib/posts'
 import Date from '../../components/date';
-import stylesPage from '../../styles/css/stylesPage.module.css'
 
 export default function Post({ postData }) {
   return (
@@ -11,16 +10,16 @@ export default function Post({ postData }) {
       <Head>
         <title>{postData.title}</title>
       </Head>
-      <section className={stylesPage.p_section}>
-        <div className={stylesPage.p_section__head}>
-          <div className='l-container'>
-            <h1 className='c-ttl'>{postData.title}</h1>
-          </div>
+      <section className='p_section'>
+        <div className='p_section__head'>
+          <h1 className='title'>
+            {postData.title}
+          </h1>
         </div>
-        <div className={stylesPage.p_section__body}>
+        <div className='p_section__body'>
           <Image
             priority
-            className={stylesPage.img}
+            className='img'
             src={postData.image}
             height={300}
             width={400}
@@ -28,19 +27,17 @@ export default function Post({ postData }) {
           />
         </div>
       </section>
-      <section className={stylesPage.p_section}>
-        <div className='l-container'>
-          <div className={stylesPage.p_section__head}>
-            <p>
-            {postData.id}
-            </p>
-          </div>
-          <div className={stylesPage.p_section__body}>
-            <Date dateString={postData.date} />
-          </div>
-          <div className={stylesPage.p_section__Foot}>
-            <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
-          </div>
+      <section className='p_section'>
+        <div className='p_section__head'>
+          <p>
+          {postData.id}
+          </p>
+        </div>
+        <div className='p_section__body'>
+          <Date dateString={postData.date} />
+        </div>
+        <div className='p_section__Foot'>
+          <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
         </div>
       </section>
     </Layout>

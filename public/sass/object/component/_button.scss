@@ -1,6 +1,5 @@
 @use "../../foundation/breakpoints" as *;
 @use "../../foundation/_var" as *;
-
 .c-btn{
 	display: inline-flex;
 	align-items: center;
@@ -56,6 +55,7 @@
 		}
 	}
 	&.sm{
+
 		height: 35px;
 		padding: 0 0.5rem;
     font-size: .75rem;
@@ -74,10 +74,6 @@
 	}
 	&.wide{
 		min-width:200px;
-	}
-	&.full{
-		width:100%;
-		max-width: inherit;
 	}
 	&__text{
 		display: inline;

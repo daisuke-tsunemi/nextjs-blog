@@ -15,13 +15,22 @@
   grid-template-rows: 1fr;
   grid-template-columns: 1fr;
   position:relative;
+  @include breakpoints (md){
+    grid-template-rows: 3rem 1fr minmax(50px, 8rem);
+    grid-template-areas:
+      " header "
+      " content "
+      " footer ";
+  }
+  >*{
+    min-width:1px;}
 }
 .header {
   grid-area:header;
   position: sticky;
   top:0;
-  left:50%;
-  transform:translate(-50%,0);
+  left:0;
+  width:100%;
   background-color: #fff;
   border-radius:0 0 2rem 2rem;
   z-index: 3;

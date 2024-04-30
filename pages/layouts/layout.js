@@ -9,7 +9,7 @@ export const siteDescription = 'Learn how to build a personal website using Next
 
 export default function Layout({ children, home }) {
   return (
-    <div className={styles.page}>
+    <div className='page'>
       <Head>
         <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0" />
         <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
@@ -29,15 +29,16 @@ export default function Layout({ children, home }) {
         <link href="https://fonts.googleapis.com/css2?family=Alata&family=Galada&family=Kiwi+Maru:wght@300;400;500&display=swap" rel="stylesheet" />
       </Head>
       <Header />
+      {/* ヘッダー */}
 
       {/* メインコンテンツ */}
         {
           home ? (
-            <main className={styles.mainHome}>
+            <main className='mainHome'>
               {children}
             </main>
           ) : (
-            <main className={styles.mainPage}>
+            <main className='mainPage'>
               {children}
             </main>
           )

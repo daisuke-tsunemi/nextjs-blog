@@ -1,0 +1,137 @@
+@use "../../foundation/breakpoints" as *;
+.p-calendar{
+  max-height: 76vh;
+  &--btn{
+    position:absolute;
+    top: 10px;
+    right: 140px;
+  }
+  &.fc {
+    .fc{
+      &-view-harness{
+        background-color: #fff;
+      }
+      &-toolbar-title{
+        font-weight: 700;
+      }
+      &-timeline{
+        &-slot{
+          &-cushion{
+            font-size: 12px;
+            color: #888;
+          }
+        }
+      }
+      &-datagrid{
+        &-cell{
+          &-main{
+            color: #333;
+          }
+          &-cushion{
+          }
+        }
+      }
+    }
+  }
+}
+
+#calendar-popup {
+  display:none;
+  position: absolute;
+  margin-bottom: 0;
+  padding: 0 1.33em;
+  z-index: 1000;
+
+  border: solid rgba(200, 200, 200, 0.75) 2px;
+  border-radius: 10px;
+  color: black;
+  background: #FFF;
+  * {
+    display: block;
+  }
+  button.close {
+    margin: 10px 10px 0 0;
+  }
+  header {
+    text-align: center;
+    font-size: 1.5em;
+    line-height: 1em;
+    margin-bottom: 0.5em;
+  }
+  label,input,textarea {
+    font-size: 0.9em;
+    font-weight: normal;
+    margin-bottom: 0;
+    padding: 0;
+    width: 100%;
+  }
+  input {
+    margin-bottom: 0.5em;
+    padding: 0;
+  }
+  time {
+    font-style: italic;
+    line-height: 1em;
+    margin-top: 0;
+  }
+  form,div#event {
+    margin: 0.75em 0 0.75em 0;
+  }
+  li {
+    margin-bottom: 0.33em;
+    &.location,&.details {
+      font-size: 0.85em;
+      color: #333;
+    }
+  }
+  .prong {
+    position: relative;
+    float: right;
+    bottom: 0;
+    right: 15px;
+    height: 0;
+    width: 20px;
+    .bottom-prong{
+      &-dk {
+        position: relative;
+        top: 0;
+        left: 0;
+        border: 10px solid;
+        border-color: rgba(200, 200, 200, 0.75) transparent;
+        border-bottom: 0;
+      }
+      &-lt {
+        position: relative;
+        top: -10px;
+        left: 2px;
+        width: 0;
+      
+        border: 8px solid;
+        border-color: white transparent;
+        border-bottom: 0;
+      }
+    }
+    .top-prong{
+      &-dk {
+        position: relative;
+        top: 2px;
+        left: 0;
+      
+        border: 10px solid;
+        border-color: rgba(200, 200, 200, 0.75) transparent;
+        border-top: 0;
+      }
+      &-lt {
+        position: relative;
+        top: -6px;
+        left: 2px;
+        width: 0;
+      
+        border: 8px solid;
+        border-color: white transparent;
+        border-top: 0;
+      }
+    }
+  }
+}
+
