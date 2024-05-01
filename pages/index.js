@@ -2,6 +2,9 @@ import Head from 'next/head'
 import Link from 'next/link';
 import Image from 'next/image';
 import View from '../components/view';
+import About from '../components/home/about';
+import Service from '../components/home/service';
+import Flow from '../components/home/flow';
 import Layout, { siteTitle } from './layouts/layout';
 import { getSortedPostsData } from '../lib/posts';
 import Date from '../components/date';
@@ -35,6 +38,9 @@ export default function Home ({ allPostsData }) {
           </div>
         </div>
       </section>
+      <About />
+      <Service />
+      <Flow />
       {/* Add this <section> tag below the existing <section> tag */}
       <section className='p_section'>
         <div className='l-container'>
@@ -46,13 +52,13 @@ export default function Home ({ allPostsData }) {
           </div>
           <div className='p_section__body'>
             <div className='l-grid--3 gridCard'>
-              {allPostsData.map(({ id, date, title, image }) => (
+              {allPostsData.map(({ id, date, title, thumbnail }) => (
                 <Link className='listItem' key={id} href={`/posts/${id}`}>
                   <Image
                     priority
                     className='img'
-                    src={image}
-                    height={200}
+                    src={thumbnail}
+                    height={300}
                     width={300}
                     alt=""
                   />

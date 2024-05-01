@@ -1,5 +1,11 @@
 ---
-image: '/images/home/sample_4.jpg'
+thumbnail: '/images/works/yukinko/thumbnail.webp'
+image1: '/images/works/yukinko/img_1.webp'
+image2: '/images/works/yukinko/img_2.webp'
+image3: '/images/works/yukinko/img_3.webp'
+image4: '/images/works/yukinko/img_4.webp'
+image5: '/images/works/yukinko/img_5.webp'
+image6: '/images/works/yukinko/img_6.webp'
 title: 'When to Use Static Generation v.s. Server-side Rendering'
 date: '2022-01-02'
 tag_1: 'リーフレットデザイン'

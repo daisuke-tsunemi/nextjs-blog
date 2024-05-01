@@ -1,6 +1,7 @@
 import Layout from '../layouts/layout'
 import Head from 'next/head';
 import Image from 'next/image';
+import Link from 'next/link';
 import { getAllPostIds, getPostData } from '../../lib/posts'
 import Date from '../../components/date';
 
@@ -12,12 +13,12 @@ export default function Post({ postData }) {
         <link rel="canonical" href="" />
       </Head>
       <section className='p_works'>
-        <div className='p_works__head'>
+        <div className='page__header'>
           <Image
             priority
             className='img'
-            src={postData.image}
-            height={500}
+            src={postData.thumbnail}
+            height={400}
             width={400}
             alt="メインのイメージ"
           />
@@ -32,12 +33,63 @@ export default function Post({ postData }) {
               <p className='c-txt__min c-txt__height--1 c-txt__letter--0'>{postData.tag_1}</p>
               <p className='c-txt__min c-txt__height--1 c-txt__letter--0'>{postData.tag_2}</p>
             </div>
-          </div>
-          <div className='p_works__foot'>
             <p>
             {postData.id}
             </p>
             <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
+            <div className='u-align center u-mt32'>
+              <Link href="/posts" className='c-btn__line'>Works一覧へ</Link>
+            </div>
+          </div>
+          <div className='p_works__foot'>
+            <Image
+              priority
+              className='img'
+              src={postData.image1}
+              height={500}
+              width={400}
+              alt="メインのイメージ"
+            />
+            <Image
+              priority
+              className='img'
+              src={postData.image2}
+              height={500}
+              width={400}
+              alt="メインのイメージ"
+            />
+            <Image
+              priority
+              className='img'
+              src={postData.image3}
+              height={500}
+              width={400}
+              alt="メインのイメージ"
+            />
+            <Image
+              priority
+              className='img'
+              src={postData.image3}
+              height={500}
+              width={400}
+              alt="メインのイメージ"
+            />
+            <Image
+              priority
+              className='img'
+              src={postData.image4}
+              height={500}
+              width={400}
+              alt="メインのイメージ"
+            />
+            <Image
+              priority
+              className='img'
+              src={postData.image5}
+              height={500}
+              width={400}
+              alt="メインのイメージ"
+            />
           </div>
         </div>
       </section>

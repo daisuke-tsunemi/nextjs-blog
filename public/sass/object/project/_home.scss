@@ -21,3 +21,23 @@
     border-radius:0 0 2rem 2rem;
   }
 }
+.p_service{
+  .l-grid{
+    &--item{
+      background-color: #fff;
+      padding: 1rem;
+      @include breakpoints (md){
+        padding: 1.5rem;
+      }
+      .c-image{
+        flex: 0 0 100px;
+        img{
+          border-radius:4px;
+        }
+      }
+      .c-txt{
+        flex: auto;
+      }
+    }
+  }
+}

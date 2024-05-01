@@ -3,3 +3,13 @@
 .layout_main{
   padding-top: 7rem;
 }
+.page__header{
+  &--title{
+    margin-block-start: -3rem;
+    color: #fff;
+    padding: 0 1rem;
+    @include breakpoints (md){
+        padding: 0 2rem;
+    }
+  }
+}

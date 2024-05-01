@@ -5,4 +5,8 @@
 	top:0;
   background-color: #fff;
   z-index: 2;
+  border-radius: 0 0 .5rem .5rem;
+  &__logo{
+    width: 10rem;
+  }
 }

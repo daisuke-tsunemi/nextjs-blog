@@ -14,23 +14,19 @@
     gap: 1rem
   }
   // 縦並び
-  &--horizontal {
-    @extend .u-align;
+  &.horizontal {
     flex-direction: column;
   }
   // 中央よせ
-  &--center {
-    @extend .u-align;
+  &.center {
     justify-content: center;
   }
-  &--start {
-    @extend .u-align;
+  &.start {
     align-items: flex-start;
     justify-content: flex-start;
   }
   // ボタン用右よせ
-  &--end {
-    @extend .u-align;
+  &.end {
     align-items: flex-end;
     justify-content: flex-end;
   }

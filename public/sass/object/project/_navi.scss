@@ -1,0 +1,26 @@
+@use "../../foundation/breakpoints" as *;
+.navi{
+  &__wrapper{
+    display:none;
+    @include breakpoints (lg){
+      display:block;
+    }
+  }
+  &__list{
+    display: grid;
+    grid-template-columns: 1fr;
+    @include breakpoints (lg){
+      grid-template-columns: inherit;
+      display:flex;
+    }
+  }
+  &__item{
+    padding: 1rem 2rem;
+    @include breakpoints (lg){
+      padding: .25rem 1rem;
+      &:hover{
+        color: var(--primary);
+      }
+    }
+  }
+}

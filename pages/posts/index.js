@@ -27,15 +27,15 @@ export default function Posts ({ allPostsData }) {
             <span className='star'></span><span className='star'></span><span className='star'></span>
           </h1>
           <div className='l-grid--3 gap16'>
-            {allPostsData.map(({ id, date, title, image }) => (
+            {allPostsData.map(({ id, date, title, thumbnail }) => (
               <Link className='listItem' key={id} href={`/posts/${id}`}>
                   <h3 className='headingMd'>{title}</h3>
                   <Image
                     priority
                     className='img'
-                    src={image}
+                    src={thumbnail}
                     height={300}
-                    width={400}
+                    width={300}
                     alt=""
                   />
                 <small className='lightText'>

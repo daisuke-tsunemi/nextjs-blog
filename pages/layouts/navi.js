@@ -5,9 +5,10 @@ export default function Navi() {
     <div className='navi'>
       <div className='navi__wrapper'>
         <nav className='navi__list'>
-          <Link href="/">Home</Link>
-          <Link href="/posts">Blog Index</Link>
-          <Link href="/details/first">Details First</Link>
+          <Link className='navi__item' href="/">Home</Link>
+          <Link className='navi__item' href="/posts">Blog Index</Link>
+          <Link className='navi__item' href="/about">About</Link>
+          <Link className='navi__item' href="/service">Service</Link>
         </nav>
       </div>
     </div>

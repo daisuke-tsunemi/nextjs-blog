@@ -1,10 +1,8 @@
 @use "../../foundation/breakpoints" as *;
 .p_section{
-  +.p_section{
-    padding: 2rem 0;
-    @include breakpoints (md){
-      padding: 4rem 0;
-    }
+  padding: 2rem 0;
+  @include breakpoints (md){
+    padding: 4rem 0;
   }
   &__head{
     margin-block-end: 1rem;
@@ -20,5 +18,8 @@
     @include breakpoints (md){
       margin-block-start: 2rem;
     }
+  }
+  &:nth-of-type(even){
+    background-color: var(--bg-light);
   }
 }

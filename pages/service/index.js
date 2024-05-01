@@ -3,12 +3,12 @@ import Link from 'next/link';
 import Script from 'next/script';
 import Layout from '../layouts/layout';
 
-export default function First() {
+export default function Service() {
   return (
     <Layout>
       <Head>
-        <title>First Post</title>
-        <meta property="og:title" content="サンプル" key="title" />
+        <title>Service</title>
+        <meta property="og:title" content="Service - サービスのご紹介" key="title" />
       </Head>
       
       <h1 className={'text-3xl font-black'}>最初の Post</h1>

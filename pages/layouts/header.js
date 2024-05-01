@@ -8,9 +8,21 @@ export default function Header() {
     <header className='l-header'>
     <>
       <div className='container'>
-        <h2 className='c-txt__min'>
-        ユーザーを、ビジネスを、ミツメルデザイン
-        </h2>
+        <div className='u-align'>
+          <Link href="/">
+            <Image
+              priority
+              src="/images/logo/logo_horizontal.png"
+              height={32}
+              width={60}
+              alt="ロゴ"
+              className='l-header__logo'
+            />
+          </Link>
+          <h2 className='c-txt__min'>
+          ユーザーを、ビジネスを、ミツメルデザイン
+          </h2>
+        </div>
         {/* <div>
           <Link href="/">
             <ForwardToInboxTwoToneIcon color="secondary" />

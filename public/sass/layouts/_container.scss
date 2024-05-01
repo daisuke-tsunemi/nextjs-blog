@@ -5,15 +5,16 @@
 %container{
   width: 100%;
   min-width:350px;
+  margin:0 auto;
 }
 .l-container {
+  @extend %container;
   max-width: 1440px;
   padding: 1rem;
   @include breakpoints (sm){
     padding: 2rem;
   }
   // 500px~1400px
-  @extend %container;
   $i: 5;
   @while $i <= 14 {
     &__#{$i}00 {

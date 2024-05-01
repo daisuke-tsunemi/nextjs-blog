@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
+import Navi from '../layouts/navi';
 
 export default function Footer() {
   return (
@@ -15,11 +16,7 @@ export default function Footer() {
           />
         </div>
         <div className="p-footer__menu">
-          <nav className="p-footer__menu--nav">
-            <Link className='c-txt__sm' href="/">Home</Link>
-            <Link className='c-txt__sm' href="/posts">Blog Index</Link>
-            <Link className='c-txt__sm' href="/details/first">Details First</Link>
-          </nav>
+          <Navi />
         </div>
       </div>
       <p className="copyright">1234567890-0iugfcvb</p>
