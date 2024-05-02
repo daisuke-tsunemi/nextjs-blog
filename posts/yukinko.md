@@ -12,12 +12,10 @@ tag_1: 'ロゴデザイン'
 tag_2: 'ブランディングデザイン'
 ---
 
-Next.js has two forms of pre-rendering: 
-**Static Generation** and **Server-side Rendering**. The difference is in **when** it generates the HTML for a page.
-
-- **Static Generation** is the pre-rendering method that generates the HTML at **build time**. The pre-rendered HTML is then _reused_ on each request.
-- **Server-side Rendering** is the pre-rendering method that generates the HTML on **each request**.
-
-Importantly, Next.js lets you **choose** which pre-rendering form to use for each page. You can create a "hybrid" Next.js app by using Static Generation for most pages and using Server-side Rendering for others.
-Next.js has two forms of pre-rendering: **Static Generation** and **Server-side Rendering**. The difference is in **when** it generates the HTML for a page.
+北海道は標茶町で牧場を営む**ゆきんこファーム**さんのロゴデザイン、名刺、ブランディングキービジュアルなどを制作。
+- 羊飼い
+- 若馬の初期馴致
+- 乗用馬生産
+- 犬猫用エゾシカ肉生産
+- 引退競走馬、引退乗用馬支援
 

@@ -17,9 +17,16 @@
       background-color: var(--primary-pale);
     }
   }
-  &__body{
-    position: sticky;
-    top:0;
+  &__foot{
+    @include breakpoints (md){
+      max-height: 100vh;
+      overflow: auto;
+      padding: 1rem;
+      background-color: var(--primary-accent);
+    }
+    img+img{
+      margin-block-start: 1rem;
+    }
   }
 }
 .listItem{

@@ -71,7 +71,7 @@
   }
   &-accent{
     @extend %bg;
-    background-color: var(--primary-light);
+    background-color: var(--primary-accent);
     p{color:#fff;}
   }
 }

@@ -43,7 +43,7 @@ export default function Home ({ allPostsData }) {
       <Flow />
       {/* Add this <section> tag below the existing <section> tag */}
       <section className='p_section'>
-        <div className='l-container'>
+        <div className='l-container__1200'>
           <div className='p_section__head'>
             <h2 className='c-txt__lg'>
               Works

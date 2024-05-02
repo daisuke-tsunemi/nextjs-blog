@@ -4,6 +4,11 @@
   padding-top: 7rem;
 }
 .page__header{
+  width: 95%;
+  &--img{
+    border-radius:0 0 1rem 0;
+    border-bottom:2px solid var(--primary);
+  }
   &--title{
     margin-block-start: -3rem;
     color: #fff;

@@ -40,8 +40,6 @@ h5.c-ttl{
   font-size: 1rem;
   line-height: 1.618em;
   letter-spacing: 0.05em;
-}
-.c-txt{
   &__xl2 {
     @extend .c-txt;
     font-size: 2rem;
@@ -97,18 +95,6 @@ h5.c-ttl{
     color: var(--primary-dark);
     &--second {color: var(--second-dark);}
   }
-  &__light {
-    color: var(--primary-light);
-    &--second {color: var(--second-light);}
-  }
-  &__alert {
-    color: var(--invalid);
-    padding: .25rem .5rem;
-    background-color: var(--invalid-light);
-    border: var(--invalid-dark) 1px solid;
-    line-height:1;
-  }
-  &__ok {color: var(--valid);}
   &__weight{
     &--100 {font-weight: 100;}
     &--200 {font-weight: 200;}

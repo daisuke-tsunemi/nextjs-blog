@@ -1,20 +1,18 @@
 :root {
  // カラー
- --hue: 204;
+ --hue: 250;
  --primary: hsl(var(--hue), 100%, 50%);
- --primary-dark: hsl(204, 30%, 55%);
- --primary-accent: hsl(216, 100%, 35%);
- --primary-light: #00f5ff;
- --primary-pale: hsl(204, 80%, 90%);
- --primary-bg: hsl(204, 40%, 93%);
- --primary-bg-light: hsl(204, 40%, 98%);
+ --primary-dark: hsl(var(--hue), 30%, 65%);
+ --primary-accent: hsl(var(--hue), 100%, 35%);
+ --primary-pale: hsl(var(--hue), 80%, 90%);
+ --primary-bg: hsl(var(--hue), 40%, 93%);
  --base: #222;
  --border: #c6c7c8;
- --border-color: hsl(204, 30%, 55%);
- --border-light: hsl(204, 2%, 90%);
+ --border-color: hsl(var(--hue), 30%, 55%);
+ --border-light: hsl(var(--hue), 2%, 90%);
  --bg: #EDF1F3;
- --bg-light: hsl(204, 4%, 96%);
- --bg-dark: hsl(204, 4%, 80%);
+ --bg-light: hsl(var(--hue), 4%, 96%);
+ --bg-dark: hsl(var(--hue), 4%, 80%);
  --txt: #363636;
  --txt-weak: #666;
  --txt-light: #bbb;
@@ -24,16 +22,13 @@
  --ok: #38ad41;
  --caution: #EA00AA;
  --alert: #de2b2b;
- --second: #FFD600;
- --second-light: #EBFF00;
- --second-dark: #BE9F00;
 
- --valid: hsl(173, 88%, 42%);
+ --valid: hsl(160, 88%, 42%);
  --invalid: hsl(345, 87%, 64%);
  --invalid-dark: hsl(345, 80%, 48%);
 
  // font-family
- --font: "Roboto", "Noto Sans JP", "Helvetica Neue", "Helvetica",
+ --font: 'Alata', "Helvetica Neue",  "Roboto",
    "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Arial", "Yu Gothic", "Meiryo",
    sans-serif;
 }

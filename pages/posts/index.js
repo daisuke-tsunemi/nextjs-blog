@@ -23,7 +23,7 @@ export default function Posts ({ allPostsData }) {
       {/* Add this <section> tag below the existing <section> tag */}
       <section className='headingMd'>
         <div className='l-container'>
-          <h1 className='title'>Blog Index 
+          <h1 className='page__header--title'>Blog Index 
             <span className='star'></span><span className='star'></span><span className='star'></span>
           </h1>
           <div className='l-grid--3 gap16'>

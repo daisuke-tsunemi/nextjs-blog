@@ -65,15 +65,15 @@
     &__head{
       display:flex;
       flex-wrap:wrap;
-      margin-bottom: 1.5rem;
+      margin-block-end: 1rem;
     }
     &__body{
       flex: auto;
     }
     &__foot{
-      margin-top: 1.5rem;
       display:flex;
       justify-content: flex-end;
+      margin-block-start: 1rem;
     }
   }
 }

@@ -16,16 +16,16 @@ export default function Post({ postData }) {
         <div className='page__header'>
           <Image
             priority
-            className='img'
+            className='page__header--img'
             src={postData.thumbnail}
             height={400}
             width={400}
-            alt="メインのイメージ"
+            alt="{postData.title}のイメージ"
           />
         </div>
         <div className='l-container'>
           <div className='p_works__body'>
-            <h1 className='c-txt__xl c-txt__weight--700'>
+            <h1 className='c-txt__lg c-txt__weight--700'>
               {postData.title}
             </h1>
             <Date dateString={postData.date} />
@@ -33,10 +33,7 @@ export default function Post({ postData }) {
               <p className='c-txt__min c-txt__height--1 c-txt__letter--0'>{postData.tag_1}</p>
               <p className='c-txt__min c-txt__height--1 c-txt__letter--0'>{postData.tag_2}</p>
             </div>
-            <p>
-            {postData.id}
-            </p>
-            <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
+            <div className='u-mt32' dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
             <div className='u-align center u-mt32'>
               <Link href="/posts" className='c-btn__line'>Works一覧へ</Link>
             </div>
@@ -44,51 +41,51 @@ export default function Post({ postData }) {
           <div className='p_works__foot'>
             <Image
               priority
-              className='img'
+              className='img--4_3'
               src={postData.image1}
               height={500}
               width={400}
-              alt="メインのイメージ"
+              alt="{postData.title}のイメージ1"
             />
             <Image
               priority
-              className='img'
+              className='img--4_3'
               src={postData.image2}
               height={500}
               width={400}
-              alt="メインのイメージ"
+              alt="{postData.title}のイメージ2"
             />
             <Image
               priority
-              className='img'
+              className='img--4_3'
               src={postData.image3}
               height={500}
               width={400}
-              alt="メインのイメージ"
+              alt="{postData.title}のイメージ3"
             />
             <Image
               priority
-              className='img'
+              className='img--4_3'
               src={postData.image3}
               height={500}
               width={400}
-              alt="メインのイメージ"
+              alt="{postData.title}のイメージ4"
             />
             <Image
               priority
-              className='img'
+              className='img--4_3'
               src={postData.image4}
               height={500}
               width={400}
-              alt="メインのイメージ"
+              alt="{postData.title}のイメージ5"
             />
             <Image
               priority
-              className='img'
+              className='img--4_3'
               src={postData.image5}
               height={500}
               width={400}
-              alt="メインのイメージ"
+              alt="{postData.title}のイメージ6"
             />
           </div>
         </div>

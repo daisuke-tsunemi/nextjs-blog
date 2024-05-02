@@ -30,14 +30,40 @@
         padding: 1.5rem;
       }
       .c-image{
-        flex: 0 0 100px;
-        img{
-          border-radius:4px;
-        }
+        flex: 0 0 5rem;
       }
       .c-txt{
         flex: auto;
       }
     }
+  }
+}
+.p_flow{
+  .l-grid{
+    &--item{
+      padding: 1rem;
+      border: 1px solid var(--border);
+      @include breakpoints (md){
+        padding: 1.5rem 1rem;
+      }
+      +*{
+        position:relative;
+        &:before{
+          content: '';
+          background-color: var(--border);
+          width: 3.5rem;
+          height: 1px;
+          position:absolute;
+          top:50%;
+          left: -2rem;
+          transform:translate(0,-50%);
+        }
+      }
+    }
+  }
+  .image--square{
+    margin:0 auto;
+    width: 5rem;
+    object-fit: contain;
   }
 }
