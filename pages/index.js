@@ -43,13 +43,10 @@ export default function Home ({ allPostsData }) {
       <Flow />
       {/* Add this <section> tag below the existing <section> tag */}
       <section className='p_section'>
+        <div className='p_section__head'>
+          <h2 className='c-txt p_section__title'>Works<span className='c-txt__sm'></span></h2>
+        </div>
         <div className='l-container__1200'>
-          <div className='p_section__head'>
-            <h2 className='c-txt__lg'>
-              Works
-              <span className='star'></span><span className='star'></span><span className='star'></span>
-            </h2>
-          </div>
           <div className='p_section__body'>
             <div className='l-grid--3 gridCard'>
               {allPostsData.map(({ id, date, title, thumbnail }) => (

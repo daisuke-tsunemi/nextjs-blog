@@ -2,10 +2,10 @@ import Image from 'next/image';
 export default function Flow() {
   return (
     <div className='p_section p_flow'>
+      <div className='p_section__head'>
+        <h2 className='c-txt c-txt--right p_section__title'>Customer Flow<span className='c-txt__md'>ご利用の流れ</span></h2>
+      </div>
       <div className='l-container__1200'>
-        <div className='p_section__head'>
-          <h2 className='c-txt__xl2'>Customer Flow<span className='c-txt__lg c-unit__after'>– ご利用の流れ</span></h2>
-        </div>
         <div className='p_section__body'>
           <div className='l-grid--4 u-gap24'>
 

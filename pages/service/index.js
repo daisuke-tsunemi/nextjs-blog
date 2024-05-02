@@ -13,7 +13,7 @@ export default function Service() {
       
       <h1 className={'text-3xl font-black'}>最初の Post</h1>
       <h2>
-        <Link href="/" className='c-btn'>Back to home</Link>
+        <Link href="/" className='c-btn--white'>Back to home</Link>
       </h2>
       
       <Script

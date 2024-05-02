@@ -3,10 +3,10 @@ import Image from 'next/image';
 export default function Service() {
   return (
     <div className='p_section p_service'>
+      <div className='p_section__head'>
+        <h2 className='c-txt p_section__title'>Service<span className='c-txt__md'>サービス紹介</span></h2>
+      </div>
       <div className='l-container__1200'>
-        <div className='p_section__head'>
-          <h2 className='c-txt__xl2'>Service<span className='c-txt__lg c-unit__after'>サービス紹介</span></h2>
-        </div>
         <div className='p_section__body'>
           <div className='l-grid--2 u-gap24'>
             <div className='l-grid--item'>
@@ -116,7 +116,7 @@ export default function Service() {
           </div>
         </div>
         <div className='p_section__foot u-align center'>
-          <Link className='c-btn lg' href="/service">詳しく見る</Link>
+          <Link className='c-btn--white lg' href="/service">詳しく見る</Link>
         </div>
       </div>
     </div>

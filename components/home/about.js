@@ -3,17 +3,19 @@ import Image from 'next/image';
 export default function About() {
   return (
     <div className='p_section p_about'>
-      <div className='l-container__1200'>
-        <div className='p_section__head'>
-          <h2 className='c-txt__xl2'>About Us<span className='c-txt__lg c-unit__after'>– 私たちについて</span></h2>
-        </div>
-        <div className='p_section__body l-grid--3 u-gap40'>
+      <div className='p_section__head'>
+        <h2 className='c-txt c-txt--center p_section__title'>About us<span className='c-txt__md'>私たちについて</span></h2>
+      </div>
+      <div className='l-container__900'>
+        <div className='p_section__body'>
+          <div className='img--left'>
           <Image
             src='/images/home/sample_1.jpg'
             height={200}
             width={300}
             alt="ご利用のイメージ6"
           />
+          </div>
           <div>
             <h3 className='c-txt__lg c-txt--center'>ユーザーを、ビジネスを、ミツメルデザイン</h3>
             <p className='c-txt__md u-mt24'>
@@ -24,15 +26,17 @@ export default function About() {
               ミツメルデザインの使命は、ユーザーとビジネスの両方に焦点を当て、効果的なデザインを提供することです。お困りの際は、ぜひお気軽にご相談ください。ビジネスの価値を共に創り上げましょう。
             </p>
           </div>
+          <div className='img--right'>
           <Image
             src='/images/home/sample_1.jpg'
             height={200}
             width={300}
             alt="ご利用のイメージ6"
           />
+          </div>
         </div>
         <div className='p_section__foot u-align center'>
-          {/* <Link className='c-btn lg' href="/about">詳しく見る</Link> */}
+          {/* <Link className='c-btn--white lg' href="/about">詳しく見る</Link> */}
         </div>
       </div>
     </div>

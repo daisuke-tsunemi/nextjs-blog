@@ -156,20 +156,6 @@
 			border:1px solid #aaa;
 		}
 	}
-	&--second{
-    @extend .c-btn;
-		background-color:var(--second);
-		border-color:var(--second-light);
-		color: var(--base);
-		svg{
-			fill:var(--base);
-		}
-		&:hover{
-			color: var(--base);
-			background-color:#fff;
-			border-color:var(--second);
-		}
-	}
 	&__line{
     @extend .c-btn;
 		background: transparent;

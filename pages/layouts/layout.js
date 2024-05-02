@@ -18,7 +18,7 @@ export default function Layout({ children, home }) {
         <link rel="icon" type="img/png" sizes="16x16" href="images/favicon/favicon.ico" />
         <meta name="author" content={siteTitle} />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:site" content="@ユーザー名" />
+        <meta name="twitter:site" content="@dt___" />
         <meta property="og:site_name" content={siteTitle} />
         <meta property="og:image" content={`https://og-image.vercel.app/${encodeURI(siteTitle,)}.png?theme=light&md=0&fontSize=75px&images=https%3A%2F%2Fassets.vercel.com%2Fimage%2Fupload%2Ffront%2Fassets%2Fdesign%2Fnextjs-black-logo.svg`}/>
         <meta property="og:url" content="https://" />
@@ -29,7 +29,7 @@ export default function Layout({ children, home }) {
         <title>{pageTitle} | {siteTitle}</title>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link href="https://fonts.googleapis.com/css2?family=Alata&family=Galada&family=Kiwi+Maru:wght@300;400;500&display=swap" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Galada&family=Kiwi+Maru:wght@300;400;500&display=swap" rel="stylesheet" />
       </Head>
       {/* ヘッダー */}
       <Header />
