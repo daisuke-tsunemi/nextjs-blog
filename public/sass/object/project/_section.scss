@@ -6,14 +6,15 @@
   }
   &__title{
     font-size: 3rem;
+    margin-inline-start: -1rem;
     line-height:0.75;
-    padding: 0 .5rem;
     font-family:'Galada';
     @include breakpoints (md){
-      padding: 0 1rem;
+      margin-inline-start: -2rem;
       font-size: 5rem;
     }
     @include breakpoints (lg){
+      margin-inline-start: -3rem;
       font-size: 8rem;
       line-height:0.5;
     }

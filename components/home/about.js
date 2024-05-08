@@ -8,15 +8,14 @@ export default function About() {
       </div>
       <div className='l-container__900'>
         <div className='p_section__body'>
-          <div className='img--left'>
           <Image
-            src='/images/home/sample_1.jpg'
+            src='/images/home/sample_5.jpg'
             height={200}
             width={300}
             alt="ご利用のイメージ6"
+            className='img--left'
           />
-          </div>
-          <div>
+          <div className='p_about__text'>
             <h3 className='c-txt__lg c-txt--center'>ユーザーを、ビジネスを、ミツメルデザイン</h3>
             <p className='c-txt__md u-mt24'>
               はじめまして、ミツメルデザインと申します！<br />
@@ -26,14 +25,13 @@ export default function About() {
               ミツメルデザインの使命は、ユーザーとビジネスの両方に焦点を当て、効果的なデザインを提供することです。お困りの際は、ぜひお気軽にご相談ください。ビジネスの価値を共に創り上げましょう。
             </p>
           </div>
-          <div className='img--right'>
           <Image
-            src='/images/home/sample_1.jpg'
+            src='/images/home/sample_6.jpg'
             height={200}
             width={300}
             alt="ご利用のイメージ6"
+            className='img--right'
           />
-          </div>
         </div>
         <div className='p_section__foot u-align center'>
           {/* <Link className='c-btn--white lg' href="/about">詳しく見る</Link> */}

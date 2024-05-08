@@ -19,9 +19,9 @@ export default function Post({ postData }) {
         <link rel="canonical" href="" />
       </Head>
       <div className='page__header'>
-                <Image 
-                priority className='page__header--img' src={postData.thumbnail} height={300} width={400} alt="{postData.title}のイメージ1"
-                />
+        <Image 
+          priority className='page__header--img' src={postData.thumbnail} height={300} width={400} alt="{postData.title}のイメージ1"
+        />
       </div>
       <div className='l-container'>
         <section className='p_works'>
@@ -37,7 +37,7 @@ export default function Post({ postData }) {
             <div className='u-mt32' dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
             <div className='u-align center u-mt32'>
               <Link href={postData.previous} className='c-btn--dark sm'>前へ</Link>
-              <Link href="/posts" className='c-btn__line sm'>Works一覧へ</Link>
+              <Link href="/works" className='c-btn__line sm'>Works一覧へ</Link>
               <Link href={postData.next} className='c-btn--dark sm'>次へ</Link>
             </div>
           </div>

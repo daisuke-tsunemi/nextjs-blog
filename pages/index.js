@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import Link from 'next/link';
 import Image from 'next/image';
-import View from '../components/view';
+import Fv from '../components/home/fv';
 import About from '../components/home/about';
 import Service from '../components/home/service';
 import Flow from '../components/home/flow';
@@ -24,20 +24,7 @@ export default function Home ({ allPostsData }) {
         <title>{`Top page | ${siteTitle}`}</title>
         <meta name="description" content="top page desu"/>
       </Head>
-      <section className='p_fv'>
-        <div className='l-container'>
-          <View />
-          <div className='logo'>
-            <Image
-              priority
-              src="/images/logo/logo_set.png"
-              height={80}
-              width={120}
-              alt=""
-            />
-          </div>
-        </div>
-      </section>
+      <Fv />
       <About />
       <Service />
       <Flow />
@@ -70,7 +57,7 @@ export default function Home ({ allPostsData }) {
             </div>
           </div>
           <div className='p_section__foot'>
-            <Link href="/posts" className='c-btn'>All Posts</Link>
+            <Link href="/works" className='c-btn'>All Posts</Link>
           </div>
         </div>
       </section>

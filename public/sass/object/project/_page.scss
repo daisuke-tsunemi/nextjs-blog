@@ -4,10 +4,14 @@
   padding-top: 7rem;
 }
 .page__header{
-  width: 95%;
+  display:flex;
+  justify-content: flex-end;
+  width: 100%;
   &--img{
-    border-radius:0 0 1rem 0;
-    border-bottom:2px solid var(--primary);
+    height: 15rem;
+    width: 90%;
+    border-radius:0 0 0 1rem;
+    margin-inline-start: auto;
   }
   &--title{
     margin-block-start: -3rem;

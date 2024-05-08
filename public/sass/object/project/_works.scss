@@ -1,11 +1,19 @@
 @use "../../foundation/breakpoints" as *;
+
 .p_works{
-  .l-container{
-    position:relative;
-    @include breakpoints (md){
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 3rem;
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 1fr;
+  position:relative;
+  @include breakpoints (md){
+    grid-template-columns: 1fr 2fr;
+  }
+  > div{
+    min-width: 1px;
+  }
+  &__body{
+    .swiper__img{
+      max-height:600px;
     }
   }
   &__tag{
@@ -18,14 +26,11 @@
     }
   }
   &__foot{
+    margin-block-start: 3rem;
+    padding-inline-start: 2rem;
     @include breakpoints (md){
-      max-height: 100vh;
-      overflow: auto;
-      padding: 1rem;
-      background-color: var(--primary-accent);
-    }
-    img+img{
-      margin-block-start: 1rem;
+      margin-block-start: 5rem;
+      padding-inline-start: 4rem;
     }
   }
 }

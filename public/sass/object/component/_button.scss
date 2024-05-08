@@ -45,35 +45,6 @@
 			background-color:var(--primary-dark);
 		}
 	}
-	// サイズ
-	&.lg{
-		font-size: 1rem;
-		min-width: 15rem;
-		@include breakpoints (sm){
-			height: 60px;
-		}
-	}
-	&.sm{
-
-		height: 35px;
-		padding: 0 0.5rem;
-    font-size: .75rem;
-    min-width: 100px;
-		letter-spacing: 0;
-		border-width:1px;
-	}
-	&.min{
-		height: 26px;
-    min-width: inherit;
-		border-width:1px;
-		letter-spacing: 0;
-    font-size: .75rem;
-    width: auto;
-    padding: 0.25rem 0.5rem 0.15rem;
-	}
-	&.wide{
-		min-width:200px;
-	}
 	&__text{
 		display: inline;
 		font-size: 1rem;
@@ -113,6 +84,13 @@
 		}
 	}
 	// カラー
+	&--dark{
+    @extend .c-btn;
+		background-color: var(--primary-dark);
+		&:hover{
+			background-color: var(--primary-accent)
+		}
+	}
 	&--black{
     @extend .c-btn;
 		border: var(--base) 1px solid;
@@ -251,5 +229,33 @@
 		&:hover{
 			color:var(--accent);
 		}
+	}
+	// サイズ
+	&.lg{
+		font-size: 1rem;
+		min-width: 15rem;
+		@include breakpoints (sm){
+			height: 60px;
+		}
+	}
+	&.sm{
+		height: 2rem;
+		padding: 0 0.5rem;
+    font-size: .75rem;
+    min-width: 5rem;
+		letter-spacing: 0;
+		border-width:1px;
+	}
+	&.min{
+		height: 26px;
+    min-width: inherit;
+		border-width:1px;
+		letter-spacing: 0;
+    font-size: .75rem;
+    width: auto;
+    padding: 0.25rem 0.5rem 0.15rem;
+	}
+	&.wide{
+		min-width:200px;
 	}
 }

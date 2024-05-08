@@ -29,7 +29,7 @@ export default function Layout({ children, home }) {
         <title>{pageTitle} | {siteTitle}</title>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link href="https://fonts.googleapis.com/css2?family=Galada&family=Kiwi+Maru:wght@300;400;500&display=swap" rel="stylesheet" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Galada&family=Zen+Kaku+Gothic+New:wght@300;400;500;700;900&display=swap" />
       </Head>
       {/* ヘッダー */}
       <Header />

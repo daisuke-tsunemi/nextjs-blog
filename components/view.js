@@ -18,7 +18,7 @@ export default () => {
           delay: 2500,
           disableOnInteraction: false,
         }}
-        onSwiper={(swiper) => console.log(swiper)}
+        onSwiper={(swiperView) => console.log(swiperView)}
         effect="fade"
         modules={[Navigation, Autoplay, Keyboard, Pagination, Scrollbar, A11y, EffectFade]}
         className="swiper"

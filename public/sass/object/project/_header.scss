@@ -9,10 +9,9 @@
   border-radius: 0 0 .5rem .5rem;
   &__logo{
     width: 7rem;
-    height: 23px;
+    height: auto;
     @include breakpoints (sm){
       width: 10rem;
-      height: 32px;
     }
   }
 }

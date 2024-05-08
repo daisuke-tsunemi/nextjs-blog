@@ -25,7 +25,7 @@ export default function Service() {
             <div className='l-grid--item'>
               <div className='l-grid--item__body u-flex u-gap24'>
                 <div className='c-image'>
-                  <Image src='/images/content/service_icon_2.png' className='image--square' height={80} width={80} alt="ご利用のイメージ1" />
+                  <Image src='/images/content/service_icon_2.png' className='image--square' height={80} width={80} alt="ご利用のイメージ2" />
                 </div>
                 <div className='c-txt'>
                   <h3 className='c-txt__md c-txt__weight--700'>CMSデザイン制作</h3>
@@ -38,7 +38,7 @@ export default function Service() {
             <div className='l-grid--item'>
               <div className='l-grid--item__body u-flex u-gap24'>
                 <div className='c-image'>
-                  <Image src='/images/content/service_icon_3.png' className='image--square' height={80} width={80} alt="ご利用のイメージ1" />
+                  <Image src='/images/content/service_icon_3.png' className='image--square' height={80} width={80} alt="ご利用のイメージ3" />
                 </div>
                 <div className='c-txt'>
                   <h3 className='c-txt__md c-txt__weight--700'>ロゴデザイン制作</h3>
@@ -51,7 +51,7 @@ export default function Service() {
             <div className='l-grid--item'>
               <div className='l-grid--item__body u-flex u-gap24'>
                 <div className='c-image'>
-                  <Image src='/images/content/service_icon_4.png' className='image--square' height={80} width={80} alt="ご利用のイメージ1" />
+                  <Image src='/images/content/service_icon_4.png' className='image--square' height={80} width={80} alt="ご利用のイメージ4" />
                 </div>
                 <div className='c-txt'>
                   <h3 className='c-txt__md c-txt__weight--700'>ブランディングツール制作</h3>
@@ -64,7 +64,7 @@ export default function Service() {
             <div className='l-grid--item'>
               <div className='l-grid--item__body u-flex u-gap24'>
                 <div className='c-image'>
-                  <Image src='/images/content/service_icon_5.png' className='image--square' height={80} width={80} alt="ご利用のイメージ1" />
+                  <Image src='/images/content/service_icon_5.png' className='image--square' height={80} width={80} alt="ご利用のイメージ5" />
                 </div>
                 <div className='c-txt'>
                   <h3 className='c-txt__md c-txt__weight--700'>LP制作</h3>
@@ -77,7 +77,7 @@ export default function Service() {
             <div className='l-grid--item'>
               <div className='l-grid--item__body u-flex u-gap24'>
                 <div className='c-image'>
-                  <Image src='/images/content/service_icon_6.png' className='image--square' height={80} width={80} alt="ご利用のイメージ1" />
+                  <Image src='/images/content/service_icon_6.png' className='image--square' height={80} width={80} alt="ご利用のイメージ6" />
                 </div>
                 <div className='c-txt'>
                   <h3 className='c-txt__md c-txt__weight--700'>SNSデザイン画像制作</h3>
@@ -90,7 +90,7 @@ export default function Service() {
             <div className='l-grid--item'>
               <div className='l-grid--item__body u-flex u-gap24'>
                 <div className='c-image'>
-                  <Image src='/images/content/service_icon_7.png' className='image--square' height={80} width={80} alt="ご利用のイメージ1" />
+                  <Image src='/images/content/service_icon_7.png' className='image--square' height={80} width={80} alt="ご利用のイメージ7" />
                 </div>
                 <div className='c-txt'>
                   <h3 className='c-txt__md c-txt__weight--700'>バナーデザイン制作</h3>
@@ -103,7 +103,7 @@ export default function Service() {
             <div className='l-grid--item'>
               <div className='l-grid--item__body u-flex u-gap24'>
                 <div className='c-image'>
-                  <Image src='/images/content/service_icon_8.png' className='image--square' height={80} width={80} alt="ご利用のイメージ1" />
+                  <Image src='/images/content/service_icon_8.png' className='image--square' height={80} width={80} alt="ご利用のイメージ8" />
                 </div>
                 <div className='c-txt'>
                   <h3 className='c-txt__md c-txt__weight--700'>広告グラフィック制作</h3>

@@ -10,12 +10,12 @@
  --border: #c6c7c8;
  --border-color: hsl(var(--hue), 30%, 55%);
  --border-light: hsl(var(--hue), 2%, 90%);
- --bg: hsl(var(--hue), 83%, 46%);
- --bg-light: hsl(var(--hue), 65%, 80%);
- --bg-dark: hsl(var(--hue), 100%, 30%);
- --txt: #eee;
+ --bg: hsl(var(--hue), 15%, 95%);
+ --bg-light: hsl(var(--hue), 15%, 80%);
+ --bg-dark: hsl(var(--hue), 15%, 70%);
+ --txt: #333;
  --txt-weak: #666;
- --txt-light: #bbb;
+ --txt-light: #888;
  --txt-strong: #000;
  --txt-color: #466683;
  --txt-link: #0081ff;
@@ -28,7 +28,5 @@
  --invalid-dark: hsl(345, 80%, 48%);
 
  // font-family
- --font: "Helvetica Neue",  "Roboto",
-   "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Arial", "Yu Gothic", "Meiryo",
-   sans-serif;
+ --font: "Helvetica Neue",  "Roboto", "Zen Kaku Gothic New", "Arial", "Yu Gothic", "Meiryo", sans-serif;
 }

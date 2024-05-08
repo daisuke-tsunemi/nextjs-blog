@@ -24,22 +24,20 @@ export default function Posts ({ allPostsData }) {
           priority
           className='page__header--img'
           src='/images/bg/bg_spat.webp'
-          height={200}
+          height={160}
           width={300}
           alt="アートのイメージ"
         />
       </div>
       <section className='p_section'>
-        <div className='p_section__head'>
-        </div>
         <div className='l-container'>
           <div className='p_section__body'>
             <h1 className='p_section__title'>Works Index<span className='c-txt__md'>制作実績一覧</span></h1>
           </div>
-          <div className='p_section__foot'>
-            <div className='l-grid--3 gap16'>
+          <div className='p_works__foot'>
+            <div className='l-grid--3 u-gap16'>
               {allPostsData.map(({ id, date, title, thumbnail }) => (
-                <Link className='listItem' key={id} href={`/posts/${id}`}>
+                <Link className='listItem' key={id} href={`/works/${id}`}>
                     <h3 className='headingMd'>{title}</h3>
                     <Image
                       priority

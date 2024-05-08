@@ -26,22 +26,34 @@
   .p_section__title span{
     left:40%;
   }
+  &__text{
+    z-index: 1;
+    position: relative;
+  }
   .img{
     &--left{
-      left:-10%;
+      left:-5%;
       position:absolute;
       top:60%;
       transform:translate(0,-50%);
-      height:300px;
-      width:300px;
+      height:10rem;
+      width:6rem;
+      @include breakpoints (md){
+        height:300px;
+        width:200px;
+      }
     }
     &--right{
-      right:-10%;
+      right:-5%;
       position:absolute;
       top:60%;
       transform:translate(0,-50%);
-      height:300px;
-      width:300px;
+      height:10rem;
+      width:6rem;
+      @include breakpoints (md){
+        height:300px;
+        width:200px;
+      }
     }
   }
 }

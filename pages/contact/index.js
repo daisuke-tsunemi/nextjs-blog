@@ -4,12 +4,12 @@ import Image from 'next/image';
 import Script from 'next/script';
 import Layout from '../layouts/layout';
 
-export default function About() {
+export default function Contact() {
   return (
     <Layout>
       <Head>
         <title>Contact</title>
-        <meta property="og:title" content="私たちについて - About Us" key="title" />
+        <meta property="og:title" content="お問い合わせ - Contact" key="title" />
       </Head>
         <div className='page__header'>
           <Image
@@ -20,7 +20,7 @@ export default function About() {
             width={400}
             alt="メインのイメージ"
           />
-          <h1 className={'c-txt__xl page__header--title'}>私たちについて</h1>
+          <h1 className={'c-txt__xl page__header--title'}>お問い合わせ</h1>
         </div>
         <div className='l-container'>
             <div className={'p_section__head'}>

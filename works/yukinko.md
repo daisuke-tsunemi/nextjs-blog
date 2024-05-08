@@ -10,8 +10,8 @@ title: 'ゆきんこファーム - ロゴブランディング'
 date: '2024-05-01'
 tag_1: 'ロゴデザイン'
 tag_2: 'ブランディングデザイン'
-previous: '/posts/ssg-ssr'
-next: '/posts/ssg-ssr'
+previous: '/works/ssg-ssr'
+next: '/works/ssg-ssr'
 ---
 
 北海道は標茶町で牧場を営む**ゆきんこファーム**さんのロゴデザイン、名刺、ブランディングキービジュアルなどを制作。

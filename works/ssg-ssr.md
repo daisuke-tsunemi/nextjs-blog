@@ -10,8 +10,8 @@ title: 'When to Use Static Generation v.s. Server-side Rendering'
 date: '2022-01-02'
 tag_1: 'リーフレットデザイン'
 tag_2: 'グラフィックデザイン'
-previous: '/posts/yukinko'
-next: '/posts/yukinko'
+previous: '/works/yukinko'
+next: '/works/yukinko'
 ---
 
 We recommend using **Static Generation** (with and without data) whenever possible because your page can be built once and served by CDN, which makes it much faster than having a server render the page on every request.
