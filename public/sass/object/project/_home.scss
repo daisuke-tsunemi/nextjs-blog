@@ -13,12 +13,15 @@
     z-index: 1;
   }
 }
-.view{
-  overflow: hidden;
-  .swiperImg{
-    object-fit: cover;
-    height: 90vh;
-    border-radius:0 0 2rem 2rem;
+.pView{
+  &__head{
+    overflow: hidden;
+  }
+  &__img{
+    width:10rem;
+    @include breakpoints (md){
+      width:15rem;
+    }
   }
 }
 .p_about{

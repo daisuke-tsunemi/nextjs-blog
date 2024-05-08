@@ -10,6 +10,7 @@ export default function Fv() {
             height={80}
             width={120}
             alt="Mitsumeru ロゴ"
+            className='pView__logo'
           />
         </div>
         <h2 className="pView__head--title c-txt__xl3 c-txt--center u-w100p">
