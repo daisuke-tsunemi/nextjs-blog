@@ -1,23 +1,10 @@
 @use "../../foundation/breakpoints" as *;
 .p_fv{
   position:relative;
-  .l-container{
-    padding-block-end: 0;
-    padding-block-start: 0;
-  }
-  .logo{
-    position:absolute;
-    top:50%;
-    left:10%;
-    transform:translate(0,-50%);
-    z-index: 1;
-  }
-}
-.pView{
   &__head{
     overflow: hidden;
   }
-  &__img{
+  &__logo{
     width:10rem;
     @include breakpoints (md){
       width:15rem;
