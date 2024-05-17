@@ -10,11 +10,9 @@
     line-height:0.75;
     font-family:'Galada';
     @include breakpoints (md){
-      margin-inline-start: -2rem;
       font-size: 5rem;
     }
     @include breakpoints (lg){
-      margin-inline-start: -3rem;
       font-size: 8rem;
       line-height:0.5;
     }

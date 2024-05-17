@@ -1,8 +1,36 @@
 @use "../../foundation/breakpoints" as *;
 .p_fv{
   position:relative;
-  &__head{
-    overflow: hidden;
+  height: 90dvh;
+  width: 100%;
+  gap: 1rem;
+  padding: .5rem;
+  @include breakpoints (md){
+    padding: 1rem;
+  }
+  >.l-container{
+    background:url(../images/bg/bg_fv.webp) no-repeat center;
+    background-size:cover;
+    height: 100%;
+    border-radius:1rem;
+    box-shadow: 0px 16px 24px rgba(103, 0, 123, 0.15);
+  }
+  &__body{
+    background-color: #fff;
+    max-width:700px;
+    width: 100%;
+    display:flex;
+    align-items:center;
+    gap: 1rem;
+    flex-direction: column;
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    padding: 1rem;
+    @include breakpoints (md){
+      padding: 3rem;
+    }
   }
   &__logo{
     width:10rem;
@@ -13,6 +41,7 @@
 }
 .p_about{
   position:relative;
+  overflow: hidden;
   .p_section__title span{
     left:40%;
   }
@@ -22,7 +51,7 @@
   }
   .img{
     &--left{
-      left:-5%;
+      left:-1%;
       position:absolute;
       top:60%;
       transform:translate(0,-50%);
@@ -34,7 +63,7 @@
       }
     }
     &--right{
-      right:-5%;
+      right:-1%;
       position:absolute;
       top:60%;
       transform:translate(0,-50%);

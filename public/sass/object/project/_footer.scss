@@ -1,6 +1,39 @@
-.l-footer{
-  grid-area:footer;
-  a{
-    color: #fff;
+@use "../../foundation/breakpoints" as *;
+.p-footer{
+  padding: 1rem;
+  margin-block-start: -1rem;
+  background-color: #fff;
+  border-radius:1rem;
+  &__body{
+    display:flex;
+    flex-wrap:wrap;
+    gap: 1rem;
+    justify-content: space-between;
   }
+  &__logo{
+    img{
+      object-fit: contain;
+    }
+  }
+  &__menu{
+    &--nav{
+      display:flex;
+      flex-wrap:wrap;
+      gap: .25rem;
+      a{
+        text-align: right;
+        padding: .5rem;
+        &:hover{
+          @include breakpoints (md){
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+}
+.copyright{
+  font-size: 11px;
+  color: #ccc;
+  text-align: right;
 }

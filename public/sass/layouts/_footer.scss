@@ -1,34 +1,4 @@
-@use "../foundation/breakpoints" as *;
-.p-footer{
-  display:flex;
-  flex-wrap:wrap;
-  justify-content: space-between;
-  gap: 1rem;
-  &__logo{
-    img{
-      object-fit: contain;
-    }
-  }
-  &__menu{
-    &--nav{
-      display:flex;
-      flex-wrap:wrap;
-      gap: .25rem;
-      a{
-        text-align: right;
-        padding: .5rem;
-        &:hover{
-          @include breakpoints (md){
-            text-decoration: underline;
-          }
-        }
-      }
-    }
-  }
-}
-.copyright{
-  font-size: 11px;
-  color: #ccc;
-  text-align: right;
-  margin: 2rem 0 0;
+.l-footer{
+  grid-area:footer;
+  padding: 0 1rem;
 }
