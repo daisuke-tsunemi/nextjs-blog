@@ -24,7 +24,7 @@ export default function Header() {
             />
           </Link>
           <h2 className='c-txt__min'>
-          ユーザーを、ビジネスを、ミツメルデザイン
+          ユーザーを、ビジネスを、<br className="off_md"/>ミツメルデザイン
           </h2>
         </div>
         <div className={`${styles.navWrapper} ${openMenu ? styles.open : undefined}`}>
