@@ -1,0 +1,117 @@
+@use "../foundation/breakpoints" as *;
+.logo {
+  font-size: 20px;
+}
+.layout{
+  display:flex;
+  flex-wrap:wrap;
+  width: 100%;
+  align-items:center;
+  padding: .5rem 1rem;
+  position: sticky;
+  z-index: 1;
+  top:0;
+}
+.navWrapper{
+  margin-inline-end: .5rem;
+  @include breakpoints (lg){
+    margin-inline-end: 1rem;
+  }
+}
+.navi{
+  &__list {
+    margin-left: auto;
+  }
+  &__item {
+    display: inline-block;
+    &:nth-child(6) {
+      background-color: rgb(34, 35, 35);
+      color: white;
+      width: 90px;
+      padding: 5px 10px;
+      margin-right: 0;
+    }
+  }
+}
+.navi__list{
+  display:none;
+}
+// ハンバーガーボタン
+.navToggle{
+  border: none;
+  position:relative;
+  height:3rem;
+  width:3rem;
+  padding:0;
+  background-color: transparent;
+  &__wrapper{
+    padding: .25rem;
+    position:relative;
+    @include breakpoints (lg){
+      display:none;
+    }
+  }
+  span{
+    position:absolute;
+    top:10%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    height: 1px;
+    width: 60%;
+    background-color: var(--border);
+    transition: ease-in 0.2s;
+    &:nth-of-type(2){
+      top:50%;
+      width: 100%;
+    }
+    &:nth-of-type(3){
+      top:90%;
+    }
+  }
+}
+.open{
+  span{
+    top:50%;
+    width: 120%;
+    transform:translate(-50%,-50%) rotate(55deg);
+    &:nth-of-type(2){
+      height: 0;
+      width: 0;
+    }
+    &:nth-of-type(3){
+      top:50%;
+      transform:translate(-50%,-50%) rotate(-55deg);
+    }
+  }
+  .navi{
+    &__list{
+      margin:0;
+      display: grid;
+      gap: .5rem;
+      grid-template-columns: 1fr;
+    }
+    &__item{
+      padding: 1rem;
+      color: #fff;
+      text-align: center;
+    }
+  }
+}
+.navWrapper{
+  display:block;
+  margin-inline-start: auto;
+  &[class*="_open"]{
+    position: fixed;
+    height:100%;
+    width: 100%;
+    background-color: rgba($color: #000000, $alpha: 0.7);
+    top:0;
+    left:0;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    +.navToggle__wrapper{
+      margin-inline-start: auto;
+    }
+  }
+}

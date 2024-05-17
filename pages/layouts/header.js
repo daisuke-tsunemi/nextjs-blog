@@ -1,36 +1,43 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import Navi from '../layouts/navi';
-// import ForwardToInboxTwoToneIcon from '@mui/icons-material/ForwardToInboxTwoTone';
+import styles from "/public/sass/module/header.module.scss";
+import React, {useState} from "react";
 
 export default function Header() {
+  const [openMenu, setOpenMenu] = useState(false);
+  const menuFunction = () => {
+    setOpenMenu(!openMenu);
+  }
   return (
-    <>
-      <header className='l-header'>
-        <div className='container'>
-          <div className='u-align'>
-            <Link href="/">
-              <Image
-                priority
-                src="/images/logo/logo_horizontal.png"
-                height={32}
-                width={60}
-                alt="ロゴ"
-                className='l-header__logo'
-              />
-            </Link>
-            <h2 className='c-txt__min'>
-            ユーザーを、ビジネスを、ミツメルデザイン
-            </h2>
-          </div>
-          {/* <div>
-            <Link href="/">
-              <ForwardToInboxTwoToneIcon color="secondary" />
-            </Link>
-          </div> */}
+    <React.Fragment>
+      <header className={styles.layout}>
+        <div className='u-align'>
+          <Link href="/">
+            <Image
+              priority
+              src="/images/logo/logo_horizontal.png"
+              height={32}
+              width={60}
+              alt="ロゴ"
+              className={styles.logo}
+            />
+          </Link>
+          <h2 className='c-txt__min'>
+          ユーザーを、ビジネスを、ミツメルデザイン
+          </h2>
+        </div>
+        <div className={`${styles.navWrapper} ${openMenu ? styles.open : undefined}`}>
           <Navi />
         </div>
+        <div className={`${styles.navToggle__wrapper} ${openMenu ? styles.open : undefined}`}>
+          <button className={styles.navToggle} onClick={() => menuFunction()}>
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
       </header>
-    </>
+    </React.Fragment>
   )
 }
