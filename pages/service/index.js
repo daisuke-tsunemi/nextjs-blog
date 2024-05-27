@@ -12,21 +12,17 @@ export default function About() {
         <title>Service</title>
         <meta property="og:title" content="サービスのご紹介 - Service" key="title" />
       </Head>
-      <div className={styles.page__header}>
+      <div className={styles.heading}>
         <Image
           priority
-          className='img'
-          src='/images/pages/service.jpg'
+          className={styles.heading__img}
+          src='/images/pages/about.jpg'
           height={300}
           width={400}
           alt="メインのイメージ"
         />
-        <h1 className={styles.header__title}>サービスのご紹介</h1>
       </div>
-      <div className='l-container'>
-          <div className={'p_section__head'}>
-          </div>
-      </div>
+            <h1 className={styles.heading__title}>Service <small>サービスについて</small></h1>
       
       <Script
         src="https://connect.facebook.net/en_US/sdk.js"

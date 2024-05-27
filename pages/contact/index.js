@@ -21,7 +21,7 @@ export default function Contact() {
             alt="メインのイメージ"
           />
         </div>
-          <h1 className={styles.heading__title}>お問い合わせ</h1>
+            <h1 className={styles.heading__title}>Contact <small>お問い合わせ</small></h1>
       
       <Script
         src="https://connect.facebook.net/en_US/sdk.js"
