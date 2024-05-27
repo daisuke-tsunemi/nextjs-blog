@@ -1,5 +1,5 @@
-@use "../../foundation/breakpoints" as *;
-.p-footer{
+@use "../../public/sass/foundation/breakpoints" as *;
+.p_footer{
   padding: 1rem;
   margin-block-start: -1rem;
   background-color: #fff;
@@ -16,7 +16,7 @@
     }
   }
   &__menu{
-    &--nav{
+    nav{
       display:flex;
       flex-wrap:wrap;
       gap: .25rem;

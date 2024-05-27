@@ -4,6 +4,7 @@ import Image from 'next/image';
 import Layout, { siteTitle } from '../layouts/layout';
 import { getSortedPostsData } from '../../lib/posts';
 import Date from '../../components/date';
+import styles from "../../styles/pages/page.module.scss";
 
 export async function getStaticProps() {
   const allPostsData = getSortedPostsData();
@@ -19,10 +20,10 @@ export default function Posts ({ allPostsData }) {
       <Head>
         <title>{`Blog Index | ${siteTitle}`}</title>
       </Head>
-      <div className='page__header'>
+      <div className={styles.heading}>
         <Image
           priority
-          className='page__header--img'
+          className={styles.heading__img}
           src='/images/bg/bg_spat.webp'
           height={160}
           width={300}
@@ -32,7 +33,7 @@ export default function Posts ({ allPostsData }) {
       <section className='p_section'>
         <div className='l-container'>
           <div className='p_section__body'>
-            <h1 className='p_section__title'>Works Index<span className='c-txt__md'>制作実績一覧</span></h1>
+            <h1 className={styles.heading__title}>Works Index<span className='c-txt__md'>制作実績一覧</span></h1>
           </div>
           <div className='p_works__foot'>
             <div className='l-grid--3 u-gap16'>

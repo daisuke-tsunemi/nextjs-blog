@@ -1,1 +1,0 @@
-.navi__list{display:none}@media screen and (min-width: 991px){.navi__list{grid-template-columns:inherit;display:flex}}.navi__item{padding:1rem 2rem}@media screen and (min-width: 991px){.navi__item{padding:.25rem 1rem}.navi__item:hover{color:var(--primary)}}/*# sourceMappingURL=navi.module.css.map */

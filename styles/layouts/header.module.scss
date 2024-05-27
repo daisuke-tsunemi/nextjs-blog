@@ -1,16 +1,47 @@
-@use "../foundation/breakpoints" as *;
+@use "../../public/sass/foundation/breakpoints" as *;
 .logo {
   font-size: 20px;
 }
 .layout{
-  display:flex;
-  flex-wrap:wrap;
   width: 100%;
-  align-items:center;
   padding: .5rem 1rem;
   position: sticky;
   z-index: 1;
   top:0;
+  background:linear-gradient(0deg, #ffffff00, #fff);
+	@supports (animation-timeline: scroll()){
+		@media (prefers-reduced-motion: no-preference){
+			--IS-SCROLL: initial;
+			—-NO-SCROLL: auto;
+			animation-name: observer;
+			animation-fill-mode: both;
+			animation-range: 10rem 2px;
+			animation-timeline: scroll(root);
+		}
+		@keyframes observer{
+      99%{
+        --IS-SCROLL: initial;
+        —-NO-SCROLL: auto;
+      }
+			100%{
+				--IS-SCROLL: auto;
+				-—NO-SCROLL: initial;
+			}
+		}
+	}
+  &Container{
+    width: 100%;
+    display:flex;
+    align-items:center;
+		@supports (animation-timeline: scroll()){
+			@media (prefers-reduced-motion: no-preference){
+				padding-block: var(--IS-SCROLL, 1rem) var(--NO-SCROLL, 1rem);
+				transition-property: padding-block;
+				transition-duration: .2s;
+				transition-timing-function: cubic-bezier(0.37, 0.01, 0.22, 1.01);
+			}
+		}
+  }
 }
 .navWrapper{
   margin-inline-end: .5rem;
@@ -21,9 +52,16 @@
 .navi{
   &__list {
     margin-left: auto;
+    display:none;
+    @include breakpoints (lg){
+      display:flex;
+    }
   }
   &__item {
     display: inline-block;
+    @include breakpoints (lg){
+      padding: .25rem 1rem;
+    }
     &:nth-child(6) {
       background-color: rgb(34, 35, 35);
       color: white;
@@ -32,9 +70,6 @@
       margin-right: 0;
     }
   }
-}
-.navi__list{
-  display:none;
 }
 // ハンバーガーボタン
 .navToggle{

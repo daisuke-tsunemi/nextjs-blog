@@ -4,6 +4,7 @@ import Image from 'next/image';
 import Layout, { siteTitle } from '../layouts/layout';
 import { getSortedPostsData } from '../../lib/posts';
 import Date from '../../components/date';
+import styles from "../../styles/pages/page.module.scss";
 
 export async function getStaticProps() {
   const allPostsData = getSortedPostsData();
@@ -19,7 +20,7 @@ export default function Posts ({ allPostsData }) {
       <Head>
         <title>{`Blog Index | ${siteTitle}`}</title>
       </Head>
-      <div className='page__header'>
+        <div className={styles.page__header}>
         <Image
           priority
           className='page__header--img'

@@ -1,4 +1,4 @@
-@use "../../foundation/breakpoints" as *;
+@use "../../public/sass/foundation/breakpoints" as *;
 .p_fv{
   position:relative;
   height: 90dvh;
@@ -8,12 +8,12 @@
   @include breakpoints (md){
     padding: 1rem;
   }
-  >.l-container{
-    background:url(../images/bg/bg_fv.webp) no-repeat center;
+  &__container{
+    background:url(../../public/images/bg/bg_fv.webp) no-repeat center;
     background-size:cover;
     height: 100%;
     border-radius:1rem;
-    box-shadow: 0px 16px 24px rgba(103, 0, 123, 0.15);
+    box-shadow: 0px 1rem 1.5rem rgba(103, 0, 123, 0.15);
   }
   &__body{
     background-color: #fff;
@@ -43,14 +43,14 @@
   position:relative;
   overflow: hidden;
   .p_section__title span{
-    left:40%;
+    left:50%;
   }
   &__text{
     z-index: 1;
     position: relative;
   }
-  .img{
-    &--left{
+  &__img{
+    &Left{
       left:-1%;
       position:absolute;
       top:60%;
@@ -62,7 +62,7 @@
         width:200px;
       }
     }
-    &--right{
+    &Right{
       right:-1%;
       position:absolute;
       top:60%;

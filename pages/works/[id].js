@@ -10,6 +10,7 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/effect-fade';
+import styles from "../../styles/pages/works.module.scss";
 
 export default function Post({ postData }) {
   return (
@@ -18,19 +19,19 @@ export default function Post({ postData }) {
         <title>{postData.title}</title>
         <link rel="canonical" href="" />
       </Head>
-      <div className='page__header'>
+      <div className={styles.heading}>
         <Image 
-          priority className='page__header--img' src={postData.thumbnail} height={300} width={400} alt="{postData.title}のイメージ1"
+          priority className={styles.heading__img} src={postData.thumbnail} height={300} width={400} alt="{postData.title}のイメージ1"
         />
       </div>
       <div className='l-container'>
-        <section className='p_works'>
-          <div className='p_works__head'>
+        <section className={styles.p_works}>
+          <div className={styles.p_works__head}>
             <h1 className='c-txt__lg c-txt__weight--700'>
               {postData.title}
             </h1>
             <Date dateString={postData.date} />
-            <div className='u-align p_works__tag u-mt16'>
+            <div className={styles.p_works__tag}>
               <p className='c-txt__min c-txt__height--1 c-txt__letter--0'>{postData.tag_1}</p>
               <p className='c-txt__min c-txt__height--1 c-txt__letter--0'>{postData.tag_2}</p>
             </div>
@@ -41,7 +42,7 @@ export default function Post({ postData }) {
               <Link href={postData.next} className='c-btn--dark sm'>次へ</Link>
             </div>
           </div>
-          <div className='p_works__body'>
+          <div className={styles.p_works__body}>
             <Swiper
               spaceBetween={50}
               slidesPerView={1}

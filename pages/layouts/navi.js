@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import styles from "/public/sass/module/header.module.scss";
+import styles from "../../styles/layouts/header.module.scss";
 
 export default function Navi() {
   return (

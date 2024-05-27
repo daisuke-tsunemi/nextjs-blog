@@ -1,24 +1,27 @@
-@use "../../foundation/breakpoints" as *;
+@use "../../public/sass/foundation/breakpoints" as *;
 // 下層ページ共通のCSS記述
 .layout_main{
   padding-top: 7rem;
 }
-.page__header{
+.heading{
   display:flex;
   justify-content: flex-end;
   width: 100%;
-  &--img{
+  &__img{
     height: 15rem;
     width: 90%;
     border-radius:0 0 0 1rem;
     margin-inline-start: auto;
   }
-  &--title{
+  &__title{
     margin-block-start: -3rem;
-    color: #fff;
+    font-size: 5rem;
     padding: 0 1rem;
     @include breakpoints (md){
         padding: 0 2rem;
+    }
+    small{
+      font-size: 1rem;
     }
   }
 }

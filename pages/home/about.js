@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import Image from 'next/image';
+import styles from "../../styles/pages/home.module.scss";
 export default function About() {
   return (
     <div className='p_section p_about'>
@@ -12,8 +13,8 @@ export default function About() {
             src='/images/home/sample_5.jpg'
             height={200}
             width={300}
-            alt="ご利用のイメージ6"
-            className='img--left'
+            alt="Aboutのイメージ6"
+            className={styles.p_about__imgLeft}
           />
           <div className='p_about__text'>
             <h3 className='c-txt__lg c-txt--center'>ユーザーを、ビジネスを、ミツメルデザイン</h3>
@@ -29,12 +30,12 @@ export default function About() {
             src='/images/home/sample_6.jpg'
             height={200}
             width={300}
-            alt="ご利用のイメージ6"
-            className='img--right'
+            alt="Aboutのイメージ6"
+            className={styles.p_about__imgRight}
           />
         </div>
         <div className='p_section__foot u-align center'>
-          {/* <Link className='c-btn--white lg' href="/about">詳しく見る</Link> */}
+          <Link className='c-btn__line lg' href="/about">詳しく見る</Link>
         </div>
       </div>
     </div>
