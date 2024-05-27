@@ -1,10 +1,10 @@
 import Head from 'next/head'
 import Link from 'next/link';
 import Image from 'next/image';
-import Fv from './home/fv';
-import About from './home/about';
-import Service from './home/service';
-import Flow from './home/flow';
+import Fv from '../components/home/fv';
+import About from '../components/home/about';
+import Service from '../components/home/service';
+import Flow from '../components/home/flow';
 import Layout, { siteTitle } from './layouts/layout';
 import { getSortedPostsData } from '../lib/posts';
 import Date from '../components/date';
