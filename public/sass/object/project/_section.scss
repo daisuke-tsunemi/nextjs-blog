@@ -4,6 +4,9 @@
   @include breakpoints (md){
     padding: 5rem 0;
   }
+  &:nth-of-type(even){
+    background-color: #fff;
+  }
   &__title{
     font-size: 3rem;
     margin-inline-start: -1rem;
@@ -48,8 +51,5 @@
     @include breakpoints (lg){
       margin-block-start: 3rem;
     }
-  }
-  &:nth-of-type(even){
-    background-color: var(--bg-dark);
   }
 }

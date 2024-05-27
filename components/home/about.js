@@ -3,7 +3,7 @@ import Image from 'next/image';
 import styles from "../../styles/pages/home.module.scss";
 export default function About() {
   return (
-    <div className='p_section p_about'>
+    <section className={`${styles.p_about} ${"p_section"}`}>
       <div className='p_section__head'>
         <h2 className='c-txt c-txt--center p_section__title'>About us<span className='c-txt__md'>私たちについて</span></h2>
       </div>
@@ -38,6 +38,6 @@ export default function About() {
           <Link className='c-btn__line lg' href="/about">詳しく見る</Link>
         </div>
       </div>
-    </div>
+    </section>
   )
 }

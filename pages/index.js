@@ -8,6 +8,7 @@ import Flow from '../components/home/flow';
 import Layout, { siteTitle } from './layouts/layout';
 import { getSortedPostsData } from '../lib/posts';
 import Date from '../components/date';
+import styles from "../styles/pages/home.module.scss";
 
 export async function getStaticProps() {
   const allPostsData = getSortedPostsData();
@@ -29,15 +30,15 @@ export default function Home ({ allPostsData }) {
       <Service />
       <Flow />
       {/* Add this <section> tag below the existing <section> tag */}
-      <section className='p_section'>
+      <section className={`${styles.p_works} ${"p_section"}`}>
         <div className='p_section__head'>
           <h2 className='c-txt p_section__title'>Works<span className='c-txt__sm'></span></h2>
         </div>
         <div className='l-container__1200'>
           <div className='p_section__body'>
-            <div className='l-grid--3 gridCard'>
+            <div className={`${styles.p_works__gridCard} ${"l-grid--3 u-gap24"}`}>
               {allPostsData.map(({ id, date, title, thumbnail }) => (
-                <Link className='listItem' key={id} href={`/posts/${id}`}>
+                <Link className={styles.p_works__listItem} key={id} href={`/posts/${id}`}>
                   <Image
                     priority
                     className='img'
@@ -47,10 +48,10 @@ export default function Home ({ allPostsData }) {
                     alt=""
                   />
                   <figcaption>
-                  <h4 className='headingMd'>{title}</h4>
-                  <small className='lightText'>
-                    <Date dateString={date} />
-                  </small>
+                    <h4 className='headingMd'>{title}</h4>
+                    <small className='lightText'>
+                      <Date dateString={date} />
+                    </small>
                   </figcaption>
                 </Link>
               ))}

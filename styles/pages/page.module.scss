@@ -17,11 +17,16 @@
     margin-block-start: -3rem;
     font-size: 5rem;
     padding: 0 1rem;
+    font-family: 'Galada', Sans-serif;
     @include breakpoints (md){
-        padding: 0 2rem;
+      padding: 0 2rem;
     }
     small{
+      margin-inline-start: .5rem;
       font-size: 1rem;
+      @include breakpoints (md){
+        margin-inline-start: 1rem;
+      }
     }
   }
 }
