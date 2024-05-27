@@ -46,8 +46,11 @@
     left:50%;
   }
   &__text{
-    z-index: 1;
     position: relative;
+    z-index: 1;
+    background-color: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(8px);
+    padding: 1rem;
   }
   &__img{
     &Left{
@@ -55,11 +58,13 @@
       position:absolute;
       top:60%;
       transform:translate(0,-50%);
-      height:10rem;
-      width:6rem;
+      height:auto;
+      width:120px;
       @include breakpoints (md){
-        height:300px;
-        width:200px;
+        width:10rem;
+      }
+      @include breakpoints (xl2){
+        width:20rem;
       }
     }
     &Right{
@@ -67,11 +72,13 @@
       position:absolute;
       top:60%;
       transform:translate(0,-50%);
-      height:10rem;
-      width:6rem;
+      height:auto;
+      width:200px;
       @include breakpoints (md){
-        height:300px;
-        width:200px;
+        width:10rem;
+      }
+      @include breakpoints (xl2){
+        width:20rem;
       }
     }
   }

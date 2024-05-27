@@ -20,13 +20,12 @@
       line-height:0.5;
     }
     span{
-      transform:rotate(-10deg);
       position:absolute;
+      left:50%;
+      transform:translate(-50%,0) rotate(-10deg);
       top: -1.5rem;
-      left: 2.5rem;
       @include breakpoints (md){
         top:-2rem;
-        left:5rem;
       }
     }
   }
