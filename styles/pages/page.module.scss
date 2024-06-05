@@ -8,17 +8,21 @@
   justify-content: flex-end;
   width: 100%;
   &__img{
-    height: 15rem;
+    height: 8rem;
     width: 90%;
     border-radius:0 0 0 1rem;
     margin-inline-start: auto;
+    @include breakpoints (md){
+      height: 15rem;
+    }
   }
   &__title{
-    margin-block-start: -3rem;
-    font-size: 5rem;
-    padding: 0 1rem;
+    margin-block-start: -5rem;
+    font-size: 3rem;
     font-family: 'Galada', Sans-serif;
     @include breakpoints (md){
+      font-size: 5rem;
+      margin-block-start: -3rem;
       padding: 0 2rem;
     }
     small{
@@ -28,5 +32,14 @@
         margin-inline-start: 1rem;
       }
     }
+  }
+}
+.l_contact{
+  @include breakpoints (md){
+    display:flex;
+  }
+  .heading__title{
+    margin-block-start: 0;
+    line-height: 1;
   }
 }

@@ -24,7 +24,7 @@ export default function Header() {
                 className={styles.logo}
               />
             </Link>
-            <h2 className='c-txt__min'>
+            <h2 className='c-txt__min on_sm'>
             ユーザーを、ビジネスを、<br className="off_md"/>ミツメルデザイン
             </h2>
           </div>

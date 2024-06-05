@@ -100,9 +100,9 @@ export default function Service() {
             </div>
           </div>
         </div>
-        <div className='p_section__foot u-align center'>
+        {/* <div className='p_section__foot u-align center'>
           <Link className='c-btn--white lg' href="/service">詳しく見る</Link>
-        </div>
+        </div> */}
       </div>
     </section>
   )

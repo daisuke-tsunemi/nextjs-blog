@@ -2,8 +2,8 @@ import Image from 'next/image';
 import styles from "../../styles/pages/home.module.scss";
 export default function Flow() {
   return (
-    <section className={`${styles.p_flow} ${"p_section"}`}>
-      <div className='p_section__head'>
+    <section className={`${styles.p_flow} ${"p_section c-txt--right"}`}>
+      <div className={`${styles.p_flow__head} ${"p_section__head"}`}>
         <h2 className='c-txt c-txt--right p_section__title'>Customer Flow<span className='c-txt__md'>ご利用の流れ</span></h2>
       </div>
       <div className='l-container__1200'>

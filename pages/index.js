@@ -4,7 +4,6 @@ import Image from 'next/image';
 import Fv from '../components/home/fv';
 import About from '../components/home/about';
 import Service from '../components/home/service';
-import Flow from '../components/home/flow';
 import Layout, { siteTitle } from './layouts/layout';
 import { getSortedPostsData } from '../lib/posts';
 import Date from '../components/date';
@@ -28,11 +27,10 @@ export default function Home ({ allPostsData }) {
       <Fv />
       <About />
       <Service />
-      <Flow />
       {/* Add this <section> tag below the existing <section> tag */}
       <section className={`${styles.p_works} ${"p_section"}`}>
         <div className='p_section__head'>
-          <h2 className='c-txt p_section__title'>Works<span className='c-txt__sm'></span></h2>
+          <h2 className='c-txt p_section__title'>Works<span className='c-txt__sm'>制作実績</span></h2>
         </div>
         <div className='l-container__1200'>
           <div className='p_section__body'>

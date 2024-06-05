@@ -1,6 +1,7 @@
 @use "../foundation/breakpoints" as *;
 @use "../foundation/_var" as *;
 .l-form{
+  max-width: 600px;
   &__head{
     margin-block-end: 1rem;
   }
@@ -95,6 +96,7 @@
 .f-item {
   position: relative;
   margin: 0 0 1.5rem;
+  display: block;
   &:last-child{
     margin:0;
   }

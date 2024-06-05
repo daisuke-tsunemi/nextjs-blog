@@ -45,22 +45,28 @@
   .p_section__title span{
     left:50%;
   }
+  &__body{
+    display:flex;
+    flex-wrap:wrap;
+  }
   &__text{
     position: relative;
     z-index: 1;
     background-color: rgba(255, 255, 255, 0.5);
     backdrop-filter: blur(8px);
     padding: 1rem;
+    max-width: 600px;
+    margin-inline: auto;
   }
   &__img{
     &Left{
-      left:-1%;
-      position:absolute;
-      top:60%;
-      transform:translate(0,-50%);
       height:auto;
       width:120px;
       @include breakpoints (md){
+        left:-1%;
+        position:absolute;
+        top:60%;
+        transform:translate(0,-50%);
         width:10rem;
       }
       @include breakpoints (xl2){
@@ -68,13 +74,14 @@
       }
     }
     &Right{
-      right:-1%;
-      position:absolute;
-      top:60%;
-      transform:translate(0,-50%);
       height:auto;
-      width:200px;
+      width:130px;
+      margin-inline-start:auto;
       @include breakpoints (md){
+        right:-1%;
+        position:absolute;
+        top:60%;
+        transform:translate(0,-50%);
         width:10rem;
       }
       @include breakpoints (xl2){
@@ -112,6 +119,11 @@
       right:7%;
     }
   }
+  &__head{
+    @include breakpoints (lg){
+      margin-block-end: 4rem;
+    }
+  }
   &Item{
     padding: 1rem;
     position:relative;
@@ -120,6 +132,7 @@
       padding: 1.5rem 1rem;
     }
     &__body{
+      text-align: left;
       &:before{
         counter-increment: number 1;
         content: counter(number)'';

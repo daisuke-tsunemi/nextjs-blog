@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import Link from 'next/link';
+import Flow from '../../components/page/flow';
 import Image from 'next/image';
 import Layout from '../layouts/layout';
 import Script from 'next/script';
@@ -32,6 +33,7 @@ export default function About() {
         }
       />
       <section className='p_section'>
+      <Flow />
       </section>
     </Layout>
   );

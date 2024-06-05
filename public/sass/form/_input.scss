@@ -6,29 +6,32 @@
 input:-webkit-autofill {
     transition: background-color 5000s ease-in-out 0s !important;
 }
-textarea {
-  padding: 8px;
-  resize: none;
-  min-height: 100px;
-  width: 100%;
-  @include breakpoints(sm){
-    min-height:200px;
-  }
-}
 //共通要素
 %input {
   font-size: 1rem; 
-  height: 35px;
-  padding: 0 8px;
-  border: 1px solid var(--border-color);
-  border-radius: 4px;
+  height: 4rem;
+  padding: 0 .5rem;
+  border: none;
+  border-bottom: 1px solid var(--border-color);
   color: var(--base);
-  background-color: #fff;
+  background-color: rgba($color: #fff, $alpha: 0);
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
   &:focus{
-    border-color: var(--primary)
+    border-bottom: 2px solid var(--primary);
+    background-color: rgba($color: #fff, $alpha: 0.5);
+  }
+}
+textarea {
+  @extend %input;
+  width: 100%;
+  padding: .5rem;
+  resize: none;
+  min-height: 100px;
+  box-shadow: inset 0px 0px 4px rgba(0, 0, 0, .15);
+  @include breakpoints(sm){
+    min-height: 200px;
   }
 }
 // プレイスホルダー
@@ -55,20 +58,10 @@ select{
   @extend %input;
   color:var(--base);
   padding-right:1.5rem;
-  background-image: url(../image/common/shape/arrow_down.svg);
+  background-image: url(../images/icon/chevron_down.svg);
   background-size: 1rem;
   background-position: right 4px center;
   background-repeat: no-repeat;
-}
-textarea {
-  @extend %input;
-  padding: 5px 8px;
-  resize: none;
-  min-height: 100px;
-  @include breakpoints(sm){
-    padding: 8px;
-    min-height: 200px;
-  }
 }
 .c-input {
   display:inline-flex;
@@ -144,7 +137,7 @@ textarea {
     &:before{
       content: '';
       display: block;
-      background: url(../image/icon/icon_calendar.svg) no-repeat center;
+      background: url(../images/icon/calendar.svg) no-repeat center;
       background-size: cover;
       position:absolute;
       right: 10px;
@@ -152,23 +145,6 @@ textarea {
       margin: 0;
       height:24px;width:24px;
       transform: translateY(-50%);
-    }
-  }
-  &--pw{
-    position:relative;
-    .c-icon__eye{
-      background-size: cover !important;
-      background: url(../image/common/shape/eye_close.svg) no-repeat center;
-      width: 24px;
-      position:absolute;
-      top: 50%;
-      right: 8px;
-      transform: translateY(-50%);
-      cursor: pointer;
-      aspect-ratio: 1/1;
-      &.visible{
-        background: url(../image/common/shape/eye_open.svg) no-repeat center;
-      }
     }
   }
   /* セレクトボックス */
@@ -229,60 +205,6 @@ textarea {
   }
   &--column {
     flex-direction: column;
-  }
-  &__button{
-    background:linear-gradient(135deg, #EFD800, #EF6500);
-    padding: 2px;
-    border-radius:8px;
-    input[type="checkbox"],input[type="radio"] {
-      +label{
-        border-radius:6px;
-        color: var(--primary);
-        background: #fff;
-        padding:4px 16px;
-        font-size: 14px;
-        font-weight:700;
-        @include breakpoints (sm){
-          padding:4px 8px;
-          font-size: 13px;
-        }
-        &:before,&:after{
-          content: none;
-        }
-        .c-icon__w16{
-          margin-right:8px;
-        }
-      }
-      &:checked + label {
-        background:transparent;
-        color:#fff;
-        .c-icon--heart{
-          background-image:url(../image/icon/icon_heart_white.svg);
-        }
-      }
-    }
-  }
-  &__icon{
-    input[type="checkbox"],input[type="radio"] {
-      +label{
-        font-size: 13px;
-        color: #888;
-        &:before,&:after{
-          content: none;
-        }
-        .c-icon--favorite{
-          border-radius:50%;
-          margin-right: 4px;
-        }
-      }
-      &:checked +label {
-        color: var(--primary);
-        .c-icon--favorite {
-          background-image:url(../image/icon/icon_star_white.svg);
-          background-color: var(--primary);
-        }
-      }
-    }
   }
   &.c-switch{
     input[type="checkbox"]{
@@ -412,7 +334,7 @@ input[type="file"]{display:none;width:100%;border-radius:0 !important;padding: 0
   }
   input[type="file"]{
     +label{
-      background:var(--fc-image-bg) url(../image/common/shape/noImage.svg) no-repeat center;
+      background:var(--fc-image-bg) url(../images/icon/noImage.svg) no-repeat center;
       background-size: cover;
       display: block;
       width: 100%;
@@ -420,10 +342,6 @@ input[type="file"]{display:none;width:100%;border-radius:0 !important;padding: 0
       cursor: pointer;
       border: 1px solid var(--border-color);
       aspect-ratio: 4/3;
-      &.c-user{
-        background-image: url(../image/common/shape/user.svg);
-        aspect-ratio: 1/1;
-      }
       &:hover{
         opacity: 0.7;
       }
@@ -506,7 +424,7 @@ label{
   }
 }
 // エラーメッセージ
-.c-txt__error,.error{
+.c-txt__error{
   padding:3px 8px 2px;
   color: #fff !important;
   background-color: #D92B89;
@@ -519,26 +437,4 @@ label{
     font-weight:900;font-size:15px;
     margin-right: 4px;
   }
-}
-//select2
-.select2{
-  &-container--default, &-container--open, &-container--below, &-selection--multiple{
-    .select2-selection--single{
-      border: 1px solid var(--primary-dark);
-      border-radius: 0;
-      cursor: text;
-      height: auto;
-      padding: 4px 0;
-      font-size: 1rem;
-      .select2-selection__arrow{
-        top:50%;
-        transform:translate(0,-50%);
-      }
-    }
-  }
-}
-.p-postal-code{
-  position:relative;
-  padding-left: 32px;
-  background: #fff url(../image/common/shape/post.svg) no-repeat 8px;
 }
