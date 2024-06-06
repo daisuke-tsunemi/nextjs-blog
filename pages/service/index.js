@@ -17,7 +17,7 @@ export default function About() {
         <Image
           priority
           className={styles.heading__img}
-          src='/images/pages/about.jpg'
+          src="/public/images/bg/bg_fv.webp"
           height={300}
           width={400}
           alt="メインのイメージ"

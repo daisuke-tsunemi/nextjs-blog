@@ -9,38 +9,10 @@
   z-index: 1;
   top:0;
   background:linear-gradient(0deg, #ffffff00, #fff);
-	@supports (animation-timeline: scroll()){
-		@media (prefers-reduced-motion: no-preference){
-			--IS-SCROLL: initial;
-			—-NO-SCROLL: auto;
-			animation-name: observer;
-			animation-fill-mode: both;
-			animation-range: 10rem 2px;
-			animation-timeline: scroll(root);
-		}
-		@keyframes observer{
-      99%{
-        --IS-SCROLL: initial;
-        —-NO-SCROLL: auto;
-      }
-			100%{
-				--IS-SCROLL: auto;
-				-—NO-SCROLL: initial;
-			}
-		}
-	}
   &Container{
     width: 100%;
     display:flex;
     align-items:center;
-		@supports (animation-timeline: scroll()){
-			@media (prefers-reduced-motion: no-preference){
-				padding-block: var(--IS-SCROLL, 1rem) var(--NO-SCROLL, 1rem);
-				transition-property: padding-block;
-				transition-duration: .2s;
-				transition-timing-function: cubic-bezier(0.37, 0.01, 0.22, 1.01);
-			}
-		}
   }
 }
 .navWrapper{

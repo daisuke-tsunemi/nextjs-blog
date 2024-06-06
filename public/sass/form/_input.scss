@@ -179,6 +179,8 @@ select{
     height: 20px;
     width: 20px;
     margin-inline-end: 4px;
+    background-color: #fff;
+    border: 1px solid var(--border-light);
   }
 }
 .c-radio {
@@ -380,8 +382,7 @@ label{
     color: var(--base);
     cursor: inherit;
     input{
-      border-color: var(--ok);
-      background-color: #fff;
+      border: 1px solid var(--ok);
     }
   }
 }

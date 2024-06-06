@@ -19,7 +19,7 @@ export default function Layout({ children, home }) {
       <header className='header'>
         <Image
           priority
-          src="https://og-image.vercel.app/${encodeURI(siteTitle,)}.png?theme=light&md=0&fontSize=75px&images=https%3A%2F%2Fassets.vercel.com%2Fimage%2Fupload%2Ffront%2Fassets%2Fdesign%2Fnextjs-black-logo.svg"
+          src="/images/logo/logo_horizontal.png"
           className='logo'
           width={300}
           height={80}
@@ -30,7 +30,7 @@ export default function Layout({ children, home }) {
       <main>{children}</main>
       {!home && (
         <div className='backToHome'>
-          <Link href="/">← Back to home</Link>
+          <Link href="/">Home</Link>
         </div>
       )}
     </div>

@@ -10,6 +10,7 @@
     "@emotion/styled": "^11.11.0",
     "@mui/icons-material": "^5.14.9",
     "@mui/material": "^5.14.10",
+    "@next/third-parties": "^14.0.5-canary.59",
     "clsx": "^1.2.1",
     "date-fns": "^2.30.0",
     "framer-motion": "^11.1.9",

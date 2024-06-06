@@ -109,7 +109,7 @@
     @extend .f-item;
     @media screen and (min-width: 480px) {
       display: grid;
-      align-items: start;
+      align-items: flex-start;
       grid-template-columns:
         clamp(calc(8 * var(--fs-font)), 24%, calc(10 * var(--fs-font)))
         1fr;
@@ -171,7 +171,7 @@
 .f-col {
   display: flex;
   flex-direction: column;
-  align-items: start;
+  align-items: flex-start;
   gap: 4px;
 }
 
