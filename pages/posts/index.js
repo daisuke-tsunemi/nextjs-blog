@@ -24,7 +24,7 @@ export default function Posts ({ allPostsData }) {
         <Image
           priority
           className='page__header--img'
-          src="/public/images/bg/bg_fv.webp"
+          src='/images/bg/bg_spat.webp'
           height={200}
           width={300}
           alt="アートのイメージ"

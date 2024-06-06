@@ -95,10 +95,16 @@
  ------------------------------ */
 .f-item {
   position: relative;
-  margin: 0 0 1.5rem;
+  margin-block-end: 1.5rem;
   display: block;
   &:last-child{
     margin:0;
+  }
+  @include breakpoints (md){
+    margin-block-end: 2.5rem;
+  }
+  @include breakpoints (xl){
+    margin-block-end: 3.5rem;
   }
   /* ------------------------------
   *

@@ -37,7 +37,7 @@ export default function Contact() {
                 <label className='f-item'>
                   <p className='f-label required'>氏名</p>
                   <div className='u-align'>
-                    <input className='u-w200' type='text' placeholder='山田 太郎' maxlength='20' name='entry.731174060' required />
+                    <input className='u-w100p' type='text' placeholder='山田 太郎' maxlength='20' name='entry.731174060' required />
                   </div>
                 </label>
                 <label className='f-item'>
