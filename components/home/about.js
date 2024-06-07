@@ -31,9 +31,9 @@ export default function About() {
           </p>
         </div>
       </div>
-      {/* <div className='p_section__foot u-align center'>
+      <div className='p_section__foot u-align center'>
         <Link className='c-btn__line' href="/about">詳しく見る</Link>
-      </div> */}
+      </div>
     </section>
   )
 }

@@ -1,6 +1,7 @@
 import Head from 'next/head';
 import Link from 'next/link';
 import Flow from '../../components/page/flow';
+import Service from '../components/page/service';
 import Image from 'next/image';
 import Layout from '../layouts/layout';
 import Script from 'next/script';
@@ -23,8 +24,19 @@ export default function About() {
           alt="メインのイメージ"
         />
       </div>
-            <h1 className={styles.heading__title}>Service <small>サービスについて</small></h1>
-      
+      <section className='p_section'>
+        <div className='l-container'>
+          <div className='p_section__head'>
+            <h1 className={styles.heading__title}>Service <span className='c-txt__md'>サービスについて</span></h1>
+          </div>
+          <div className='p_section__body'>
+            <Service />
+          </div>
+          <div className='p_section__body'>
+            <Flow />
+          </div>
+        </div>
+      </section>
       <Script
         src="https://connect.facebook.net/en_US/sdk.js"
         strategy="lazyOnload"
@@ -32,9 +44,6 @@ export default function About() {
           console.log(`script loaded correctly, window.FB has been populated`)
         }
       />
-      <section className='p_section'>
-      <Flow />
-      </section>
     </Layout>
   );
 }

@@ -5,10 +5,23 @@ padding
 .u-p0 {
   padding: 0;
 }
+@for $i from 2 through 10 {
+  $num: $i * 8;
+  .u-pd#{$num} {
+    padding: #{calc($num / 2)}px;
+  }
+}
 // padding-top
 @for $i from 2 through 10 {
   $num: $i * 8;
   .u-pdt#{$num} {
-    padding: #{calc($num / 2)}px;
+    padding-block-start: #{calc($num / 2)}px;
+  }
+}
+// padding-bottom
+@for $i from 2 through 10 {
+  $num: $i * 8;
+  .u-pdt#{$num} {
+    padding-block-end: #{calc($num / 2)}px;
   }
 }

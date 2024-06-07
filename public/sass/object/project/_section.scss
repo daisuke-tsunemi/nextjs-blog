@@ -4,7 +4,10 @@
   @include breakpoints (md){
     padding: 5rem 0;
   }
-  &:nth-of-type(even){
+  @include breakpoints (xl){
+    padding: 8rem 0;
+  }
+  &:nth-of-type(odd){
     background-color: #fff;
   }
   &__title{

@@ -1,6 +1,8 @@
 import Head from 'next/head';
 import Header from '../layouts/header';
 import Footer from '../layouts/footer';
+import Loading from '../loading';
+import { Suspense } from "react";
 
 export const siteTitle = 'Mitsumeru Design Studio';
 export const pageTitle = 'デザインページ';
@@ -37,11 +39,15 @@ export default function Layout({ children, home }) {
         {
           home ? (
             <main className='mainHome'>
-              {children}
+              <Suspense fallback={<Loading />}>
+                {children}
+              </Suspense>
             </main>
           ) : (
             <main className='mainPage'>
-              {children}
+              <Suspense fallback={<Loading />}>
+                {children}
+              </Suspense>
             </main>
           )
         }

@@ -32,10 +32,10 @@ export default function Posts ({ allPostsData }) {
       </div>
       <section className='p_section'>
         <div className='l-container'>
-          <div className='p_section__body'>
+          <div className='p_section__head'>
             <h1 className={styles.heading__title}>Works Index<span className='c-txt__md'>制作実績一覧</span></h1>
           </div>
-          <div className='p_works__foot'>
+          <div className='p_section__body'>
             <div className='l-grid--3 u-gap16'>
               {allPostsData.map(({ id, date, title, thumbnail }) => (
                 <Link className='listItem' key={id} href={`/works/${id}`}>

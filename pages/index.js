@@ -3,7 +3,6 @@ import Link from 'next/link';
 import Image from 'next/image';
 import Fv from '../components/home/fv';
 import About from '../components/home/about';
-import Service from '../components/home/service';
 import Layout, { siteTitle } from './layouts/layout';
 import { getSortedPostsData } from '../lib/posts';
 import Date from '../components/date';
@@ -26,7 +25,6 @@ export default function Home ({ allPostsData }) {
       </Head>
       <Fv />
       <About />
-      <Service />
       {/* Add this <section> tag below the existing <section> tag */}
       <section className={`${styles.p_works} ${"p_section"}`}>
         <div className='p_section__head'>
@@ -43,7 +41,7 @@ export default function Home ({ allPostsData }) {
                     src={thumbnail}
                     height={300}
                     width={300}
-                    alt=""
+                    alt="サムネイル"
                   />
                   <figcaption>
                     <h4 className='headingMd'>{title}</h4>
@@ -55,7 +53,7 @@ export default function Home ({ allPostsData }) {
               ))}
             </div>
           </div>
-          <div className='p_section__foot'>
+          <div className='p_section__foot u-align center'>
             <Link href="/works" className='c-btn'>All Posts</Link>
           </div>
         </div>

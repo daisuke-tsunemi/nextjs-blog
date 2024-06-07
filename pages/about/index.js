@@ -21,7 +21,13 @@ export default function About() {
           alt="メインのイメージ"
         />
       </div>
-      <h1 className={styles.heading__title}>About Us <small>私たちについて</small></h1>
+      <section className='p_section'>
+        <div className={`${styles.l_contact} ${"l-container"}`}>
+          <div className='p_section__head'>
+            <h1 className={styles.heading__title}>About Us<span className='c-txt__md'>私たちについて</span></h1>
+          </div>
+        </div>
+      </section>
       
       <Script
         src="https://connect.facebook.net/en_US/sdk.js"
