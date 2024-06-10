@@ -21,7 +21,7 @@ export default function Contact() {
           alt="アートのイメージ"
         />
       </div>
-      <section className='p_section'>
+      <section className={styles.p_page__content}>
         <div className={`${styles.l_contact} ${"l-container"}`}>
           <div className='p_section__head'>
             <h1 className={styles.heading__title}>Contact<span className='c-txt__md'>お問い合わせ</span></h1>
@@ -32,21 +32,30 @@ export default function Contact() {
               <div className='l-form__body'>
                 <label className='f-item'>
                   <p className='f-label required'>メールアドレス<small className='c-unit__after'>※半角英数小文字で入力</small></p>
-                  <input className='u-w100p' type='email' placeholder='sample@mail.com' maxlength='100' name='emailAddress' required />
+                  <div>
+                    <input className='u-w100p' type='email' placeholder='sample@mail.com' maxlength='100' name='emailAddress' required />
+                  </div>
+                  <p className='c-txt__error'>メールアドレスは半角英数小文字正しく入力してください</p>
                 </label>
                 <label className='f-item'>
                   <p className='f-label required'>氏名</p>
                   <div className='u-align'>
                     <input className='u-w100p' type='text' placeholder='山田 太郎' maxlength='20' name='entry.731174060' required />
                   </div>
+                  <p className='c-txt__error'>氏名は必ず正しく入力してください</p>
                 </label>
                 <label className='f-item'>
                   <p className='f-label optional'>会社名</p>
-                  <input className='u-w100p' type='text' placeholder='株式会社サンプル' maxlength='100' name='entry.834472026' />
+                  <div>
+                    <input className='u-w100p' type='text' placeholder='株式会社サンプル' maxlength='100' name='entry.834472026' />
+                  </div>
                 </label>
                 <label className='f-item'>
                   <p className='f-label optional'>電話番号<small className='c-unit__after'>※ハイフンなし、半角小数字で入力</small></p>
-                  <input className='u-w300' type='text' inputmode='numeric' pattern='\d*' placeholder='09012345678' maxlength='13' name='entry.1709705454' />
+                  <div>
+                    <input className='u-w300' type='text' inputmode='numeric' pattern='\d*' placeholder='09012345678' maxlength='13' name='entry.1709705454' />
+                  </div>
+                  <p className='c-txt__error'>電話番号はハイフンなし、半角小数字で正しく入力してください</p>
                 </label>
                 <div className='f-item'>
                   <p className='f-label required'>お問い合わせの種類</p>
@@ -73,6 +82,7 @@ export default function Contact() {
                       <input type='checkbox' name='entry.466861117' />その他
                     </label>
                   </div>
+                  <p className='c-txt__error'>お問い合わせの種類はどれか一つは必ず選択してください</p>
                 </div>
                 <div className='f-item'>
                   <p className='f-label optional'>ご予算</p>
@@ -99,11 +109,17 @@ export default function Contact() {
                 </div>
                 <label className='f-item'>
                   <p className='f-label required'>タイトル<small className='c-unit__after'>※200文字以内で入力</small></p>
-                  <input className='u-w100p' type='text' placeholder='お問い合わせタイトル' maxlength='200' name='entry.1350789339' required />
+                  <div>
+                    <input className='u-w100p' type='text' placeholder='お問い合わせタイトル' maxlength='200' name='entry.1350789339' required />
+                  </div>
+                  <p className='c-txt__error'>タイトルは200文字以内で正しく入力してください</p>
                 </label>
                 <label className='f-item'>
                   <p className='f-label required'>お問い合わせ内容<small className='c-unit__after'>※1000文字以内で入力</small></p>
-                  <textarea cols='30' rows='10' placeholder='お問い合わせ内容を入力してください' name='entry.1820498006' required maxlength='1000'></textarea>
+                  <div>
+                    <textarea cols='30' rows='10' placeholder='お問い合わせ内容を入力してください' name='entry.1820498006' required maxlength='1000'></textarea>
+                  </div>
+                  <p className='c-txt__error'>お問い合わせ内容は1000文字以内で必ず入力してください</p>
                 </label>
               </div>
               <div className='l-form__foot u-align center'>

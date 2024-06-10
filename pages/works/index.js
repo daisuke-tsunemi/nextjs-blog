@@ -30,7 +30,7 @@ export default function Posts ({ allPostsData }) {
           alt="アートのイメージ"
         />
       </div>
-      <section className='p_section'>
+      <section className={styles.p_page__content}>
         <div className='l-container'>
           <div className='p_section__head'>
             <h1 className={styles.heading__title}>Works Index<span className='c-txt__md'>制作実績一覧</span></h1>

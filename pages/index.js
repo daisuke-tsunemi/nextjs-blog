@@ -34,7 +34,7 @@ export default function Home ({ allPostsData }) {
           <div className='p_section__body'>
             <div className={`${styles.p_works__gridCard} ${"l-grid--3 u-gap24"}`}>
               {allPostsData.map(({ id, date, title, thumbnail }) => (
-                <Link className={styles.p_works__listItem} key={id} href={`/posts/${id}`}>
+                <Link className={styles.p_works__listItem} key={id} href={`/works/${id}`}>
                   <Image
                     priority
                     className='img'

@@ -35,6 +35,14 @@
     }
   }
 }
+.p_page{
+  &__content{
+    padding-block: 3rem;
+    @include breakpoints (md){
+      padding-block: 5rem;
+    }
+  }
+}
 .l_contact{
   @include breakpoints (md){
     display:flex;

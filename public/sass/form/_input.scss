@@ -19,8 +19,37 @@ input:-webkit-autofill {
   -moz-appearance: none;
   appearance: none;
   &:focus{
-    border-bottom: 2px solid var(--primary);
+    border-bottom: 2px solid var(--primary-accent);
     background-color: rgba($color: #fff, $alpha: 0.5);
+  }
+  &:invalid{
+    display: inline-flex;
+    
+  }
+}
+div{
+  &:has(*:valid){
+    +.c-txt__error{
+      display: none;
+    }
+  }
+}
+// エラーメッセージ
+.c-txt__error{
+  padding:3px .5rem 2px;
+  color: var(--invalid-dark);
+  border: 1px solid var(--invalid-dark);
+  background-color: #fff;
+  font-size: .75rem;
+  font-weight: 500;
+  margin-top: .25rem;
+  border-radius:3px;
+  display:none;
+  &:before{
+    content: '!';
+    font-weight:900;
+    font-size: 14px;
+    margin-right: .25rem;
   }
 }
 textarea {
@@ -29,6 +58,7 @@ textarea {
   padding: .5rem;
   resize: none;
   min-height: 100px;
+  background-color: rgba($color: #fff, $alpha: 0.4);
   box-shadow: inset 0px 0px 4px rgba(0, 0, 0, .15);
   @include breakpoints(sm){
     min-height: 200px;
@@ -421,20 +451,5 @@ label{
         display: none;
       }
     }
-  }
-}
-// エラーメッセージ
-.c-txt__error{
-  padding:3px 8px 2px;
-  color: #fff !important;
-  background-color: #D92B89;
-  font-size: 12px;
-  font-weight: 500;
-  margin-top: 5px;
-  display: inline-flex;
-  &:before{
-    content: '!';
-    font-weight:900;font-size:15px;
-    margin-right: 4px;
   }
 }

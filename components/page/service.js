@@ -3,10 +3,10 @@ import Image from 'next/image';
 import styles from "../../styles/pages/home.module.scss";
 export default function Service() {
   return (
-    <section className={`${styles.p_service} ${"p_section"}`}>
-      <div className='p_section__head'>
+    <section className={`${styles.p_service} ${""}`}>
+      {/* <div className='p_section__head'>
         <h2 className='c-txt p_section__title'>Service<span className='c-txt__md'>サービス紹介</span></h2>
-      </div>
+      </div> */}
       <div className='l-container__1200'>
         <div className='p_section__body'>
           <div className='l-grid--2 u-gap24'>

@@ -1,11 +1,12 @@
 :root {
  // カラー
- --hue: 245;
- --primary: hsl(var(--hue), 100%, 50%);
- --primary-dark: hsl(var(--hue), 30%, 65%);
- --primary-accent: hsl(var(--hue), 100%, 35%);
- --primary-pale: hsl(var(--hue), 80%, 90%);
+ --hue: 231;
+ --primary: hsl(var(--hue), 64%, 30%);
+ --primary-dark: hsl(var(--hue), 40%, 30%);
+ --primary-accent: hsl(var(--hue), 100%, 50%);
+ --primary-pale: hsl(var(--hue), 80%, 30%);
  --primary-bg: hsl(var(--hue), 40%, 93%);
+ --secondary: hsl(333, 77%, 68%);
  --base: #222;
  --border: #c6c7c8;
  --border-color: hsl(var(--hue), 30%, 55%);
@@ -28,5 +29,5 @@
  --invalid-dark: hsl(345, 80%, 48%);
 
  // font-family
- --font: "Helvetica Neue",  "Roboto", "Zen Kaku Gothic New", "Arial", "Yu Gothic", "Meiryo", sans-serif;
+ --font: "Helvetica Neue", "Roboto", "Zen Kaku Gothic New", "Arial", "Yu Gothic", "Meiryo", sans-serif;
 }
