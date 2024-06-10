@@ -4,7 +4,7 @@ import styles from "../../styles/layouts/footer.module.scss";
 
 export default function Footer() {
   return (
-    <footer className='l-footer'>
+    <footer className={styles.l_footer}>
       <div className={styles.p_footer}>
         <div className={styles.p_footer__body}>
           <div className={styles.p_footer__logo}>
@@ -14,6 +14,7 @@ export default function Footer() {
               width={150}
               height={50}
               alt="ロゴ"
+              className={styles.p_footer_img}
             />
           </div>
           <div className={styles.p_footer__menu}>
@@ -21,7 +22,7 @@ export default function Footer() {
           </div>
         </div>
         <div className={styles.p_footer__foot}>
-          <p className="copyright">© Mitsumeru Design Studio All Rights Reserved.</p>
+          <p className={styles.copyright}>© Mitsumeru Design Studio All Rights Reserved.</p>
         </div>
       </div>
     </footer>
