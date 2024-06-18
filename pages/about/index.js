@@ -16,24 +16,24 @@ export default function About() {
         <Image
           priority
           className={styles.heading__img}
-          src='/images/pages/about.jpg'
-          height={300}
-          width={400}
-          alt="メインのイメージ"
+          src='/images/pages/works.webp'
+          height={160}
+          width={300}
+          alt="Aboutのイメージ"
         />
       </div>
       <section className={styles.p_page__content}>
         <div className='l-container'>
           <div className='p_section__head'>
-            <h1 className={styles.heading__title}>About Us<span className='c-txt__md'>私たちについて</span></h1>
+            <h1 className={styles.heading__title}>About Us<br className='off_sm' /><span className='c-txt__md'>私たちについて</span></h1>
           </div>
           <div className='p_section__body'>
             <div className='c-txt u-mb32'>
-              <h3 className='c-txt__lg c-txt--center'>ユーザーを、ビジネスを、<br className='off_sm'></br>ミツメルデザイン</h3>
+              <h3 className='c-txt__lg c-txt--center'>ユーザーを、ビジネスを、<br className='off_sm' />ミツメルデザイン</h3>
               <p className='c-txt__md u-mt24 c-txt--center'>
-                はじめまして、ミツメルデザイン 常見大祐（つねみだいすけ）と申します！<br />
-                ミツメルデザインでは、Web・デジタル、グラフィックのデザイン開発を通じて、あらゆるビジネスを阻む壁を取り除きます。<br />
-                そのために、あらゆる角度からユーザーを見つめ、最高のサービス体験を提供しています。
+                はじめまして、ミツメルデザイン<br className='off_sm' /> 常見大祐（つねみだいすけ）と申します！<br />
+                ミツメルデザインでは、Web・デジタル、グラフィックのデザイン開発を通じて、<br className='off_sm' />あらゆるビジネスを阻む壁を取り除きます。<br />
+                多角的にユーザーベネフィットを見つめ、<br className='off_sm' />最高のサービス体験を提供しています。
               </p>
             </div>
             <Service />

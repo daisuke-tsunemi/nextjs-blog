@@ -14,13 +14,14 @@ input:-webkit-autofill {
   border: none;
   border-bottom: 1px solid var(--border-color);
   color: var(--base);
-  background-color: rgba($color: #fff, $alpha: 0);
+  background-color: rgba($color: #fff, $alpha: 0.4);
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
+  border-radius:0;
   &:focus{
     border-bottom: 2px solid var(--primary-accent);
-    background-color: rgba($color: #fff, $alpha: 0.5);
+    background-color: rgba($color: #fff, $alpha: 0.8);
   }
   &:invalid{
     display: inline-flex;

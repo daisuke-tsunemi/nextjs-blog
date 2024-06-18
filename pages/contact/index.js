@@ -15,10 +15,10 @@ export default function Contact() {
         <Image
           priority
           className={styles.heading__img}
-          src='/images/bg/bg_spat.webp'
+          src='/images/pages/contact.webp'
           height={160}
           width={300}
-          alt="アートのイメージ"
+          alt="Contactのイメージ"
         />
       </div>
       <section className={styles.p_page__content}>

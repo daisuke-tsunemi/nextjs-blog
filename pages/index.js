@@ -3,7 +3,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import About from '../components/home/about';
 import Layout, { siteTitle } from './layouts/layout';
-import { getSortedPostsData } from '../lib/posts';
+import { getSortedPostsData } from '../lib/works';
 import Date from '../components/date';
 import styles from "../styles/pages/home.module.scss";
 import dynamic from 'next/dynamic';
@@ -43,9 +43,9 @@ export default function Home ({ allPostsData }) {
             <h2 className="p_fv__head--title c-txt__xl2 c-txt--center">
                 <strong>事業</strong>を<span>見つめる</span><br className='off_md' /><strong>デザイン</strong>を
             </h2>
-            <h3 className="c-txt__md u-align--center">
-                
-            </h3>
+            <div className="c-txt__md u-align--center">
+              <Link href='#about'>Scroll</Link>
+            </div>
           </div>
         </div>
       </section>
@@ -60,14 +60,16 @@ export default function Home ({ allPostsData }) {
             <div className={`${styles.p_works__gridCard} ${"l-grid--3 u-gap24"}`}>
               {allPostsData.map(({ id, date, title, thumbnail }) => (
                 <Link className={styles.p_works__listItem} key={id} href={`/works/${id}`}>
-                  <Image
-                    priority
-                    className='img'
-                    src={thumbnail}
-                    height={300}
-                    width={300}
-                    alt="サムネイル"
-                  />
+                  <picture>
+                    <Image
+                      priority
+                      className='img'
+                      src={thumbnail}
+                      height={300}
+                      width={300}
+                      alt="サムネイル"
+                    />
+                  </picture>
                   <figcaption>
                     <h4 className='headingMd'>{title}</h4>
                     <small className='lightText'>

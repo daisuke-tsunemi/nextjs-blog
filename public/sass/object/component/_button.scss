@@ -9,16 +9,19 @@
 	font-weight: 400;
 	letter-spacing: .1em;
 	line-height: 1em;
-	padding: .35rem .5rem .25rem;
+	padding: .35rem 1rem .25rem;
 	background-color: var(--primary);
 	color: #fff;
 	border:var(--primary-accent) 1px solid;
 	border-radius:.25rem;
-	height: 45px;
+	height: 35px;
 	transition: all 0.1s ease-in-out;
 	overflow: hidden;
 	position: relative;
 	cursor: pointer;
+	@include breakpoints (sm){
+		height: 2.5rem;
+	}
 	svg{
 		fill:#fff;
 	}
@@ -234,7 +237,7 @@
 		}
 	}
 	&.sm{
-		height: 2rem;
+		height: 1.875rem;
 		padding: 0 0.5rem;
     font-size: .75rem;
     min-width: 5rem;

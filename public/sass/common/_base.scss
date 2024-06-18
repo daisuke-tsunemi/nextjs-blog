@@ -16,8 +16,8 @@ html {
   scroll-behavior: smooth;
   scroll-padding-top: 1rem;
   height: -weblit-fill-available;
-  display: block;
   font-feature-settings: "palt";
+  display: block;
   /* Windows (全バージョン)のみ */
   &.win {
     font-feature-settings: normal;
@@ -30,13 +30,12 @@ html {
   }
 }
 body {
-  min-height: 100vh;
-  min-width:320px;
   min-height: -webkit-fill-available;
+  min-height: 100dvh;
+  min-width:320px;
   font-size: 14px;
   background: var(--bg-dark) url(../images/bg/noise1.png) no-repeat center;
   background-size:cover;
-
   width: 100%;
   display:flex;
   flex-direction:column;

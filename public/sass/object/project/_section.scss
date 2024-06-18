@@ -1,14 +1,11 @@
 @use "../../foundation/breakpoints" as *;
 .p_section{
-  padding: 3rem 0;
+  padding: 5rem 0;
   @include breakpoints (md){
-    padding: 5rem 0;
-  }
-  @include breakpoints (xl){
     padding: 8rem 0;
   }
-  &:nth-of-type(odd){
-    background-color: #fff;
+  @include breakpoints (xl){
+    padding: 10rem 0;
   }
   &__title{
     font-size: 4rem;

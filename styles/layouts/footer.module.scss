@@ -1,17 +1,16 @@
 @use "../../public/sass/foundation/breakpoints" as *;
 .l_footer{
   grid-area:footer;
-  padding: 0 .5rem .5rem;
-}
-.p_footer{
-  padding: .5rem;
   margin-block-start: 3rem;
+  padding: 0 .5rem .5rem;
   @include breakpoints (sm){
     padding: 1rem;
     margin-block-start: 5rem;
     background-color: #fff;
     border-radius:.5rem;
   }
+}
+.p_footer{
   &__body{
     display:flex;
     flex-direction: column;
@@ -23,6 +22,9 @@
       justify-content: space-between;
       flex-wrap:wrap;
     }
+  }
+  &__foot{
+    margin-block-start: 1rem;
   }
   &__logo{
     object-fit: contain;
@@ -37,11 +39,6 @@
       a{
         text-align: right;
         padding: .5rem;
-        &:hover{
-          @include breakpoints (md){
-            text-decoration: underline;
-          }
-        }
       }
     }
   }

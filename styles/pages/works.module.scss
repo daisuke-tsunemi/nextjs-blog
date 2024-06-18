@@ -5,35 +5,30 @@
   justify-content: flex-end;
   width: 100%;
   &__img{
-    height: 15rem;
+    height: 8rem;
     width: 90%;
     border-radius:0 0 0 1rem;
     margin-inline-start: auto;
+    @include breakpoints (md){
+      height: 15rem;
+      border-radius:0 0 0 3rem;
+    }
   }
 }
 .p_works{
   display: grid;
   gap: 1rem;
   grid-template-columns: 1fr;
-  position:relative;
   @include breakpoints (md){
     grid-template-columns: 1fr 2fr;
   }
   > div{
     min-width: 1px;
   }
-  &__head{
-    @include breakpoints (md){
-      position: sticky;
-      top:0;
-    }
-  }
   &__body{
     margin-block-start: 2rem;
     @include breakpoints (md){
       margin-block-start: 0;
-      height: 100dvh;
-      overflow: auto;
     }
   }
   &__img{

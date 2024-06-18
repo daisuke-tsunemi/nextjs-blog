@@ -7,7 +7,6 @@
   display:flex;
   justify-content: flex-end;
   width: 100%;
-  // background:linear-gradient(180deg, #ffffff, #ffffff00);
   &__img{
     height: 8rem;
     width: 90%;
@@ -15,18 +14,20 @@
     margin-inline-start: auto;
     @include breakpoints (md){
       height: 15rem;
+      border-radius:0 0 0 3rem;
     }
   }
   &__title{
     margin-block-start: -5rem;
     font-size: 3rem;
     font-family: 'Galada', Sans-serif;
+    line-height: 0.5;
     @include breakpoints (md){
       font-size: 5rem;
       margin-block-start: -3rem;
       padding: 0 2rem;
     }
-    small{
+    span{
       margin-inline-start: .5rem;
       font-size: 1rem;
       @include breakpoints (md){
@@ -41,6 +42,9 @@
     @include breakpoints (md){
       padding-block: 5rem;
     }
+    @include breakpoints (xl){
+      padding-block: 8rem;
+    }
   }
 }
 .l_contact{
@@ -50,5 +54,54 @@
   .heading__title{
     margin-block-start: 0;
     line-height: 1;
+  }
+}
+.p_works{
+  &__listItem{
+    display: block;
+    position:relative;
+    picture{
+      display: block;
+      aspect-ratio: 4/3;
+      width: 100%;
+      position:relative;
+      overflow: hidden;
+      background-color: var(--primary);
+      border-radius:.25rem;
+    }
+    img{
+      transition: all 0.2s;
+      position:absolute;
+      top:50%;
+      left:50%;
+      transform:translate(-50%,-50%);
+    }
+    &:hover{
+      figcaption{
+        background-color: rgba($color: #000000, $alpha: .7);
+      }
+      img{
+        transform: scale(1.01) translate(-50%,-50%);
+        opacity: .7;
+      }
+    }
+  }
+  &__gridCard{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    @include breakpoints (md){
+      grid-template-columns: repeat(3, 1fr);
+    }
+    figcaption{
+      position:absolute;
+      bottom:1rem;
+      left:0;
+      color: #fff;
+      backdrop-filter: blur(4px);
+      padding: .5rem;
+      background-color: rgba($color: #000000, $alpha: .3);
+      transition: all 0.2s;
+    }
   }
 }

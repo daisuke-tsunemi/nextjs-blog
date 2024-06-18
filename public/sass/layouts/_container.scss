@@ -10,9 +10,9 @@
 .l-container {
   @extend %container;
   max-width: 1440px;
-  padding: 1rem;
+  padding: 0 1rem;
   @include breakpoints (sm){
-    padding: 2rem;
+    padding: 0 2rem;
   }
   // 500px~1400px
   $i: 5;

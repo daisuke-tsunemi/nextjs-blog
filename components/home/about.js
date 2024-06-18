@@ -3,7 +3,7 @@ import Image from 'next/image';
 import styles from "../../styles/pages/home.module.scss";
 export default function About() {
   return (
-    <section className={`${styles.p_about} ${"p_section c-txt--center"}`}>
+    <section className={`${styles.p_about} ${"p_section c-txt--center"}`} id='about'>
       <div className='p_section__head'>
         <h2 className='c-txt c-txt--center p_section__title'>About us<span className='c-txt__md'>私たちについて</span></h2>
       </div>
@@ -27,7 +27,7 @@ export default function About() {
           <p className='c-txt__md u-mt24'>
             はじめまして、ミツメルデザイン 常見大祐（つねみだいすけ）と申します！<br />
             ミツメルデザインでは、Web・デジタル、グラフィックのデザイン開発を通じて、あらゆるビジネスを阻む壁を取り除きます。<br />
-            そのために、あらゆる角度からユーザーを見つめ、最高のサービス体験を提供しています。
+            多角的にユーザーベネフィットを見つめ、最高のサービス体験を提供しています。
           </p>
         </div>
       </div>
