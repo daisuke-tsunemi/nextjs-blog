@@ -22,10 +22,23 @@
   > div{
     min-width: 1px;
   }
-  &__body{
-    .swiper__img{
-      max-height:600px;
+  &__head{
+    @include breakpoints (md){
+      position: sticky;
+      top:0;
     }
+  }
+  &__body{
+    margin-block-start: 2rem;
+    @include breakpoints (md){
+      margin-block-start: 0;
+      height: 100dvh;
+      overflow: auto;
+    }
+  }
+  &__img{
+    width: 100%;
+    height: auto;
   }
   &__tag{
     gap:.5rem;
@@ -35,8 +48,9 @@
     p{
       padding: .125rem .5rem;
       border-radius:4px;
+      color: var(--primary);
       border: 1px solid var(--primary);
-      background-color: var(--primary-pale);
+      background-color: #fff;
     }
   }
   &__foot{
