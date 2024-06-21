@@ -4,7 +4,12 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { getAllPostIds, getPostData } from '../../lib/works'
 import Date from '../../components/date';
-import Grid from '@mui/material/Grid';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Navigation, Autoplay, Pagination, Keyboard, Scrollbar, A11y, EffectFade } from "swiper/modules";
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import 'swiper/css/effect-fade';
 import styles from "../../styles/pages/works.module.scss";
 
 export default function Works({ postData }) {
@@ -16,7 +21,7 @@ export default function Works({ postData }) {
       </Head>
       <div className={styles.heading}>
         <Image 
-          priority className={styles.heading__img} src={postData.thumbnail} height={300} width={400} alt="{postData.title}のイメージ1"
+          priority className={styles.heading__img} src={postData.thumbnail} height={300} width={400} alt={`${postData.title} ${"のイメージ"}`}
         />
       </div>
       <div className={styles.p_page_content}>
@@ -31,6 +36,9 @@ export default function Works({ postData }) {
                 <p className='c-txt__min c-txt__height--1 c-txt__letter--0'>{postData.tag_1}</p>
                 <p className='c-txt__min c-txt__height--1 c-txt__letter--0'>{postData.tag_2}</p>
               </div>
+              <div className='u-mt24'>
+                <Link href={postData.link} className='c-btn__text' target='_blank' rel='noreferrer'>関連リンク</Link>
+              </div>
               <div className='u-mt32' dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
               <div className='u-align center u-mt80'>
                 <Link href={postData.previous} className='c-btn--dark sm'>前へ</Link>
@@ -38,33 +46,62 @@ export default function Works({ postData }) {
                 <Link href={postData.next} className='c-btn--dark sm'>次へ</Link>
               </div>
             </div>
-            <Grid container spacing={3} className={styles.p_works__body}>
-              <Grid item xs={12}>
-                <Image 
-                priority className={styles.p_works__img} src={postData.image1} height={300} width={400} alt="{postData.title}のイメージ1"
-                />
-              </Grid>
-              <Grid item xs={12}>
-                <Image 
-                priority className={styles.p_works__img} src={postData.image2} height={300} width={400} alt="{postData.title}のイメージ2"
-                />
-              </Grid>
-              <Grid item xs={12}>
-                <Image 
-                priority className={styles.p_works__img} src={postData.image3} height={300} width={400} alt="{postData.title}のイメージ3"
-                />
-              </Grid>
-              <Grid item xs={12}>
-                <Image 
-                priority className={styles.p_works__img} src={postData.image4} height={300} width={400} alt="{postData.title}のイメージ4"
-                />
-              </Grid>
-              <Grid item xs={12}>
-                <Image 
-                priority className={styles.p_works__img} src={postData.image5} height={300} width={400} alt="{postData.title}のイメージ5"
-                />
-              </Grid>
-            </Grid>
+            <div container spacing={3} className={`${styles.p_works__body} ${postData.category}`}>
+              
+              <div className='p_works__bodyWeb'>
+              {postData.iframe}
+              </div>
+              <div className='p_works__bodyGra'>
+                <Swiper
+                spaceBetween={50}
+                slidesPerView={1}
+                pagination={{ clickable: true }}
+                navigation={true}
+                keyboard={true}
+                loop={true}
+                autoplay={{
+                  delay: 3000,
+                  disableOnInteraction: false,
+                }}
+                onSwiper={(swiper) => console.log(swiper)}
+                effect="fade"
+                modules={[Navigation, Autoplay, Keyboard, Pagination, Scrollbar, A11y, EffectFade]}
+                className="swiper"
+                >
+                  <SwiperSlide>
+                    <Image 
+                    priority className={styles.p_works__img} src={postData.image1} height={300} width={400} alt={`${postData.title} ${"のイメージ1"}`}
+                    />
+                  </SwiperSlide>
+                  <SwiperSlide>
+                    <Image 
+                    priority className={styles.p_works__img} src={postData.image2} height={300} width={400} alt={`${postData.title} ${"のイメージ2"}`}
+                    />
+                  </SwiperSlide>
+                  <SwiperSlide>
+                    <Image 
+                    priority className={styles.p_works__img} src={postData.image3} height={300} width={400} alt={`${postData.title} ${"のイメージ3"}`}
+                    />
+                  </SwiperSlide>
+                  <SwiperSlide>
+                    <Image 
+                    priority className={styles.p_works__img} src={postData.image4} height={300} width={400} alt={`${postData.title} ${"のイメージ4"}`}
+                    />
+                  </SwiperSlide>
+                  <SwiperSlide>
+                    <Image 
+                    priority className={styles.p_works__img} src={postData.image5} height={300} width={400} alt={`${postData.title} ${"のイメージ5"}`}
+                    />
+                  </SwiperSlide>
+                  <SwiperSlide>
+                    <Image 
+                    priority className={styles.p_works__img} src={postData.image6} height={300} width={400} alt={`${postData.title} ${"のイメージ6"}`}
+                    />
+                  </SwiperSlide>
+                </Swiper>
+              </div>
+              
+            </div>
           </div>
         </div>
       </div>

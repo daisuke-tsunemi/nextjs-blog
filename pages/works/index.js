@@ -42,7 +42,7 @@ export default function Works ({ allPostsData }) {
                 <picture>
                   <Image
                     priority
-                    className='img'
+                    className={styles.p_works__listImg}
                     src={thumbnail}
                     height={300}
                     width={300}

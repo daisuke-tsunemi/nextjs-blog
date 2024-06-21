@@ -7,11 +7,11 @@
   &__img{
     height: 8rem;
     width: 90%;
-    border-radius:0 0 0 1rem;
+    border-radius: 1rem 0 0 1rem;
     margin-inline-start: auto;
     @include breakpoints (md){
       height: 15rem;
-      border-radius:0 0 0 3rem;
+      border-radius: 3rem 0 0 3rem;
     }
   }
 }
@@ -21,6 +21,7 @@
   grid-template-columns: 1fr;
   @include breakpoints (md){
     grid-template-columns: 1fr 2fr;
+    margin-block-start: 4rem;
   }
   > div{
     min-width: 1px;
@@ -30,10 +31,32 @@
     @include breakpoints (md){
       margin-block-start: 0;
     }
+    .p_works__body{
+      &Web{
+        display:none;
+      }
+      &Gra{
+        display:block;
+      }
+    }
+    &.web{
+      .p_works__body{
+        &Web{
+          display:block;
+        }
+        &Gra{
+          display:none;
+        }
+      }
+    }
   }
   &__img{
     width: 100%;
     height: auto;
+    margin-block-start: .5rem;
+    &:first-of-type{
+      margin-block-start: 0;
+    }
   }
   &__tag{
     gap:.5rem;
