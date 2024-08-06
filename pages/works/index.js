@@ -18,7 +18,7 @@ export default function Works ({ allPostsData }) {
   return (
     <Layout>
       <Head>
-        <title>{`Woeks Index | ${siteTitle}`}</title>
+        <title>{`Works Index | ${siteTitle}`}</title>
       </Head>
       <div className={styles.heading}>
         <Image
@@ -37,13 +37,13 @@ export default function Works ({ allPostsData }) {
           </div>
           <div className='p_section__body'>
             <div className={`${styles.p_works__gridCard} ${"u-gap24"}`}>
-              {allPostsData.map(({ id, date, title, thumbnail }) => (
+              {allPostsData.map(({ id, date, title, image1 }) => (
               <Link className={styles.p_works__listItem} key={id} href={`/works/${id}`}>
                 <picture>
                   <Image
                     priority
                     className={styles.p_works__listImg}
-                    src={thumbnail}
+                    src={image1}
                     height={300}
                     width={300}
                     alt="サムネイル"

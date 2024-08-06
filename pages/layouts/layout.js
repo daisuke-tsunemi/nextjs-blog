@@ -1,7 +1,7 @@
 import Head from 'next/head';
-import Header from '../layouts/header';
-import Footer from '../layouts/footer';
-import Loading from '../loading';
+import Header from './header';
+import Footer from './footer';
+import Loading from './loading';
 import { Suspense } from "react";
 
 export const siteTitle = 'Mitsumeru Design Studio';
@@ -39,17 +39,17 @@ export default function Layout({ children, home }) {
       {/* メインコンテンツ */}
         {
           home ? (
-            <main className='mainHome'>
-              <Suspense fallback={<Loading />}>
+            <Suspense fallback={<Loading />}>
+              <main className='mainHome'>
                 {children}
-              </Suspense>
-            </main>
+              </main>
+            </Suspense>
           ) : (
-            <main className='mainPage'>
-              <Suspense fallback={<Loading />}>
+            <Suspense fallback={<Loading />}>
+              <main className='mainPage'>
                 {children}
-              </Suspense>
-            </main>
+              </main>
+            </Suspense>
           )
         }
       {/* フッター */}

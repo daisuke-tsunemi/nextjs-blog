@@ -16,7 +16,7 @@ export default function About() {
         <Image
           priority
           className={styles.heading__img}
-          src='/images/pages/works.webp'
+          src='/images/pages/about.webp'
           height={160}
           width={300}
           alt="Aboutのイメージ"

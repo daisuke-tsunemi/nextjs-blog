@@ -4,27 +4,62 @@
   display:flex;
   justify-content: flex-end;
   width: 100%;
+  background-color: rgba($color: #00314a, $alpha: 0.5);
   &__img{
-    height: 8rem;
-    width: 90%;
-    border-radius: 1rem 0 0 1rem;
-    margin-inline-start: auto;
+    height: auto;
+    width: 95%;
+    object-fit: contain;
+    margin:2rem auto;
+    border-radius:.25rem;
+    box-shadow: 0px .5rem 1rem rgba(0, 0, 0, .15);
     @include breakpoints (md){
-      height: 15rem;
-      border-radius: 3rem 0 0 3rem;
+      width: 80%;
+      border-radius:.5rem;
+      margin: 4rem auto;
+      box-shadow: 0px 1rem 2rem rgba(0, 0, 0, .15);
     }
+  }
+}
+.c_bg__pc{
+  background:url(../../public/images/bg/bg_pc.png) no-repeat center;
+  background-size:contain;
+  position:relative;
+  width: 100%;
+  aspect-ratio: 16/9;
+  picture{
+    overflow: auto;
+    position: absolute;
+    top: 47.5%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 92%;
+    display: block;
+    width: 76%;
+    border-radius: 3%;
+    aspect-ratio: 4 / 3;
   }
 }
 .p_works{
   display: grid;
-  gap: 1rem;
   grid-template-columns: 1fr;
+  gap: 1rem;
   @include breakpoints (md){
     grid-template-columns: 1fr 2fr;
     margin-block-start: 4rem;
+    gap: 2rem;
+  }
+  @include breakpoints (xl){
+    gap: 3rem;
   }
   > div{
     min-width: 1px;
+  }
+  &__head{
+    @include breakpoints (md){
+      position:sticky;
+      top:60px;
+      max-height: calc(100dvh - 60px);
+    }
   }
   &__body{
     margin-block-start: 2rem;
@@ -39,7 +74,7 @@
         display:block;
       }
     }
-    &.web{
+    &[class*="web"]{
       .p_works__body{
         &Web{
           display:block;
@@ -48,6 +83,11 @@
           display:none;
         }
       }
+    }
+    iframe{
+      width: 100%;
+      max-width:800px;
+      height:auto;
     }
   }
   &__img{

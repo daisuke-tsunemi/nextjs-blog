@@ -89,13 +89,13 @@ export default function Home ({ allPostsData }) {
         <div className='l-container__1200'>
           <div className='p_section__body'>
             <div className={`${styles.p_works__gridCard} ${"l-grid--3 u-gap24"}`}>
-              {allPostsData.map(({ id, date, title, thumbnail }) => (
+              {allPostsData.map(({ id, date, title, image_1 }) => (
                 <Link className={styles.p_works__listItem} key={id} href={`/works/${id}`}>
-                  <picture>
+                  <picture className={'name'}>
                     <Image
                       priority
                       className='img'
-                      src={thumbnail}
+                      src={image_1}
                       height={300}
                       width={300}
                       alt="サムネイル"

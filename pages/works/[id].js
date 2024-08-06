@@ -13,6 +13,7 @@ import 'swiper/css/effect-fade';
 import styles from "../../styles/pages/works.module.scss";
 
 export default function Works({ postData }) {
+  const images = ['image1','image2','image3','image4','image5','image6'];
   return (
     <Layout>
       <Head>
@@ -21,7 +22,7 @@ export default function Works({ postData }) {
       </Head>
       <div className={styles.heading}>
         <Image 
-          priority className={styles.heading__img} src={postData.thumbnail} height={300} width={400} alt={`${postData.title} ${"のイメージ"}`}
+        priority className={styles.heading__img} src={postData.image1} height={300} width={400} alt={`${postData.title} ${"のイメージ1"}`}
         />
       </div>
       <div className={styles.p_page_content}>
@@ -48,10 +49,41 @@ export default function Works({ postData }) {
             </div>
             <div container spacing={3} className={`${styles.p_works__body} ${postData.category}`}>
               
-              <div className='p_works__bodyWeb'>
-              {postData.iframe}
+              <div className={styles.p_works__bodyGra}>
+                <div className='l-grid u-gap8'>
+                  <picture className='l-grid--item'>
+                    <Image 
+                    priority className={styles.p_works__img} src={postData.image1} height={300} width={400} alt={`${postData.title} ${"のイメージ1"}`}
+                    />
+                  </picture>
+                  <picture className='l-grid--item'>
+                    <Image 
+                    priority className={styles.p_works__img} src={postData.image2} height={300} width={400} alt={`${postData.title} ${"のイメージ"}`}
+                    />
+                  </picture>
+                  <picture className='l-grid--item'>
+                    <Image 
+                    priority className={styles.p_works__img} src={postData.image3} height={300} width={400} alt={`${postData.title} ${"のイメージ3"}`}
+                    />
+                  </picture>
+                  <picture className='l-grid--item'>
+                    <Image 
+                    priority className={styles.p_works__img} src={postData.image4} height={300} width={400} alt={`${postData.title} ${"のイメージ4"}`}
+                    />
+                  </picture>
+                  <picture className='l-grid--item'>
+                    <Image 
+                    priority className={styles.p_works__img} src={postData.image5} height={300} width={400} alt={`${postData.title} ${"のイメージ5"}`}
+                    />
+                  </picture>
+                  <picture className='l-grid--item'>
+                    <Image 
+                    priority className={styles.p_works__img} src={postData.image6} height={300} width={400} alt={`${postData.title} ${"のイメージ6"}`}
+                    />
+                  </picture>
+                </div>
               </div>
-              <div className='p_works__bodyGra'>
+              <div className={styles.p_works__bodyWeb}>
                 <Swiper
                 spaceBetween={50}
                 slidesPerView={1}
@@ -60,8 +92,8 @@ export default function Works({ postData }) {
                 keyboard={true}
                 loop={true}
                 autoplay={{
-                  delay: 3000,
-                  disableOnInteraction: false,
+                  delay: 5000,
+                  disableOnInteraction: true,
                 }}
                 onSwiper={(swiper) => console.log(swiper)}
                 effect="fade"
@@ -69,34 +101,58 @@ export default function Works({ postData }) {
                 className="swiper"
                 >
                   <SwiperSlide>
-                    <Image 
-                    priority className={styles.p_works__img} src={postData.image1} height={300} width={400} alt={`${postData.title} ${"のイメージ1"}`}
-                    />
+                    <div className={styles.c_bg__pc}>
+                      <picture>
+                        <Image 
+                        priority className={styles.p_works__img} src={postData.image2} height={300} width={400} alt={`${postData.title} ${"のイメージ1"}`}
+                        />
+                      </picture>
+                    </div>
                   </SwiperSlide>
                   <SwiperSlide>
-                    <Image 
-                    priority className={styles.p_works__img} src={postData.image2} height={300} width={400} alt={`${postData.title} ${"のイメージ2"}`}
-                    />
+                    <div className={styles.c_bg__pc}>
+                      <picture>
+                        <Image 
+                        priority className={styles.p_works__img} src={postData.image2} height={300} width={400} alt={`${postData.title} ${"のイメージ2"}`}
+                        />
+                      </picture>
+                    </div>
                   </SwiperSlide>
                   <SwiperSlide>
+                    <div className={styles.c_bg__pc}>
+                      <picture>
                     <Image 
                     priority className={styles.p_works__img} src={postData.image3} height={300} width={400} alt={`${postData.title} ${"のイメージ3"}`}
                     />
+                    </picture>
+                  </div>
                   </SwiperSlide>
                   <SwiperSlide>
+                    <div className={styles.c_bg__pc}>
+                      <picture>
                     <Image 
                     priority className={styles.p_works__img} src={postData.image4} height={300} width={400} alt={`${postData.title} ${"のイメージ4"}`}
                     />
+                    </picture>
+                  </div>
                   </SwiperSlide>
                   <SwiperSlide>
+                    <div className={styles.c_bg__pc}>
+                      <picture>
                     <Image 
                     priority className={styles.p_works__img} src={postData.image5} height={300} width={400} alt={`${postData.title} ${"のイメージ5"}`}
                     />
+                    </picture>
+                  </div>
                   </SwiperSlide>
                   <SwiperSlide>
+                    <div className={styles.c_bg__pc}>
+                      <picture>
                     <Image 
                     priority className={styles.p_works__img} src={postData.image6} height={300} width={400} alt={`${postData.title} ${"のイメージ6"}`}
                     />
+                    </picture>
+                  </div>
                   </SwiperSlide>
                 </Swiper>
               </div>
