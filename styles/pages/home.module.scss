@@ -188,6 +188,9 @@
   &__listItem{
     display: block;
     position:relative;
+    &:nth-child(n+9){
+      display:none;
+    }
     picture{
       display: block;
       aspect-ratio: 1;
@@ -224,6 +227,9 @@
     }
     @include breakpoints (lg){
       grid-template-columns: repeat(3, 1fr);
+    }
+    @include breakpoints (xl){
+      grid-template-columns: repeat(4, 1fr);
     }
     figcaption{
       position:absolute;

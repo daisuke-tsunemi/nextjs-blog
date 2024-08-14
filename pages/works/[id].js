@@ -22,14 +22,14 @@ export default function Works({ postData }) {
       </Head>
       <div className={styles.heading}>
         <Image 
-        priority className={styles.heading__img} src={postData.image1} height={300} width={400} alt={`${postData.title} ${"のイメージ1"}`}
+        priority className={styles.heading__img} src={postData.image1} height={180} width={320} alt={`${postData.title} ${"のイメージ1"}`}
         />
       </div>
       <div className={styles.p_page_content}>
         <div className="l-container">
           <div className={styles.p_works}>
             <div className={styles.p_works__head}>
-              <h1 className='c-txt__lg c-txt__weight--700'>
+              <h1 className={`${styles.p_works__h1} ${"c-txt__xl c-txt__weight--700"}`}>
                 {postData.title}
               </h1>
               <Date dateString={postData.date} />

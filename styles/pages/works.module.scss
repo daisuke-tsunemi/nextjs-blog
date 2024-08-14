@@ -43,6 +43,7 @@
   display: grid;
   grid-template-columns: 1fr;
   gap: 1rem;
+  margin-block-start: 2rem;
   @include breakpoints (md){
     grid-template-columns: 1fr 2fr;
     margin-block-start: 4rem;
@@ -53,6 +54,26 @@
   }
   > div{
     min-width: 1px;
+  }
+  &__h1{
+    position:relative;
+    &:after{
+      content: '';
+      background-color: #e9ff00;
+      height: 45%;
+      width: 0%;
+      position:absolute;
+      bottom:0;
+      left:-0.5rem;
+      display:block;
+      animation-name: works_h1;
+      animation-duration: 1s;
+      animation-delay: 1.5s;
+      animation-timing-function: ease-in;
+      animation-fill-mode: forwards;
+      mix-blend-mode: multiply;
+      z-index: -1;
+    }
   }
   &__head{
     @include breakpoints (md){
@@ -118,6 +139,14 @@
       margin-block-start: 5rem;
       padding-inline-start: 4rem;
     }
+  }
+}
+@keyframes works_h1{
+  0%{
+    width:0%
+  }
+  100%{
+    width:100%
   }
 }
 .listItem{

@@ -9,12 +9,18 @@ image3: '/images/works/metroengines/img_3.webp'
 image4: '/images/works/metroengines/img_4.webp'
 image5: '/images/works/metroengines/img_5.webp'
 image6: '/images/works/metroengines/img_6.webp'
-title: 'metroengines'
+title: 'metroengines様'
 date: '2021-10-31'
 tag_1: 'LPデザイン'
 tag_2: 'フロントエンド実装'
-previous: '/works/yukinko'
+previous: '/works/laruche'
 next: '/works/lp'
 ---
 
-勤務内実績。Metroengines株式会社様のサービスデザイン制作とフロントエンド実装を行いました。
+勤務内実績。Metroengines株式会社様の**サービスデザイン制作**と**フロントエンド実装**を行いました。
+
+- コンセプトデザイン提案
+- デザインディレクション
+- UI/UXデザイン
+- サービスLPデザイン
+- フロントエンド実装（Laravel PHP, Wordpress）

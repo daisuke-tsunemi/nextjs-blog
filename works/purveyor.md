@@ -9,7 +9,7 @@ image3: '/images/works/purveyor/img_3.webp'
 image4: '/images/works/purveyor/img_4.webp'
 image5: '/images/works/purveyor/img_5.webp'
 image6: '/images/works/purveyor/img_6.webp'
-title: '海外居住者向け 個人輸出代行サービス'
+title: '海外居住者向け輸出代行サービス'
 date: '2024-03-31'
 tag_1: 'UIUXデザイン'
 tag_2: 'フロントエンド実装'
@@ -17,4 +17,11 @@ previous: '/works/tokyuski'
 next: '/works/knowhows'
 ---
 
-勤務内実績。Japanese Purveyor様、海外居住者向け 個人輸出代行サービス開発のご依頼にて、サービスワークフローの作成。ユーザー画面、管理者画面のUIUXデザイン制作。及びフロントエンド実装を行いました。
+勤務内実績。Japanese Purveyor様、海外居住者向け 個人輸出代行サービス開発のご依頼にて、**サービスワークフローの作成。ユーザー画面、管理者画面のUIUXデザイン制作。**及び**フロントエンド実装**を行いました。
+
+- コンセプトデザイン提案
+- デザインディレクション
+- ワークフローデザイン
+- UI/UXデザイン
+- 管理画面デザイン
+- フロントエンド実装（Laravel PHP）
