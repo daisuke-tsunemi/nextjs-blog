@@ -22,7 +22,7 @@ export default function Works({ postData }) {
       </Head>
       <div className={styles.heading}>
         <Image 
-        priority className={styles.heading__img} src={postData.image1} height={180} width={320} alt={`${postData.title} ${"のイメージ1"}`}
+        priority className={styles.heading__img} src={postData.image1} height={900} width={1600} alt={`${postData.title} ${"のイメージ1"}`}
         />
       </div>
       <div className={styles.p_page_content}>
