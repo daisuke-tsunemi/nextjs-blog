@@ -3,6 +3,7 @@
 # Block all crawlers for /accounts
 User-agent: *
 Disallow: /accounts
+Disallow: /images
 
 # Allow all crawlers
 User-agent: *
