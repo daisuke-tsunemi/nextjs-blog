@@ -3,6 +3,9 @@ module.exports = {
   sassOptions: {
     includePaths: [path.join(__dirname, 'layoutStyles')],
     includePaths: [path.join(__dirname, 'styles')],
+    experimental: {
+      scrollRestoration: false,
+    },
   },
   // リダイレクト
   async redirects() {
@@ -10,7 +13,7 @@ module.exports = {
       {
         source: '/redirect',
         destination: '/',
-        permanent: true, 
+        permanent: false, 
       },
     ];
   },

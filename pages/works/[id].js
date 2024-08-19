@@ -18,14 +18,14 @@ export default function Works({ postData }) {
     <Layout>
       <Head>
         <title>{postData.title}</title>
-        <link rel="canonical" href="" />
+        <link rel="canonical" href="https://mitsumeru-design.vercel.app/works/yukinko" />
       </Head>
       <div className={styles.heading}>
         <Image 
         priority className={styles.heading__img} src={postData.image1} height={900} width={1600} alt={`${postData.title} ${"のイメージ1"}`}
         />
       </div>
-      <div className={styles.p_page_content}>
+      <div className={styles.p_page_content} id="top">
         <div className="l-container">
           <div className={styles.p_works}>
             <div className={styles.p_works__head}>
@@ -41,10 +41,10 @@ export default function Works({ postData }) {
                 <Link href={postData.link} className='c-btn__text' target='_blank' rel='noreferrer'>関連リンク</Link>
               </div>
               <div className='u-mt32' dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
-              <div className='u-align center u-mt80'>
-                <Link href={postData.previous} className='c-btn--dark sm'>前へ</Link>
+              <div className={`${styles.p_works__bottom} ${"u-align center u-mt80"}`}>
+                <Link href={`${postData.previous}${"#top"}`} className='c-btn--dark sm'>前へ</Link>
                 <Link href="/works" className='c-btn__line sm'>Works一覧へ</Link>
-                <Link href={postData.next} className='c-btn--dark sm'>次へ</Link>
+                <Link href={`${postData.next}${"#top"}`} className='c-btn--dark sm'>次へ</Link>
               </div>
             </div>
             <div container spacing={3} className={`${styles.p_works__body} ${postData.category}`}>
@@ -58,7 +58,7 @@ export default function Works({ postData }) {
                   </picture>
                   <picture className='l-grid--item'>
                     <Image 
-                    priority className={styles.p_works__img} src={postData.image2} height={300} width={400} alt={`${postData.title} ${"のイメージ"}`}
+                    priority className={styles.p_works__img} src={postData.image2} height={300} width={400} alt={`${postData.title} ${"のイメージ2"}`}
                     />
                   </picture>
                   <picture className='l-grid--item'>

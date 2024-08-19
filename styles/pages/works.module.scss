@@ -60,10 +60,10 @@
     &:after{
       content: '';
       background-color: #e9ff00;
-      height: 45%;
+      height: 35%;
       width: 0%;
       position:absolute;
-      bottom:0;
+      bottom:.25rem;
       left:-0.5rem;
       display:block;
       animation-name: works_h1;
@@ -80,6 +80,22 @@
       position:sticky;
       top:60px;
       max-height: calc(100dvh - 60px);
+    }
+    ul{
+      margin-block-start: 1rem;
+      &:before{
+        content:'作業範囲';
+        font-weight: 700;
+        font-size: .875rem;
+      }
+    }
+    li{
+      &:before{
+        content: '●';
+        font-weight: 700;
+        font-size: .875rem;
+        color: var(--secondary);
+      }
     }
   }
   &__body{
@@ -138,6 +154,21 @@
     @include breakpoints (md){
       margin-block-start: 5rem;
       padding-inline-start: 4rem;
+    }
+  }
+  &__bottom{
+    position:fixed;
+    left:0;
+    bottom:0;
+    width: 100%;
+    z-index: 2;
+    background-color: #fff;
+    padding-block: .5rem;
+    @include breakpoints (sm){
+      position:static;
+      left:inherit;
+      bottom:inherit;
+      background-color: transparent;
     }
   }
 }
