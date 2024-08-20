@@ -97,13 +97,10 @@ export default function Contact() {
                       <input type='radio' name='entry.420340127' />200,000円前後
                     </label>
                     <label className='c-radio'>
-                      <input type='radio' name='entry.420340127' />500,000円前後
+                      <input type='radio' name='entry.420340127' />300,000円前後
                     </label>
                     <label className='c-radio'>
-                      <input type='radio' name='entry.420340127' />1,000,000円前後
-                    </label>
-                    <label className='c-radio'>
-                      <input type='radio' name='entry.420340127' />2,000,000円以上
+                      <input type='radio' name='entry.420340127' />500,000円以上
                     </label>
                   </div>
                 </div>
