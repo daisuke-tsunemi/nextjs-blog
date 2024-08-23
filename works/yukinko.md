@@ -14,7 +14,7 @@ date: '2023-04-01'
 tag_1: 'ロゴデザイン'
 tag_2: 'ブランディングデザイン'
 previous: '/works/logidx'
-next: '/works/tokyuski'
+next: '/works/kidsspace'
 ---
 
 北海道は標茶町で牧場を営むゆきんこファーム様の**ロゴデザイン、名刺、ブランディング、キービジュアル**などのデザインを制作。

@@ -4,6 +4,7 @@
   height: 85dvh;
   width: 100%;
   gap: 1rem;
+  mix-blend-mode: multiply;
   @include breakpoints (md){
     height: 90dvh;
     padding: 1rem;
@@ -23,7 +24,7 @@
     }
   }
   &__body{
-    width: 16rem;
+    width: 14rem;
     display:flex;
     align-items:center;
     gap: 1rem;
@@ -33,10 +34,10 @@
     left:50%;
     transform:translate(-50%,-50%);
     @include breakpoints (sm){
-      width: 20rem;
+      width: 27rem;
     }
     @include breakpoints (lg){
-      max-width:600px;
+      max-width:680px;
       width: 100%;
     }
   }
@@ -56,6 +57,13 @@
   &__body{
     display:flex;
     flex-wrap:wrap;
+    margin-block-start: -3rem;
+    @include breakpoints (sm){
+      margin-block-start: -8rem;
+    }
+    @include breakpoints (md){
+      margin-block-start: 0;
+    }
   }
   &__text{
     position: relative;
@@ -74,32 +82,42 @@
   }
   &__img{
     &Left{
-      height:auto;
-      width:120px;
       @include breakpoints (md){
         left:-1%;
         position:absolute;
         top:60%;
         transform:translate(0,-50%);
-        width:10rem;
       }
-      @include breakpoints (xl2){
-        width:20rem;
+      img{
+        height:auto;
+        width:120px;
+        @include breakpoints (md){
+          width:10rem;
+        }
+        @include breakpoints (xl2){
+          width:20rem;
+        }
       }
     }
     &Right{
-      height:auto;
-      width:130px;
       margin-inline-start:auto;
       @include breakpoints (md){
         right:-1%;
         position:absolute;
         top:60%;
         transform:translate(0,-50%);
-        width:10rem;
       }
       @include breakpoints (xl2){
-        width:20rem;
+      }
+      img{
+        height:auto;
+        width:120px;
+        @include breakpoints (md){
+          width:10rem;
+        }
+        @include breakpoints (xl2){
+          width:20rem;
+        }
       }
     }
   }
@@ -188,7 +206,7 @@
   &__listItem{
     display: block;
     position:relative;
-    &:nth-child(n+9){
+    &:nth-child(n+7){
       display:none;
     }
     picture{
@@ -227,9 +245,6 @@
     }
     @include breakpoints (lg){
       grid-template-columns: repeat(3, 1fr);
-    }
-    @include breakpoints (xl){
-      grid-template-columns: repeat(4, 1fr);
     }
     figcaption{
       position:absolute;

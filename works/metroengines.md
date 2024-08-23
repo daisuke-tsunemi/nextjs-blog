@@ -13,7 +13,7 @@ title: 'metroengines様'
 date: '2021-10-31'
 tag_1: 'LPデザイン'
 tag_2: 'フロントエンド実装'
-previous: '/works/laruche'
+previous: '/works/leaflet'
 next: '/works/lp'
 ---
 

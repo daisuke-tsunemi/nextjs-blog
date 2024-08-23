@@ -37,7 +37,7 @@ export default function Works ({ allPostsData }) {
           </div>
           <div className='p_section__body'>
             <div className={`${styles.p_works__gridCard} ${"u-gap24"}`}>
-              {allPostsData.map(({ id, date, title, image1 }) => (
+              {allPostsData.map(({ id, date, title, image1, category }) => (
               <Link className={styles.p_works__listItem} key={id} href={`/works/${id}`}>
                 <picture>
                   <Image
@@ -49,6 +49,9 @@ export default function Works ({ allPostsData }) {
                     alt="サムネイル"
                   />
                 </picture>
+                <div className={styles.p_works__tagWrap}>
+                  <span className={styles.p_works__tag}>{category}</span>
+                </div>
                 <figcaption>
                   <h4 className='headingMd'>{title}</h4>
                   <small className='lightText'>

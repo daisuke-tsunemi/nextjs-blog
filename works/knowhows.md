@@ -1,7 +1,7 @@
 ---
 thumbnail: '/images/works/knowhows/thumbnail.webp'
 link: 'https://knowhows.jp/'
-category: 'web'
+category: 'webApp'
 iframe: ''
 image1: '/images/works/knowhows/img_1.webp'
 image2: '/images/works/knowhows/img_2.webp'

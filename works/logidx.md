@@ -1,7 +1,7 @@
 ---
 thumbnail: '/images/works/logidx/thumbnail.webp'
-link: ''
-category: 'web'
+link: '/'
+category: 'webApp'
 iframe: ''
 image1: '/images/works/logidx/img_1.webp'
 image2: '/images/works/logidx/img_2.webp'

@@ -1,7 +1,7 @@
 ---
 thumbnail: '/images/works/tokyuski/thumbnail.webp'
 link: 'https://smartclub.tokyu-rs.co.jp/help/ski-ticket'
-category: 'web'
+category: 'webApp'
 iframe: ''
 image1: '/images/works/tokyuski/img_1.webp'
 image2: '/images/works/tokyuski/img_2.webp'
@@ -13,7 +13,7 @@ title: 'スキーリフトチケット予約システム'
 date: '2023-12-29'
 tag_1: 'UIUXデザイン'
 tag_2: 'フロントエンド実装'
-previous: '/works/yukinko'
+previous: '/works/kidsspace'
 next: '/works/purveyor'
 ---
 

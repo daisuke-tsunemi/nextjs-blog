@@ -140,6 +140,11 @@
     display:flex;
     flex-wrap:wrap;
     margin-block-start: 1rem;
+    &Wrap{
+      position:absolute;
+      top:.5rem;
+      left:.5rem;
+    }
     p{
       padding: .125rem .5rem;
       border-radius:4px;

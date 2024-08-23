@@ -59,6 +59,7 @@ h5.c-ttl{
   }
   &__lg {
     @extend .c-txt;
+    font-size: 1.25rem;
     @include breakpoints (sm){
       font-size: 1.5rem;
     }

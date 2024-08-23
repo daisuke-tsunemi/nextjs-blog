@@ -23,7 +23,7 @@ export default function About() {
         />
       </div>
       <section className={styles.p_page__content}>
-        <div className='l-container'>
+        <div className='l-container__900'>
           <div className='p_section__head'>
             <h1 className={styles.heading__title}>About Us<br className='off_sm' /><span className='c-txt__md'>私たちについて</span></h1>
           </div>
@@ -32,7 +32,7 @@ export default function About() {
               <h3 className='c-txt__lg c-txt--center'>ユーザーを、ビジネスを、<br className='off_sm' />ミツメルデザイン</h3>
               <p className='c-txt__md u-mt24 c-txt--center'>
                 はじめまして、ミツメルデザイン<br className='off_sm' /> 常見大祐（つねみだいすけ）と申します！<br />
-                ミツメルデザインでは、Web・デジタル、グラフィックのデザイン開発を通じて、<br className='off_sm' />あらゆるビジネスを阻む壁を取り除きます。<br />
+                ミツメルデザインでは、Web・デジタル、グラフィックのデザイン開発を通じて、<br />あらゆるビジネスを阻む壁を取り除きます。<br />
                 多角的にユーザーベネフィットを見つめ、<br className='off_sm' />最高のサービス体験を提供しています。
               </p>
             </div>

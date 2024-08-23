@@ -1,7 +1,7 @@
 ---
 thumbnail: '/images/works/imacoco/thumbnail.webp'
 link: 'https://imacoco-shuukatsu.com/'
-category: 'web'
+category: 'webApp'
 iframe: ''
 image1: '/images/works/imacoco/img_1.webp'
 image2: '/images/works/imacoco/img_2.webp'

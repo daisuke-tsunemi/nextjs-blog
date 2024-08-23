@@ -14,7 +14,7 @@ date: '2024-08-09'
 tag_1: 'UIUXデザイン'
 tag_2: 'フロントエンド実装'
 previous: '/works/knowhows'
-next: '/works/metroengines'
+next: '/works/kidsspace'
 ---
 
 勤務内実績。株式会社LaRuche様の**ホームページ制作**を行いました。

@@ -52,33 +52,33 @@ export default function Works({ postData }) {
               <div className={styles.p_works__bodyGra}>
                 <div className='l-grid u-gap8'>
                   <picture className='l-grid--item'>
-                    <Image 
-                    priority className={styles.p_works__img} src={postData.image1} height={300} width={400} alt={`${postData.title} ${"のイメージ1"}`}
+                  <Image className={`${styles.p_works__img} ${'c-image'}`}
+                    priority src={postData.image1} height={300} width={400} alt={`${postData.title} ${"のイメージ1"}`}
                     />
                   </picture>
                   <picture className='l-grid--item'>
-                    <Image 
-                    priority className={styles.p_works__img} src={postData.image2} height={300} width={400} alt={`${postData.title} ${"のイメージ2"}`}
+                  <Image className={`${styles.p_works__img} ${'c-image'}`}
+                    priority src={postData.image2} height={300} width={400} alt={`${postData.title} ${"のイメージ2"}`}
                     />
                   </picture>
                   <picture className='l-grid--item'>
-                    <Image 
-                    priority className={styles.p_works__img} src={postData.image3} height={300} width={400} alt={`${postData.title} ${"のイメージ3"}`}
+                    <Image className={`${styles.p_works__img} ${'c-image'}`}
+                    priority src={postData.image3} height={300} width={400} alt={`${postData.title} ${"のイメージ3"}`}
                     />
                   </picture>
                   <picture className='l-grid--item'>
-                    <Image 
-                    priority className={styles.p_works__img} src={postData.image4} height={300} width={400} alt={`${postData.title} ${"のイメージ4"}`}
+                  <Image className={`${styles.p_works__img} ${'c-image'}`}
+                    priority src={postData.image4} height={300} width={400} alt={`${postData.title} ${"のイメージ4"}`}
                     />
                   </picture>
                   <picture className='l-grid--item'>
-                    <Image 
-                    priority className={styles.p_works__img} src={postData.image5} height={300} width={400} alt={`${postData.title} ${"のイメージ5"}`}
+                  <Image className={`${styles.p_works__img} ${'c-image'}`}
+                    priority src={postData.image5} height={300} width={400} alt={`${postData.title} ${"のイメージ5"}`}
                     />
                   </picture>
                   <picture className='l-grid--item'>
-                    <Image 
-                    priority className={styles.p_works__img} src={postData.image6} height={300} width={400} alt={`${postData.title} ${"のイメージ6"}`}
+                  <Image className={`${styles.p_works__img} ${'c-image'}`}
+                    priority src={postData.image6} height={300} width={400} alt={`${postData.title} ${"のイメージ6"}`}
                     />
                   </picture>
                 </div>
