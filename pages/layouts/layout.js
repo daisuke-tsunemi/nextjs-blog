@@ -10,7 +10,7 @@ export const siteDescription = 'ユーザーを、ビジネスを、ミツメル
 
 export default function Layout({ children, home }) {
   return (
-    <div className='l-wrap'>
+    <div className='l-wrap' id="top">
       <Head>
         <meta name="robots" content="noindex" />
         <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0" />
