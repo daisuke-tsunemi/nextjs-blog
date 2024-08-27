@@ -22,6 +22,7 @@ export default function Layout({ children, home }) {
         <meta name="author" content={siteTitle} />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content="@dt___" />
+        <meta name="p:domain_verify" content="fda03515e4c2a9600acc9bc1356d993b"/>{/* pinterest */}
         <meta property="og:site_name" content={siteTitle} />
         <meta property="og:image" content={`https://og-image.vercel.app/${encodeURI(siteTitle,)}.png?theme=light&md=0&fontSize=75px&images=https%3A%2F%2Fassets.vercel.com%2Fimage%2Fupload%2Ffront%2Fassets%2Fdesign%2Fnextjs-black-logo.svg`}/>
         <meta property="og:url" content="https://mitsumeru-design.vercel.app/" />
