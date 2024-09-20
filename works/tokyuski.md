@@ -13,8 +13,8 @@ title: 'スキーリフトチケット予約システム'
 date: '2023-12-29'
 tag_1: 'UIUXデザイン'
 tag_2: 'フロントエンド実装'
-previous: '/works/kidsspace'
-next: '/works/purveyor'
+previous: '/works/purveyor'
+next: '/works/kidsspace'
 ---
 
 勤務内実績。東急グループのポイントサイト内、スキー場リフトチケット購入システムの**告知LP、ユーザーのチケット購入フロー、管理画面のUIUXデザイン**と**フロントエンド実装**を行いました。

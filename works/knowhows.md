@@ -13,8 +13,8 @@ title: 'KnowHows様'
 date: '2024-05-31'
 tag_1: 'サービスUIUXデザイン'
 tag_2: 'フロントエンド実装'
-previous: '/works/purveyor'
-next: '/works/laruche'
+previous: '/works/laruche'
+next: '/works/purveyor'
 ---
 
 勤務内実績。ユーザー用画面の各種サービス**UIUXデザイン制作**と**フロントエンド実装**を行いました。

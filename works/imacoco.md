@@ -13,8 +13,8 @@ title: 'いまここ就活様'
 date: '2023-01-20'
 tag_1: 'サービスUIUXデザイン'
 tag_2: 'フロントエンド実装'
-previous: '/works/lp'
-next: '/works/logidx'
+previous: '/works/logidx'
+next: '/works/lp'
 ---
 
 勤務内実績。求職者、企業、管理者用の各種サービス**UIUXデザイン制作**と**フロントエンド実装**を行いました。

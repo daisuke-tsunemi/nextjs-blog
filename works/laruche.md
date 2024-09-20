@@ -13,8 +13,8 @@ title: '株式会社LaRuche様'
 date: '2024-08-09'
 tag_1: 'UIUXデザイン'
 tag_2: 'フロントエンド実装'
-previous: '/works/knowhows'
-next: '/works/kidsspace'
+previous: '/works/adproduction'
+next: '/works/knowhows'
 ---
 
 勤務内実績。株式会社LaRuche様の**ホームページ制作**を行いました。

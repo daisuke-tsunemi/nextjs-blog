@@ -43,7 +43,7 @@ export default function Home ({ allPostsData }) {
               <strong>人</strong>と<strong>事業</strong>を<span>見つめる</span><br className='off_md' /><strong>デザイン</strong>を
             </h2>
             <div className="c-txt__md u-align--center">
-              <Link href='#about'>Scroll</Link>
+              <Link className={styles.p_fv__body__scroll} href='#about'>Scroll</Link>
             </div>
           </div>
         </div>
@@ -105,7 +105,14 @@ export default function Home ({ allPostsData }) {
           <div className='p_section__body'>
             <div className={`${styles.p_works__gridCard} ${"l-grid--3 u-gap24"}`}>
               {allPostsData.map(({ id, date, title, image1 }) => (
-                <Link className={styles.p_works__listItem} key={id} href={`/works/${id}`}>
+                <Link className={styles.p_works__listItem} key={id} href={`/works/${id}`}      
+                  initial={{ opacity: 0 }}
+                  transition={{ duration: 1 }}
+                  viewport={{ once: true }}
+                  whileInView={{ opacity: 1 }}
+                  offscreen={{ y:200 }}
+                  onscreen={{ y:200 }}
+                  >
                   <picture className={'name'}>
                     <Image
                       priority

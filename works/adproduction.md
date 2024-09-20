@@ -13,8 +13,8 @@ title: '広告デザイン'
 date: '2017-12-31'
 tag_1: 'グラフィックデザイン'
 tag_2: '販促物デザイン'
-previous: '/works/laruche'
-next: '/works/leaflet'
+previous: '/works/leaflet'
+next: '/works/laruche'
 ---
 
 過去に勤めていた勤務内での実績。**ロゴデザイン**、**新聞/雑誌広告デザイン**、**交通広告デザイン**、**パッケージデザイン**、など幅広く行いました。

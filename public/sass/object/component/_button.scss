@@ -140,17 +140,13 @@
 	&__line{
     @extend .c-btn;
 		background: transparent;
-		color: var(--primary-accent);
-		border: 1px solid var(--primary-accent);
+		color: var(--primary);
+		border: 1px solid var(--primary);
 		svg{
-			fill:var(--primary-accent);
+			fill:var(--primary);
 		}
 		&:hover{
-			background: var(--primary-accent);
-			color: #fff;
-			svg{
-				fill:#fff;
-			}
+			background: var(--primary-light);
 		}
 		&--white{
 			@extend .c-btn;

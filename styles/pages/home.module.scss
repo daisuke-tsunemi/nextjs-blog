@@ -40,6 +40,37 @@
       max-width:680px;
       width: 100%;
     }
+    &__scroll{
+      font-size: 10px;
+      padding: 1rem;
+      border-radius:50%;
+      aspect-ratio: 1;
+      display: block;
+      border: 1px solid var(--border);
+      align-content: center;
+      position:relative;
+      transition: all 0.2s;
+      &:after{
+        content: '';
+        position:absolute;
+        top:75%;
+        left:50%;
+        transform:translate(-50%,0);
+        width:1px;
+        height:2rem;
+        display: block;
+        background-color: var(--border);
+        transition: all 0.2s;
+      }
+      &:hover{
+        @include breakpoints (sm){
+          border-color: var(--base);
+          &:after{
+            background-color: var(--base);
+          }
+        }
+      }
+    }
   }
   &__logo{
     width:10rem;

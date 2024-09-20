@@ -13,8 +13,8 @@ title: 'LP制作'
 date: '2022-12-29'
 tag_1: 'LPデザイン'
 tag_2: 'フロントエンド実装'
-previous: '/works/metroengines'
-next: '/works/imacoco'
+previous: '/works/imacoco'
+next: '/works/metroengines'
 ---
 
 勤務内実績。各社企業様のサービス**LPデザイン制作**と**フロントエンド実装**を行いました。

@@ -13,11 +13,11 @@ title: '海外居住者向け輸出サービス'
 date: '2024-03-31'
 tag_1: 'UIUXデザイン'
 tag_2: 'フロントエンド実装'
-previous: '/works/tokyuski'
-next: '/works/knowhows'
+previous: '/works/knowhows'
+next: '/works/tokyuski'
 ---
 
-勤務内実績。Japanese Purveyor様、海外居住者向け 個人輸出代行サービス開発のご依頼にて、**サービスワークフローの作成。ユーザー画面、管理者画面のUIUXデザイン制作。**及び**フロントエンド実装**を行いました。
+勤務内実績。Japanese Purveyor様、海外居住者向け 個人輸出代行サービス開発のご依頼にて、**サービスワークフローの作成。ユーザー画面、管理者画面のUIUXデザイン制作。** 及び **フロントエンド実装**を行いました。
 
 - コンセプトデザイン提案
 - デザインディレクション

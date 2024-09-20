@@ -13,8 +13,8 @@ title: 'KidsSpace'
 date: '2023-12-09'
 tag_1: 'UIUXデザイン'
 tag_2: 'フロントエンド実装'
-previous: '/works/yukinko'
-next: '/works/tokyuski'
+previous: '/works/tokyuski'
+next: '/works/yukinko'
 ---
 
 Webビュー内での子供向けの遊び場として、実験的なJavascriptを用いた**インタラクティブサイト**を制作しました。

@@ -11,11 +11,21 @@ body > div{
   grid-template-columns: 1fr;
   position:relative;
   overflow: auto;
+  animation: fadeIn 3s ease 0s 1 normal;
+  -webkit-animation: fadeIn 3s ease 0s 1 normal;
   grid-template-areas:
     " header "
     " content "
     " footer ";
   >*{
     min-width:1px;
+  }
+}
+@keyframes fadeIn{
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
   }
 }

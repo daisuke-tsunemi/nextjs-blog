@@ -1,4 +1,4 @@
-import Layout from '../layouts/layout'
+import Layout from '../layouts/layout';
 import Head from 'next/head';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -12,7 +12,10 @@ import 'swiper/css/pagination';
 import 'swiper/css/effect-fade';
 import styles from "../../styles/pages/works.module.scss";
 
+
+
 export default function Works({ postData }) {
+
   const images = ['image1','image2','image3','image4','image5','image6'];
   return (
     <Layout>
@@ -20,12 +23,12 @@ export default function Works({ postData }) {
         <title>{postData.title}</title>
         <link rel="canonical" href="https://mitsumeru-design.vercel.app/works/yukinko" />
       </Head>
-      <div className={styles.heading}>
+      <div className={styles.heading} id="hero">
         <Image 
         priority className={styles.heading__img} src={postData.image1} height={900} width={1600} alt={`${postData.title} ${"のイメージ1"}`}
         />
       </div>
-      <div className={styles.p_page_content} id="top">
+      <div className={styles.p_page_content}>
         <div className={styles.p_works}>
           <div className={styles.p_works__head}>
             <h1 className={`${styles.p_works__h1} ${"c-txt__xl c-txt__weight--700"}`}>
@@ -41,9 +44,9 @@ export default function Works({ postData }) {
             </div>
             <div className='u-mt32' dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
             <div className={`${styles.p_works__bottom} ${"u-align center u-mt80"}`}>
-              <Link href={`${postData.previous}${"#top"}`} className='c-btn--dark sm'>前へ</Link>
+              <Link href={`${postData.previous}${"#hero"}`} className='c-btn--dark sm'>前へ</Link>
               <Link href="/works" className='c-btn__line sm'>Works一覧へ</Link>
-              <Link href={`${postData.next}${"#top"}`} className='c-btn--dark sm'>次へ</Link>
+              <Link href={`${postData.next}${"#hero"}`} className='c-btn--dark sm'>次へ</Link>
             </div>
           </div>
           <div container spacing={3} className={`${styles.p_works__body} ${postData.category}`}>

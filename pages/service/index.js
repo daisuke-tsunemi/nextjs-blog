@@ -1,42 +1,45 @@
 import Head from 'next/head';
-import Link from 'next/link';
-import Flow from '../../components/page/flow';
-import Service from '../../components/page/service';
 import Image from 'next/image';
-import Layout from '../layouts/layout';
 import Script from 'next/script';
+import Layout from '../layouts/layout';
 import styles from "../../styles/pages/page.module.scss";
+import Service from '../../components/page/service';
 
-export default function About() {
+export default function Feature() {
   return (
     <Layout>
       <Head>
-        <title>Service</title>
-        <meta property="og:title" content="サービスのご紹介 - Service" key="title" />
+        <title>サービス概要 - Service</title>
+        <meta property="og:title" content="サービス概要 - Service" key="title" />
       </Head>
       <div className={styles.heading}>
         <Image
           priority
           className={styles.heading__img}
-          src="/public/images/bg/bg_fv.webp"
-          height={300}
-          width={400}
-          alt="メインのイメージ"
+          src='/images/pages/about.webp'
+          height={160}
+          width={300}
+          alt="Aboutのイメージ"
         />
       </div>
-      <section className='p_section'>
-        <div className='l-container'>
+      <section className={styles.p_page__content}>
+        <div className='l-container__900'>
           <div className='p_section__head'>
-            <h1 className={styles.heading__title}>Service <span className='c-txt__md'>サービスについて</span></h1>
+            <h1 className={styles.heading__title}>Service<br className='off_sm' /><span className='c-txt__md'>サービス概要</span></h1>
           </div>
           <div className='p_section__body'>
+            <div className='c-txt u-mb48'>
+              <p className='c-txt__md c-txt--center'>
+                はじめまして、ミツメルデザイン<br className='off_sm' /> 常見大祐（つねみだいすけ）と申します！<br />
+                ミツメルデザインでは、Web・デジタル、グラフィックのデザイン開発を通じて、<br />あらゆるビジネスを阻む壁を取り除きます。<br />
+                多角的にユーザーベネフィットを見つめ、<br className='off_sm' />最高のサービス体験を提供しています。
+              </p>
+            </div>
             <Service />
-          </div>
-          <div className='p_section__body'>
-            <Flow />
           </div>
         </div>
       </section>
+      
       <Script
         src="https://connect.facebook.net/en_US/sdk.js"
         strategy="lazyOnload"

@@ -13,8 +13,8 @@ title: 'metroengines様'
 date: '2021-10-31'
 tag_1: 'LPデザイン'
 tag_2: 'フロントエンド実装'
-previous: '/works/leaflet'
-next: '/works/lp'
+previous: '/works/lp'
+next: '/works/leaflet'
 ---
 
 勤務内実績。Metroengines株式会社様の**サービスデザイン制作**と**フロントエンド実装**を行いました。
