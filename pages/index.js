@@ -26,26 +26,24 @@ export default function Home ({ allPostsData }) {
         <title>{`Top page | ${siteTitle}`}</title>
         <meta name="description" content="top page desu"/>
       </Head>
+      <section className={styles.p_bg}>
+        <FView />
+      </section>
       <section className={styles.p_fv}>
         <div className={styles.p_fv__container}>
-          <div className={styles.p_fv__head}>
-            <FView />
-          </div>
-          <div className={styles.p_fv__body}>
-            <Image
-              priority
-              src="/images/logo/logo_set.png"
-              height={80}
-              width={120}
-              alt="Mitsumeru ロゴ"
-              className={styles.p_fv__logo}
-            />
-            <h2 className="p_fv__head--title c-txt__xl2 c-txt--center">
-              <strong>人</strong>と<strong>事業</strong>を<span>見つめる</span><br className='off_md' /><strong>デザイン</strong>
-            </h2>
-            <div className="c-txt__md u-align--center">
-              <Link className={styles.p_fv__body__scroll} href='#about'>Scroll</Link>
-            </div>
+          <Image
+            priority
+            src="/images/logo/logo_set.png"
+            height={80}
+            width={120}
+            alt="Mitsumeru ロゴ"
+            className={styles.p_fv__logo}
+          />
+          <h1 className="p_fv__head--title c-txt__xl2 c-txt--center">
+            <strong>人</strong>と<strong>事業</strong>を<span>見つめる</span><br className='off_md' /><strong>デザイン</strong>
+          </h1>
+          <div className="c-txt__md u-align--center">
+            <Link className={styles.p_fv__scroll} href='#about'>Scroll</Link>
           </div>
         </div>
       </section>
@@ -136,7 +134,7 @@ export default function Home ({ allPostsData }) {
         </div>
       </section>
 
-      <section className='p_section' id='service'>
+      <section className={`${styles.p_service} ${"p_section"}`} id='service'>
         <div className='p_section__head'>
           <h2 className='c-txt c-txt--center p_section__title'>Service<span className='c-txt__md'>サービス概要</span></h2>
         </div>

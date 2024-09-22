@@ -8,12 +8,13 @@
     font-size: 4rem;
     line-height:0.75;
     font-family:'Galada';
-    @include breakpoints (md){
-      font-size: 5rem;
+    @include breakpoints (sm){
+      font-size: 6rem;
     }
     @include breakpoints (lg){
       font-size: 8rem;
       line-height:0.5;
+      padding: 1rem;
     }
     span{
       position:absolute;

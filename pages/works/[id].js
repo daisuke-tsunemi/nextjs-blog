@@ -43,7 +43,7 @@ export default function Works({ postData }) {
               <Link href={postData.link} className='c-btn__text' target='_blank' rel='noreferrer'>関連リンク</Link>
             </div>
             <div className='u-mt32' dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
-            <div className={`${styles.p_works__bottom} ${"u-align center u-mt80"}`}>
+            <div className={`${styles.p_works__bottom} ${"u-align center u-mt32"}`}>
               <Link href={`${postData.previous}${"#hero"}`} className='c-btn--dark sm'>前へ</Link>
               <Link href="/works" className='c-btn__line sm'>Works一覧へ</Link>
               <Link href={`${postData.next}${"#hero"}`} className='c-btn--dark sm'>次へ</Link>

@@ -43,10 +43,10 @@
   display: grid;
   grid-template-columns: 1fr;
   gap: 1rem;
-  margin-block-start: 2rem;
+  padding-block: 4rem;
   @include breakpoints (md){
     grid-template-columns: 1fr 2fr;
-    margin-block-start: 4rem;
+    padding-block: 8rem;
     gap: 2rem;
   }
   @include breakpoints (xl){
@@ -170,8 +170,9 @@
     width: 100%;
     z-index: 2;
     background-color: #fff;
-    padding-block: .5rem;
+    padding-block: 1rem;
     @include breakpoints (sm){
+      padding: 0;
       position:static;
       left:inherit;
       bottom:inherit;
