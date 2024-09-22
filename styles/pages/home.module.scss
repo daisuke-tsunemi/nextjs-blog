@@ -154,6 +154,10 @@
   }
 }
 .p_service{
+  &__body{
+    max-width: 1080px;
+    margin:0 auto;
+  }
   &Item{
     background-color: #fff;
     padding: 1rem;

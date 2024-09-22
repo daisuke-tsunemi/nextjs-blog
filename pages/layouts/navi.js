@@ -6,7 +6,6 @@ export default function Navi() {
     <nav className={styles.navi__list}>
       <Link className={styles.navi__item} href="/">Home</Link>
       <Link className={styles.navi__item} href="/works">Works</Link>
-      <Link className={styles.navi__item} href="/service">Service</Link>
       {/* <Link className={styles.navi__item} href="/service">Service</Link> */}
       <Link className={styles.navi__item} href="/contact">Contact</Link>
     </nav>

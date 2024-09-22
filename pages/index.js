@@ -4,6 +4,7 @@ import Image from 'next/image';
 import Layout, { siteTitle } from './layouts/layout';
 import { getSortedPostsData } from '../lib/works';
 import Date from '../components/date';
+import Service from '../components/page/service';
 import styles from "../styles/pages/home.module.scss";
 import dynamic from 'next/dynamic';
 import { motion } from 'framer-motion';
@@ -40,7 +41,7 @@ export default function Home ({ allPostsData }) {
               className={styles.p_fv__logo}
             />
             <h2 className="p_fv__head--title c-txt__xl2 c-txt--center">
-              <strong>人</strong>と<strong>事業</strong>を<span>見つめる</span><br className='off_md' /><strong>デザイン</strong>を
+              <strong>人</strong>と<strong>事業</strong>を<span>見つめる</span><br className='off_md' /><strong>デザイン</strong>
             </h2>
             <div className="c-txt__md u-align--center">
               <Link className={styles.p_fv__body__scroll} href='#about'>Scroll</Link>
@@ -51,7 +52,7 @@ export default function Home ({ allPostsData }) {
       
       <section className={`${styles.p_about} ${"p_section c-txt--center"}`} id='about'>
         <div className='p_section__head'>
-          <h2 className='c-txt c-txt--center p_section__title'>About us<span className='c-txt__md'>私たちについて</span></h2>
+          <h2 className='c-txt c-txt--center p_section__title'>About us<span className='c-txt__md'>ミツメルデザインについて</span></h2>
         </div>
         <div className={`${styles.p_about__body} ${"p_section__body"}`}>
           <motion.div
@@ -83,20 +84,16 @@ export default function Home ({ allPostsData }) {
             />
           </motion.div>
           <div className={styles.p_about__text}>
-            <h3 className='c-txt__lg c-txt--center'>ユーザーを、ビジネスを、<br className='off_sm'></br>ミツメルデザイン</h3>
-            <p className='c-txt__md u-mt24'>
-              はじめまして、ミツメルデザインの常見大祐（つねみだいすけ）と申します！<br />
-              ミツメルデザインでは、Web・デジタル、グラフィックのデザイン開発を通じて、あらゆるビジネスを阻む壁を取り除きます。<br />
-              多角的にユーザーベネフィットを見つめ、最高のサービス体験を提供しています。
+            <h3 className='c-txt__lg c-txt--center'>ユーザーを、ビジネスを、<br className='off_sm' />ミツメルデザイン</h3>
+            <p className='c-txt__md u-mt24 c-txt--center'>
+              はじめまして、ミツメルデザインの<br className='off_sm' />常見大祐（つねみだいすけ）と申します！<br />
+              ミツメルデザインは、東京都墨田区の<br className='off_sm' />デザインディベロッパーとして、<br />あらゆるビジネスを阻む壁を取り除きます。<br />
+              Web・デジタル、グラフィックデザインを<br className='off_sm' />主軸に、多角的にユーザーベネフィットを<br className='off_sm' />見つめ、最高のサービス体験を提供しています。
             </p>
           </div>
         </div>
-        <div className='p_section__foot u-align center'>
-          <Link className='c-btn__line' href="/about">詳しく見る</Link>
-        </div>
       </section>
 
-      {/* Add this <section> tag below the existing <section> tag */}
       <section className={`${styles.p_works} ${"p_section"}`}>
         <div className='p_section__head'>
           <h2 className='c-txt p_section__title'>Works<span className='c-txt__sm'>制作実績</span></h2>
@@ -136,6 +133,15 @@ export default function Home ({ allPostsData }) {
           <div className='p_section__foot u-align center'>
             <Link href="/works" className='c-btn'>All Posts</Link>
           </div>
+        </div>
+      </section>
+
+      <section className='p_section' id='service'>
+        <div className='p_section__head'>
+          <h2 className='c-txt c-txt--center p_section__title'>Service<span className='c-txt__md'>サービス概要</span></h2>
+        </div>
+        <div className={styles.p_service__body}>
+          <Service />
         </div>
       </section>
     </Layout>

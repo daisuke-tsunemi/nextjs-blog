@@ -20,9 +20,9 @@
     &__#{$i}00 {
       @extend %container;
       max-width: (100px * $i);
-      padding: 1rem;
+      padding: 0 1rem;
       @include breakpoints (sm){
-        padding: 2rem;
+        padding: 0 2rem;
       }
     }
     $i: $i + 1;

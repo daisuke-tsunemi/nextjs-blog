@@ -4,9 +4,6 @@
   @include breakpoints (md){
     padding: 8rem 0;
   }
-  @include breakpoints (xl){
-    padding: 10rem 0;
-  }
   &__title{
     font-size: 4rem;
     line-height:0.75;
