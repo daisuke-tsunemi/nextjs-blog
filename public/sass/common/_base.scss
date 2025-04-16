@@ -34,8 +34,6 @@ body {
   min-height: 100dvh;
   min-width:350px;
   font-size: 14px;
-  background: var(--bg-dark) url(../images/bg/noise1.png) no-repeat center;
-  background-size:cover;
   width: 100%;
   display:flex;
   flex-direction:column;
@@ -43,6 +41,18 @@ body {
   position:relative;
   color: var(--text);
   line-height: 1.4;
+  &:before{
+    content: '';
+    background: var(--bg-dark) url(../images/bg/noise1.png) no-repeat center;
+    background-size:cover;
+    height: 100dvh;
+    width: 100vw;
+    z-index: -1;
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+  }
 }
 /* ! --------------------------------------------------
 - text
