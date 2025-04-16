@@ -14,14 +14,13 @@ input:-webkit-autofill {
   border: none;
   border-bottom: 1px solid var(--border-color);
   color: var(--base);
-  background-color: rgba($color: #fff, $alpha: 0.4);
+  background-color: white;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
   border-radius:0;
   &:focus{
     border-bottom: 2px solid var(--primary-accent);
-    background-color: rgba($color: #fff, $alpha: 0.8);
   }
   &:invalid{
     display: inline-flex;
@@ -59,7 +58,6 @@ textarea {
   padding: .5rem;
   resize: none;
   min-height: 100px;
-  background-color: rgba($color: #fff, $alpha: 0.4);
   box-shadow: inset 0px 0px 4px rgba(0, 0, 0, .15);
   @include breakpoints(sm){
     min-height: 200px;
